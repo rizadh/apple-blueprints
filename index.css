@@ -1,11 +1,9 @@
 body {
-  margin: 30px;
+  margin: 0;
   font-family: 'Helvetica Neue';
 }
 
-.header-wrapper {
-  margin: 0;
-  padding: 0;
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -25,9 +23,15 @@ body {
   margin-top: 112px;
 }
 
+.year {
+  margin-left: 66px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
 .container {
+  margin: 0 30px;
   padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
