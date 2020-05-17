@@ -1,6 +1,30 @@
+
 body {
+
+  --site-background: white;
+  --header-background: rgba(255, 255,255, 0.6);
+  --header-border: rgba(0,0,0,0.1);
+  --text-primary: black;
+  --text-secondary: gray;
+  --month-card-background: rgb(245,245,247);
+  --counter-background: rgba(0,0,0,0.1);
+  --success-text: rgb(8, 127, 6);
+
   margin: 0;
   font-family: 'Helvetica Neue';
+  background-color: var(--site-background);
+  color: var(--text-primary);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --site-background: black;
+    --header-background: rgba(0, 0, 0, 0.6);
+    --header-border: rgba(255,255,255,0.1);
+    --text-primary: white;
+    --month-card-background: rgb(16,16,18);
+    --counter-background: rgba(255,255,255,0.1);
+    --success-text: rgb(76,175,79);
+  }
 }
 
 .header {
@@ -9,9 +33,9 @@ body {
   left: 0;
   width: 100%;
   text-align: center;
-  background-color: rgba(255,255,255,0.6);
-  -webkit-backdrop-filter:  saturate(180%) blur(20px);
-  border-bottom: solid 1px rgba(0,0,0,0.2);
+  background-color: var(--header-background);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: solid 1px var(--header-border);
 }
 
 #spacer {
@@ -19,14 +43,27 @@ body {
   opacity: 0;
   margin: auto;
   margin-bottom: 2%;
-  border-radius: 12px;
   margin-top: 112px;
 }
 
 .year {
-  margin-left: 66px;
+  margin-left: 60px;
   font-size: 60px;
   font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+}
+
+.counter {
+  background-color: var(--counter-background);
+  padding: 4px 12px;
+  margin-right: -6px;
+  font-size: 0.7em;
+  font-weight: bolder;
+  border-radius: 6px;
+  display: inline-block;
+  float: right;
+  /* color: var(--text-secondary); */
 }
 
 .container {
@@ -36,29 +73,35 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
 .item {
   min-width: 200px;
-  padding: 12px 24px;
+  padding: 12px 18px;
   margin: 12px 12px 12px;
   border-radius: 18px;
-  background-color: #EEE;
+  background-color: var(--month-card-background);
   font-size: 36px;
   font-weight: 900;
   letter-spacing: -1.5px;
   flex-grow: 1;
   flex-basis: 0;
+  text-transform: lowercase;
 }
+
 li {
   list-style: none;
   line-height: 90%;
 }
+
 a {
   text-decoration: none;
   color: grey;
   font-size: 22px;
   font-weight: 500;
   letter-spacing: -0.5px;
+  text-transform: none;
 }
+
 .released-product {
-  color: green;
+  color: var(--success-text);
 }

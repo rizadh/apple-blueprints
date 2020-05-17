@@ -1,7 +1,7 @@
 function MonthCard(props) {
   return (
     <ul className="item">
-    {props.month} ({props.products.length})
+    {props.month} <span class="counter">{props.products.length}</span>
     {props.products.map(product =>
       <li key={product.name}>
         <a href='#' className={product.isReleased ? 'released-product' : ''}>
@@ -15,10 +15,9 @@ function MonthCard(props) {
 
 function YearCard(props) {
   const totalProducts = props.months.reduce((total, currentMonth) => total + currentMonth.products.length, 0)
-
   return (
     <>
-      <div className="year">{props.year} ({totalProducts})</div>
+      <div className="year">{props.year}</div>
       <div className="container">
         {props.months.map(month => <MonthCard key={month.name} month={month.name} products={month.products}/>)}
       </div>
@@ -84,8 +83,31 @@ const years = [
       },
     ],
   },
+  {
+    yearName: '2021',
+    months: [
+      {
+        products: [
+          { name: 'iPhone SE Plus' },
+          { name: 'Game Controller' },
+          { name: 'iPad Pro' },
+        ],
+      },
+    ],
+  },
+
+  {
+    yearName: '2022',
+    months: [
+      {
+        products: [
+          { name: 'Apple Glasses' },
+        ],
+      },
+    ],
+  },
 ]
 
-// PROPS                                     ->
+// PROPS                                      ->
 const yearCards = years.map(year => <YearCard key={year.yearName} year={year.yearName} months={year.months}/>)
 ReactDOM.render(yearCards, document.querySelector('.wrapper'))
