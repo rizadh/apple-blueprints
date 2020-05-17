@@ -1,11 +1,11 @@
-function MonthCard(props) {
+function MonthCard({ month, products, isReleased }) {
   return (
     <ul className="item">
-    {props.month} <span class="counter">{props.products.length}</span>
-    {props.products.map(product =>
-      <li key={product.name}>
-        <a href='#' className={product.isReleased ? 'released-product' : ''}>
-          <i className={product.isReleased ? 'fas fa-check-circle' : 'far fa-question-circle'} /> {product.name}
+    {month} <span class="counter">{products.length}</span>
+    {products.map(({ name, isReleased }) =>
+      <li key={name}>
+        <a href='#' className={isReleased ? 'released-product' : ''}>
+          <i className={isReleased ? 'fas fa-check-circle' : 'far fa-question-circle'} /> {name}
         </a>
       </li>
     )}
@@ -13,13 +13,13 @@ function MonthCard(props) {
   )
 }
 
-function YearCard(props) {
-  const totalProducts = props.months.reduce((total, currentMonth) => total + currentMonth.products.length, 0)
+function YearCard({ months, year }) {
+  const totalProducts = months.reduce((total, { products }) => total + products.length, 0)
   return (
     <>
-      <div className="year">{props.year}</div>
+      <div className="year">{year}</div>
       <div className="container">
-        {props.months.map(month => <MonthCard key={month.name} month={month.name} products={month.products}/>)}
+        {months.map(({ name, products }) => <MonthCard key={name} month={name} products={products}/>)}
       </div>
     </>
   )
@@ -109,5 +109,5 @@ const years = [
 ]
 
 // PROPS                                      ->
-const yearCards = years.map(year => <YearCard key={year.yearName} year={year.yearName} months={year.months}/>)
+const yearCards = years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months}/>)
 ReactDOM.render(yearCards, document.querySelector('.wrapper'))
