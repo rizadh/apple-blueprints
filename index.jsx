@@ -49,7 +49,7 @@ const years = [
       {
         name: 'May',
         products: [
-          { name: '13" MacBook Pro' },
+          { name: '13" MacBook Pro', isReleased: true },
           { name: 'iMac' },
           { name: 'Apple TV' },
         ],
