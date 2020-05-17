@@ -1,6 +1,6 @@
 
 body {
-
+  --site-background: white;
   --site-background: white;
   --header-background: rgba(255, 255,255, 0.6);
   --header-border: rgba(0,0,0,0.1);
@@ -9,7 +9,6 @@ body {
   --month-card-background: rgb(245,245,247);
   --counter-background: rgba(0,0,0,0.1);
   --success-text: rgb(8, 127, 6);
-
   margin: 0;
   font-family: 'Helvetica Neue';
   background-color: var(--site-background);
@@ -21,7 +20,7 @@ body {
     --header-background: rgba(0, 0, 0, 0.6);
     --header-border: rgba(255,255,255,0.1);
     --text-primary: white;
-    --month-card-background: rgb(16,16,18);
+    --month-card-background: rgb(28,28,30);
     --counter-background: rgba(255,255,255,0.1);
     --success-text: rgb(76,175,79);
   }
