@@ -53,9 +53,9 @@ body {
   display: flex;
   align-items: flex-end;
 }
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .year {
-    margin-left: 50px;
+    margin-left: 48px;
   }
 }
 
