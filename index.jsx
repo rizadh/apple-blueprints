@@ -1,7 +1,7 @@
 function MonthCard({ month, products, isReleased }) {
   return (
     <ul className="item">
-    {month} <span class="counter">{products.length}</span>
+    {month} <span className="counter">{products.length}</span>
     {products.map(({ name, isReleased }) =>
       <li key={name}>
         <a href='#' className={isReleased ? 'released-product' : ''}>
@@ -30,7 +30,7 @@ const years = [
     yearName: '2020',
     months: [
       {
-        name: 'March',
+        name: 'march',
         products: [
           { name: 'iPad Pro', isReleased: true },
           { name: 'Magic Keyboard', isReleased: true },
@@ -40,45 +40,40 @@ const years = [
         ],
       },
       {
-        name: 'April',
+        name: 'april',
         products: [
           { name: 'iPhone SE', isReleased: true },
         ],
       },
       {
-        name: 'May',
+        name: 'may',
         products: [
           { name: '13" MacBook Pro', isReleased: true },
-          { name: 'iMac' },
-          { name: 'Apple TV' },
         ],
       },
       {
-        name: 'June',
-        products: [
-          { name: 'AirTags' },
-          { name: 'AirPods Studio' },
-          { name: 'Wireless Charging Pad' },
-        ],
-      },
-      {
-        name: 'September',
+        name: 'september',
         products: [
           { name: 'iPhone 12 (5.4")' },
           { name: 'iPhone 12 (6.1")' },
           { name: 'iPhone 12 Pro (6.1")' },
           { name: 'iPhone 12 Pro (6.7")' },
           { name: 'Apple Watch Series 6' },
-          { name: 'AirPods X' },
+          { name: 'AirTags' },
+          { name: 'AirPods Studio' },
           { name: 'HomePod' },
           { name: 'HomePod Lite' },
+          { name: 'Small Wireless Charging Pad' },
+          { name: 'iPad Air' },
+          { name: 'iPad' },
         ],
       },
       {
-        name: 'October',
+        name: 'unknown',
         products: [
-          { name: 'iPad Air' },
-          { name: 'iPad' },
+          { name: 'iMac' },
+          { name: 'Apple TV' },
+          { name: 'AirPods X' },
         ],
       },
     ],
@@ -91,23 +86,23 @@ const years = [
           { name: 'iPhone SE Plus' },
           { name: 'Game Controller' },
           { name: 'iPad Pro' },
+          { name: 'ARM MacBooks' },
         ],
       },
     ],
   },
-
   {
     yearName: '2022',
     months: [
       {
         products: [
-          { name: 'Apple Glasses' },
+          { name: 'Apple Glass' },
         ],
       },
     ],
   },
 ]
 
-// PROPS                                      ->
+// PROPS
 const yearCards = years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months}/>)
 ReactDOM.render(yearCards, document.querySelector('.wrapper'))
