@@ -1,18 +1,28 @@
 import years from './data'
 
-function MonthCard({ month, products, isReleased }) {
-  const setProduct = React.useContext(SetProductContext)
+function ProductItem({ product }) {
+  const { name, isReleased } = product
+  const [showDetails, setShowDetails] = React.useState(false)
+  const showModal = React.useCallback(() => setShowDetails(true))
+  const closeModal = React.useCallback(() => setShowDetails(false))
 
   return (
-    <ul className="item">
-    {month} <span className="counter">{products.length}</span>
-    {products.map(({ name, isReleased }) =>
-      <li key={name}>
-        <a href='#' className={isReleased ? 'released-product' : ''} onClick={() => setProduct({ name })}>
+    <>
+      <li>
+        <a href='#' className={isReleased ? 'released-product' : ''} onClick={showModal}>
           <i className={isReleased ? 'fas fa-check-circle' : 'far fa-question-circle'} /> {name}
         </a>
       </li>
-    )}
+      {showDetails && <Modal><ProductContainer product={product} onDismiss={closeModal}/></Modal>}
+    </>
+  )
+}
+
+function MonthCard({ month, products, isReleased }) {
+  return (
+    <ul className="item">
+    {month} <span className="counter">{products.length}</span>
+    {products.map(product => <ProductItem key={product.name} product={product} />)}
     </ul>
   )
 }
@@ -29,19 +39,16 @@ function YearCard({ months, year }) {
 }
 
 // TODO: Remove placeholders and use product details to populate UI
-function ProductContainer({ product: { name }}) {
-  const setProduct = React.useContext(SetProductContext)
-  const close = React.useCallback(() => setProduct(null))
-
+function ProductContainer({ product: { name }, onDismiss }) {
   return (
-    <div class="product-container">
-      <i class="fas fa-check-circle product-status"></i><div class="product-status">&nbsp;Released</div>
-      <div class="product-name">{name}</div>
-      <div class="product-description">The original iPhone SE was discontinued in 2018. Apple has revived the name April 2020 with a new 4.7-inch model that looks like the iPhone 8 model with more powerful internals.</div>
+    <div className="product-container">
+      <i className="fas fa-check-circle product-status"></i><div className="product-status">&nbsp;Released</div>
+      <div className="product-name">{name}</div>
+      <div className="product-description">The original iPhone SE was discontinued in 2018. Apple has revived the name April 2020 with a new 4.7-inch model that looks like the iPhone 8 model with more powerful internals.</div>
 
-      <div class="product-header">
+      <div className="product-header">
         Features
-        <ul class="product-features">
+        <ul className="product-features">
           <li>4.7-inch display</li>
           <li>A13 Bionic Chip</li>
           <li>iPhone 8</li>
@@ -53,14 +60,14 @@ function ProductContainer({ product: { name }}) {
         </ul>
       </div>
 
-      <div class="product-header">
+      <div className="product-header">
         Sources
-        <ul class="product-features">
-          <li><a href="#" class="source-link">Jon Prosser</a></li>
-          <li><a href="#" class="source-link">Ming-Chi Kuo</a></li>
+        <ul className="product-features">
+          <li><a href="#" className="source-link">Jon Prosser</a></li>
+          <li><a href="#" className="source-link">Ming-Chi Kuo</a></li>
         </ul>
 
-        <div class="close-button" onClick={close}>Okay</div>
+        <div className="close-button" onClick={onDismiss}>Okay</div>
       </div>
     </div>
   )
@@ -79,15 +86,8 @@ function Modal({ children }) {
   return ReactDOM.createPortal(children, element.current)
 }
 
-const SetProductContext = React.createContext()
-
 function App() {
-  const [product, setProduct] = React.useState(null)
-
-  return <SetProductContext.Provider value={setProduct}>
-    {years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months}/>) }
-    {product && <Modal><ProductContainer product={product} /></Modal>}
-  </SetProductContext.Provider>
+  return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months}/>)
 }
 
 ReactDOM.render(<App />, document.querySelector('.wrapper'))
