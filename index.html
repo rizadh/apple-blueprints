@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
   </head>
+
   <body>
 
     <div id="navbar">
@@ -59,10 +59,9 @@
     <!-- Convert to react -->
 
 
-    <script src="./index.jsx"></script>
+    <script src ="./index.jsx"></script>
 
     <script>
-
       var lastScrollTop = 0;
       window.addEventListener("scroll", function(){
          var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
@@ -70,9 +69,6 @@
          else document.getElementById("navbar").style.top = "0";
          lastScrollTop = st <= 0 ? 0 : st; // for mobile or negative scrolling
       }, false);
-
-
-
     </script>
 
   </body>

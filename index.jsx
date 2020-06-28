@@ -38,82 +38,56 @@ function YearCard({ months, year }) {
   )
 }
 
-const years = [
-  {
-    yearName: '2020',
-    months: [
-      {
-        name: 'march',
-        products: [
-          { name: 'iPad Pro', isReleased: true },
-          { name: 'Magic Keyboard', isReleased: true },
-          { name: 'MacBook Air' , isReleased: true },
-          { name: 'Mac mini', isReleased: true },
-          { name: 'Powerbeats', isReleased: true },
-        ],
-      },
-      {
-        name: 'april',
-        products: [
-          { name: 'iPhone SE', isReleased: true },
-        ],
-      },
-      {
-        name: 'may',
-        products: [
-          { name: '13" MacBook Pro', isReleased: true },
-        ],
-      },
-      {
-        name: 'september',
-        products: [
-          { name: 'iPhone 12 (5.4")' },
-          { name: 'iPhone 12 (6.1")' },
-          { name: 'iPhone 12 Pro (6.1")' },
-          { name: 'iPhone 12 Pro (6.7")' },
-          { name: 'Apple Watch Series 6' },
-          { name: 'AirTags' },
-          { name: 'AirPods Studio' },
-          { name: 'AirPods X' },
-          { name: 'Small Wireless Charging Pad' },
-        ],
-      },
-      {
-        name: 'unknown',
-        products: [
-          { name: 'iMac' },
-          { name: 'HomePod' },
-          { name: 'HomePod Lite' },
-          { name: 'iPad Air' },
-          { name: 'iPad' },
-          { name: 'Apple TV' },
-        ],
-      },
-    ],
-  },
-  {
-    yearName: '2021',
-    months: [
-      {
-        products: [
-          { name: 'iPhone SE Plus' },
-          { name: 'Game Controller' },
-          { name: 'iPad Pro' },
-          { name: 'ARM MacBooks' },
-        ],
-      },
-    ],
-  },
-  {
-    yearName: '2022',
-    months: [
-      {
-        products: [
-          { name: 'Apple Glass' },
-        ],
-      },
-    ],
-  },
-]
+// TODO: Remove placeholders and use product details to populate UI
+function ProductContainer({ product: { name }, onDismiss }) {
+  return (
+    <div className="product-container">
+      <i className="fas fa-check-circle product-status"></i><div className="product-status">&nbsp;Released</div>
+      <div className="product-name">{name}</div>
+      <div className="product-description">The original iPhone SE was discontinued in 2018. Apple has revived the name April 2020 with a new 4.7-inch model that looks like the iPhone 8 model with more powerful internals.</div>
+
+      <div className="product-header">
+        Features
+        <ul className="product-features">
+          <li>4.7-inch display</li>
+          <li>A13 Bionic Chip</li>
+          <li>iPhone 8</li>
+          <li>Touch ID</li>
+          <li>Single-lens rear camera</li>
+          <li>3GB RAM</li>
+          <li>Red, white and black colours</li>
+          <li>$399 starting price</li>
+        </ul>
+      </div>
+
+      <div className="product-header">
+        Sources
+        <ul className="product-features">
+          <li><a href="#" className="source-link">Jon Prosser</a></li>
+          <li><a href="#" className="source-link">Ming-Chi Kuo</a></li>
+        </ul>
+
+        <div className="close-button" onClick={onDismiss}>Okay</div>
+      </div>
+    </div>
+  )
+}
+
+function Modal({ children }) {
+  const element = React.useRef(document.createElement('div'))
+
+  React.useEffect(() => {
+    const parentNode = document.querySelector('#modal-container')
+    parentNode.appendChild(element.current)
+
+    return () => element.current.remove()
+  })
+
+  return ReactDOM.createPortal(children, element.current)
+}
+
+function App() {
+  return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months}/>)
+}
 
 ReactDOM.render(<App />, document.querySelector('.wrapper'))
