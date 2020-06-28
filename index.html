@@ -11,7 +11,7 @@
   </head>
   <body>
 
-    <div class="navbar">
+    <div id="navbar">
       <h1>[ apple blueprints ]</h1>
     </div>
 
@@ -20,7 +20,6 @@
     <div class="wrapper"></div>
 
     <!-- Convert to react -->
-
 
     <!-- <div class="overlay"></div>
     <div class="product-container">
@@ -60,6 +59,20 @@
 
 
     <script src="./index.jsx"></script>
+
+    <script>
+
+      var lastScrollTop = 0;
+      window.addEventListener("scroll", function(){
+         var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+         if (st > lastScrollTop) document.getElementById("navbar").style.top = "-84px";
+         else document.getElementById("navbar").style.top = "0";
+         lastScrollTop = st <= 0 ? 0 : st; // for mobile or negative scrolling
+      }, false);
+
+
+
+    </script>
 
   </body>
 </html>

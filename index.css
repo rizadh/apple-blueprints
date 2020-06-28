@@ -29,7 +29,7 @@ body {
   }
 }
 
-.navbar {
+#navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -37,8 +37,10 @@ body {
   text-align: center;
   background-color: var(--navbar-background);
   color: black;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(200%) blur(20px);
   border-bottom: solid 1px var(--navbar-border);
+  transition: 200ms;
+  z-index: 1;
 }
 
 #spacer {
@@ -64,14 +66,16 @@ body {
 }
 
 .counter {
-  background-color: var(--counter-background);
   padding: 4px 12px;
-  margin-right: -6px;
+  margin: 12px;
+  border-radius: 100px;
+  background-color: var(--counter-background);
   font-size: 0.7em;
   font-weight: bolder;
-  border-radius: 6px;
-  display: inline-block;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+
 }
 
 .container {
@@ -93,6 +97,8 @@ body {
   letter-spacing: -1.5px;
   flex-grow: 1;
   flex-basis: 0;
+  position: relative;
+
 }
 @media (max-width: 600px) {
   .item {
@@ -125,7 +131,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 30px;
-  background-color: var(--navbar-background);
+  background-color: var(--site-background);
   -webkit-backdrop-filter: blur(20px);
   font-weight: bold;
   letter-spacing: -0.5px;
@@ -185,7 +191,7 @@ ul {
   /* transform: translate(-50%, -50%); */
   margin-top: 40px;
   font-size: 0.8em;
-  background-color: var(--counter-background);
+  background-color: var(--navbar-background);
   color: var(--text-primary);
   border-radius: 18px;
   cursor: pointer;
