@@ -1,20 +1,33 @@
+import years from './data'
+
+function ProductItem({ product }) {
+  const { name, isReleased } = product
+  const [showDetails, setShowDetails] = React.useState(false)
+  const showModal = React.useCallback(() => setShowDetails(true))
+  const closeModal = React.useCallback(() => setShowDetails(false))
+
+  return (
+    <>
+      <li>
+        <a href='#' className={isReleased ? 'released-product' : ''} onClick={showModal}>
+          <i className={isReleased ? 'fas fa-check-circle' : 'far fa-question-circle'} /> {name}
+        </a>
+      </li>
+      {showDetails && <Modal><ProductContainer product={product} onDismiss={closeModal}/></Modal>}
+    </>
+  )
+}
+
 function MonthCard({ month, products, isReleased }) {
   return (
     <ul className="item">
     {month} <span className="counter">{products.length}</span>
-    {products.map(({ name, isReleased }) =>
-      <li key={name}>
-        <a href='#' className={isReleased ? 'released-product' : ''}>
-          <i className={isReleased ? 'fas fa-check-circle' : 'far fa-question-circle'} /> {name}
-        </a>
-      </li>
-    )}
+    {products.map(product => <ProductItem key={product.name} product={product} />)}
     </ul>
   )
 }
 
 function YearCard({ months, year }) {
-  const totalProducts = months.reduce((total, { products }) => total + products.length, 0)
   return (
     <>
       <div className="year">{year}</div>
@@ -103,6 +116,4 @@ const years = [
   },
 ]
 
-// PROPS
-const yearCards = years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months}/>)
-ReactDOM.render(yearCards, document.querySelector('.wrapper'))
+ReactDOM.render(<App />, document.querySelector('.wrapper'))
