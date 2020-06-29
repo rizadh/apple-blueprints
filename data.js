@@ -1,15 +1,15 @@
-// TODO: Figure out how to take remove certain product details
+// TODO: Fix overlay bug
+// TODO: Fix z-index bug
 
 export default [
     {
         yearName: '2020',
         months: [
-            {
-                name: 'march',
+            { name: 'march',
                 products: [
-                    { name: 'iPad Pro',
+                  { name: 'iPad Pro',
                       isReleased: true,
-                      description: "The 11-inch and 12.9-inch iPad Pro models were updated in March 2020 with a faster A12Z Bionic chip, a new 10MP Ultra Wide camera to complement the traditional 12MP camera, a LiDAR depth scanner for improved augmented reality experiences, and more. There's also a new Magic Keyboard with Trackpad, and the new iPad Pro models continue to work with the Apple Pencil 2.",
+                      description: 'The 11-inch and 12.9-inch iPad Pro models were updated in March 2020 with a faster A12Z Bionic chip, a new 10MP Ultra Wide camera to complement the traditional 12MP camera, a LiDAR depth scanner for improved augmented reality experiences, and more. There\'s also a new Magic Keyboard with Trackpad, and the new iPad Pro models continue to work with the Apple Pencil 2.',
                       features: [
                         'LiDAR Scanner',
                         'Trackpad support to iPadOS',
@@ -21,7 +21,7 @@ export default [
                         },
                       ],
                     },
-                    { name: 'Magic Keyboard',
+                  { name: 'Magic Keyboard',
                       isReleased: true,
                       description: '',
                       features: [
@@ -33,28 +33,26 @@ export default [
                         },
                       ],
                     },
-                    { name: 'MacBook Air',
+                  { name: 'MacBook Air',
+                      isReleased: true,
+                      description: '',
+                      features: [],
+                    },
+                  { name: 'Mac mini',
                       isReleased: true,
                       description: '',
                       features: '',
                       sources: '',
                     },
-                    { name: 'Mac mini',
+                  { name: 'Powerbeats',
                       isReleased: true,
                       description: '',
                       features: '',
                       sources: '',
                     },
-                    { name: 'Powerbeats',
-                      isReleased: true,
-                      description: '',
-                      features: '',
-                      sources: '',
-                    },
-                ],
+               ],
             },
-            {
-                name: 'april',
+            { name: 'april',
                 products: [
                   { name: 'iPhone SE',
                     isReleased: true,
@@ -64,25 +62,23 @@ export default [
                   },
                 ],
             },
-            {
-                name: 'may',
+            { name: 'may',
                 products: [{ name: '13" MacBook Pro', isReleased: true }],
             },
-            {
-                name: 'september',
+            { name: 'september',
                 products: [
-                    { name: 'iPhone 12 (5.4")' },
-                    { name: 'iPhone 12 (6.1")' },
-                    { name: 'iPhone 12 Pro (6.1")' },
-                    { name: 'iPhone 12 Pro (6.7")' },
-                    { name: 'Apple Watch Series 6' },
-                    { name: 'AirTags' },
-                    { name: 'AirPods Studio' },
-                    { name: 'HomePod' },
-                    { name: 'HomePod Lite' },
-                    { name: 'Small Wireless Charging Pad' },
-                    { name: 'iPad Air' },
-                    { name: 'iPad (10.8")' },
+                  { name: 'iPhone 12 (5.4")' },
+                  { name: 'iPhone 12 (6.1")' },
+                  { name: 'iPhone 12 Pro (6.1")' },
+                  { name: 'iPhone 12 Pro (6.7")' },
+                  { name: 'Apple Watch Series 6' },
+                  { name: 'AirTags' },
+                  { name: 'AirPods Studio' },
+                  { name: 'HomePod' },
+                  { name: 'HomePod Lite' },
+                  { name: 'Small Wireless Charging Pad' },
+                  { name: 'iPad Air' },
+                  { name: 'iPad (10.8")' },
                 ],
             },
             {
@@ -104,7 +100,7 @@ export default [
                     { name: 'iPhone SE Plus' },
                     { name: 'Game Controller' },
                     { name: 'iPad Pro' },
-                    { name: 'ARM MacBooks' },
+                    { name: 'ARM MacBook' },
                     { name: 'iPad Mini (8.5")' },
 
                 ],

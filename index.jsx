@@ -38,8 +38,6 @@ function YearCard({ months, year }) {
   )
 }
 
-// TODO: Change product-status labels to appropiate colour
-
 function ProductContainer({ product: { name, isReleased, description, features, sources }, onDismiss }) {
   return (
     <div className="product-container">
@@ -59,13 +57,19 @@ function ProductContainer({ product: { name, isReleased, description, features, 
         </ul>
       </div>
 
-      <div className="product-header">
-        Sources
-        <ul className="product-features">
-          {sources.map(source => <li key={source} className="source-link"><a href={source.link} target="_blank" className="source-link">{source.name}</a></li>)}
-        </ul>
-        <div className="close-button" onClick={onDismiss}>Okay</div>
-      </div>
+      {
+        // if sources is truey return <div>...</div> which React will show
+        // else, return sources which is falsy so React will ignore
+        sources &&
+        <div className="product-header">
+          Sources
+          <ul className="product-features">
+            {sources.map(source => <li key={source} className="source-link"><a href={source.link} target="_blank" className="source-link">{source.name}</a></li>)}
+          </ul>
+          <div className="close-button" onClick={onDismiss}>Okay</div>
+        </div>
+      }
+
     </div>
   )
 }
