@@ -10,7 +10,7 @@ function ProductItem({ product }) {
     <>
       <li>
         <a href='#' className={isReleased ? 'released-product' : ''} onClick={showModal}>
-          <i className={isReleased ? 'fas fa-check-circle' : 'far fa-question-circle'} /> {name}
+          <i className={isReleased ? 'fas fa-check-circle' : 'far fa-question-circle'}/> {name}
         </a>
       </li>
       {showDetails && <Modal><ProductContainer product={product} onDismiss={closeModal}/></Modal>}
@@ -38,35 +38,32 @@ function YearCard({ months, year }) {
   )
 }
 
-// TODO: Remove placeholders and use product details to populate UI
-function ProductContainer({ product: { name }, onDismiss }) {
+// TODO: Change product-status labels to appropiate colour
+
+function ProductContainer({ product: { name, isReleased, description, features, sources }, onDismiss }) {
   return (
     <div className="product-container">
-      <i className="fas fa-check-circle product-status"></i><div className="product-status">&nbsp;Released</div>
+
+      <i className={isReleased ? 'fas fa-check-circle product-status released-product' : 'far fa-question-circle product-status rumoured-product'}/>
+      <i className={isReleased ? 'released-product' : ''}/>
+
+      <div className={isReleased ? 'product-status released-product' : 'product-status rumoured-product'}>&nbsp;{isReleased ? 'Released' : 'Rumoured'}</div>
+
       <div className="product-name">{name}</div>
-      <div className="product-description">The original iPhone SE was discontinued in 2018. Apple has revived the name April 2020 with a new 4.7-inch model that looks like the iPhone 8 model with more powerful internals.</div>
+      <div className="product-description">{description}</div>
 
       <div className="product-header">
         Features
         <ul className="product-features">
-          <li>4.7-inch display</li>
-          <li>A13 Bionic Chip</li>
-          <li>iPhone 8</li>
-          <li>Touch ID</li>
-          <li>Single-lens rear camera</li>
-          <li>3GB RAM</li>
-          <li>Red, white and black colours</li>
-          <li>$399 starting price</li>
+          {features.map(feature => <li key={feature}>{feature}</li>)}
         </ul>
       </div>
 
       <div className="product-header">
         Sources
         <ul className="product-features">
-          <li><a href="#" className="source-link">Jon Prosser</a></li>
-          <li><a href="#" className="source-link">Ming-Chi Kuo</a></li>
+          {sources.map(source => <li key={source} className="source-link"><a href={source.link} target="_blank" className="source-link">{source.name}</a></li>)}
         </ul>
-
         <div className="close-button" onClick={onDismiss}>Okay</div>
       </div>
     </div>
