@@ -26,7 +26,7 @@
       var lastScrollTop = 0;
       window.addEventListener("scroll", function(){
          var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-         if (st > lastScrollTop) document.getElementById("navbar").style.top = "-84px";
+         if (st > lastScrollTop) document.querySelector("#navbar").style.top = "-84x";
          else document.getElementById("navbar").style.top = "0";
          lastScrollTop = st <= 0 ? 0 : st; // for mobile or negative scrolling
       }, false);

@@ -8,12 +8,13 @@ body {
   --month-card-background: rgb(245,245,247);
   --counter-background: rgba(0,0,0,0.1);
   --released-product: rgb(8,127,6);
+  --announced-product: rgb(198,105,0);
   --rumoured-product: grey;
   --link: rgb(18,116,224);
   --overlay: rgba(255,255,255,0.5);
   --product-container-background: rgb(255,255,255);
-  --close-button: rgba(0,0,0,0.1);
-  --close-button-hover: rgba(0,0,0,0.2);
+  --okay-button: rgba(0,0,0,0.1);
+  --okay-button-hover: rgba(0,0,0,0.2);
   margin: 0;
   font-family: 'Helvetica Neue';
   background-color: var(--site-background);
@@ -26,16 +27,20 @@ body {
     --text-primary: white;
     --month-card-background: rgb(28,28,30);
     --counter-background: rgba(255,255,255,0.1);
+
     --released-product: rgb(76,175,79);
+    --announced-product: #c66900;
+
     --overlay: rgba(0,0,0,0.2);
     --product-container-background: rgb(0,0,0);
-    --close-button: rgba(255,255,255,0.1);
-    --close-button-hover: rgba(255,255,255,0.2);
+    --okay-button: rgba(255,255,255,0.1);
+    --okay-button-hover: rgba(255,255,255,0.2);
   }
 }
 
 #navbar {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -103,6 +108,7 @@ body {
   flex-basis: 0;
   position: relative;
 }
+
 @media (max-width: 600px) {
   .item {
     margin: 10px 0 6px;
@@ -120,10 +126,7 @@ a {
   font-size: 22px;
   font-weight: 500;
   letter-spacing: -0.5px;
-  text-transform: none;
 }
-
-
 
 .product-container {
   width: 60%;
@@ -142,7 +145,7 @@ a {
   /* Restore click events */
   pointer-events: initial;
 }
-/* TODO: make released-product, rumoured-product, announced-product  */
+
 .product-status {
   display: inline-block;
   margin-bottom: 6px;
@@ -151,6 +154,9 @@ a {
 }
 .released-product {
   color: var(--released-product);
+}
+.announced-product {
+  color: var(--announced-product);
 }
 .rumoured-product {
   color: var(--rumoured-product);
@@ -187,19 +193,20 @@ ul {
   font-weight: 400;
 }
 
-.close-button {
+.okay-button {
   padding: 6px 18px;
   text-align: center;
   position: sticky;
   margin-top: 40px;
-  font-size: 0.8em;
-  background-color: var(--close-button);
+  font-size: 1.4em;
+  background-color: var(--okay-button);
   color: var(--text-primary);
   border-radius: 18px;
   cursor: pointer;
+  transition: 100ms;
 }
-.close-button:hover {
-  background-color: var(--close-button-hover);
+.okay-button:hover {
+  background-color: var(--okay-button-hover);
 }
 
 .overlay {
