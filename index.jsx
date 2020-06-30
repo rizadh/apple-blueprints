@@ -13,7 +13,12 @@ function ProductItem({ product }) {
           <i className={status ? 'fas fa-check-circle' : 'far fa-question-circle'}/> {name}
         </a>
       </li>
-      {showDetails && <Modal><ProductContainer product={product} onDismiss={closeModal}/></Modal>}
+      {showDetails && (
+        <Modal>
+          <div className="overlay" />
+          <ProductContainer product={product} onDismiss={closeModal}/>
+        </Modal>
+      )}
     </>
   )
 }
