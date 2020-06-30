@@ -15,7 +15,7 @@ function ProductItem({ product }) {
       </li>
       {showDetails && (
         <Modal>
-          <div class="overlay" />
+          <div className="overlay" />
           <ProductContainer product={product} onDismiss={closeModal}/>
         </Modal>
       )}
