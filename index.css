@@ -142,8 +142,6 @@ a {
   overflow: scroll;
   max-height: 80%;
   border-radius: 18px;
-  /* Restore click events */
-  pointer-events: initial;
 }
 
 .product-status {
@@ -234,4 +232,9 @@ ul {
 
   /* Prevent modal container from blocking click events */
   pointer-events: none;
+}
+
+#modal-container > * {
+  /* Restore click events */
+  pointer-events: initial;
 }
