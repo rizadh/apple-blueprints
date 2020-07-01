@@ -20,7 +20,7 @@ function ProductItem({ product }) {
       </li>
       {showDetails && (
         <Modal>
-          <div className="overlay" />
+          <div className="overlay" onClick={closeModal} />
           <ProductContainer product={product} onDismiss={closeModal} />
         </Modal>
       )}
