@@ -10,11 +10,11 @@ body {
   --announced-product: rgb(230, 125, 6);
   --rumoured-product: grey;
   --link: rgb(18, 116, 224);
-  --overlay: rgb(0, 0, 0, 0.2);
+  --overlay: rgb(0, 0, 0);
   --product-container-background: rgb(255, 255, 255);
   --okay-button: rgba(0, 0, 0, 0.1);
   --okay-button-hover: rgba(0, 0, 0, 0.2);
-  --blur-value: 12px;
+  --blur-value: 6px;
   --border-radius: 18px;
   margin: 0;
   font-family: "Helvetica Neue";
@@ -30,7 +30,7 @@ body {
     --counter-background: rgba(255, 255, 255, 0.1);
     --released-product: rgb(76, 175, 79);
     --announced-product: rgb(198, 105, 0);
-    --overlay: rgba(255, 255, 255, 0.2);
+    --overlay: rgb(255, 255, 255);
     --product-container-background: rgb(14, 14, 14);
     --okay-button: rgba(255, 255, 255, 0.1);
     --okay-button-hover: rgba(255, 255, 255, 0.2);
@@ -214,19 +214,16 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: var(--overlay);
+  opacity: 0;
   animation-name: fadeIn;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
-  0% {
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
-  }
   100% {
-    -webkit-backdrop-filter: blur(var(--blur-value));
-    backdrop-filter: blur(var(--blur-value));
+    opacity: 0.2;
   }
 }
 

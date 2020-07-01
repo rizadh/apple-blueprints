@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Apple Blueprints | Upcoming Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </head>
 
-<head>
-  <title>Apple Blueprints | Upcoming Products</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="./index.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-</head>
+  <body>
+    <div id="navbar">
+      <h1>[ apple blueprints ]</h1>
+    </div>
 
-<body>
+    <div id="spacer"></div>
 
-  <div id="navbar">
-    <h1>[ apple blueprints ]</h1>
-  </div>
+    <div class="wrapper"></div>
+    <div id="modal-container"></div>
 
-  <div id="spacer"></div>
+    <script src="./index.jsx"></script>
 
-  <div class="wrapper"></div>
-  <div id="modal-container"></div>
+    <script>
+      let lastTop = 0;
+      let lastScrollPosition = 0;
+      const navbar = document.querySelector("#navbar");
 
-  <script src="./index.jsx"></script>
+      window.addEventListener(
+        "scroll",
+        function () {
+          // Credit: Neil Philip Whitehead https://stackoverflow.com/a/17698713
+          const maxScrollPosition =
+            Math.max(
+              document.body.scrollHeight,
+              document.body.offsetHeight,
+              document.documentElement.clientHeight,
+              document.documentElement.scrollHeight,
+              document.documentElement.offsetHeight
+            ) - window.innerHeight;
 
-  <script>
-    let lastTop = 0;
-    let lastScrollPosition = 0;
-    const navbar = document.querySelector('#navbar');
+          const scrollPosition = window.pageYOffset;
+          const delta = scrollPosition - lastScrollPosition;
+          const newTop =
+            scrollPosition <= 0
+              ? -scrollPosition
+              : Math.max(0, Math.min(84, lastTop + delta));
 
-    window.addEventListener("scroll", function () {
-      // Credit: Neil Philip Whitehead https://stackoverflow.com/a/17698713
-      const maxScrollPosition = Math.max(
-        document.body.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.clientHeight,
-        document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight
-      ) - window.innerHeight;
+          navbar.style.transform = `translateY(-${newTop}px)`;
 
-      const scrollPosition = window.pageYOffset;
-      const delta = scrollPosition - lastScrollPosition;
-      const newTop = scrollPosition <= 0 ? -scrollPosition : Math.max(0, Math.min(84, lastTop + delta));
-
-      navbar.style.transform = `translateY(-${newTop}px)`;
-
-      lastTop = newTop;
-      lastScrollPosition = Math.min(maxScrollPosition, scrollPosition);
-    }, false);
-  </script>
-
-</body>
-
+          lastTop = newTop;
+          lastScrollPosition = Math.min(maxScrollPosition, scrollPosition);
+        },
+        false
+      );
+    </script>
+  </body>
 </html>
