@@ -40,23 +40,19 @@ body {
 #navbar {
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 42px;
+  left: 42px;
+  right: 42px;
   text-align: center;
   background-color: var(--navbar-background);
   color: black;
   -webkit-backdrop-filter: saturate(200%) blur(20px);
   backdrop-filter: saturate(200%) blur(20px);
-  border-bottom: solid 1px var(--navbar-border);
+  border-radius: 12px;
 }
 
 #spacer {
-  width: 80%;
-  opacity: 0;
-  margin: auto;
-  margin-bottom: 2%;
-  margin-top: 112px;
+  height: 136px;
 }
 
 .year {
