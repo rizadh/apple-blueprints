@@ -10,13 +10,13 @@ function ProductItem({ product }) {
     <>
       <li>
         <a href='#' className={status + '-product'} onClick={showModal}>
-          <i className={status ? 'fas fa-check-circle' : 'far fa-question-circle'}/> {name}
+          <i className={status ? 'fas fa-check-circle' : 'far fa-question-circle'} /> {name}
         </a>
       </li>
       {showDetails && (
         <Modal>
           <div className="overlay" />
-          <ProductContainer product={product} onDismiss={closeModal}/>
+          <ProductContainer product={product} onDismiss={closeModal} />
         </Modal>
       )}
     </>
@@ -26,8 +26,8 @@ function ProductItem({ product }) {
 function MonthCard({ month, products, status }) {
   return (
     <ul className="item">
-    {month} <span className="counter">{products.length}</span>
-    {products.map(product => <ProductItem key={product.name} product={product} />)}
+      {month} <span className="counter">{products.length}</span>
+      {products.map(product => <ProductItem key={product.name} product={product} />)}
     </ul>
   )
 }
@@ -37,7 +37,7 @@ function YearCard({ months, year }) {
     <>
       <div className="year">{year}</div>
       <div className="container">
-        {months.map(({ name, products }) => <MonthCard key={name} month={name} products={products}/>)}
+        {months.map(({ name, products }) => <MonthCard key={name} month={name} products={products} />)}
       </div>
     </>
   )
@@ -47,13 +47,13 @@ function ProductContainer({ product: { name, status, description, features, sour
   return (
     <div className="product-container">
 
-      <i className={status ? 'fas fa-check-circle product-status released-product' : 'far fa-question-circle product-status rumoured-product'}/>
+      <i className={status ? 'fas fa-check-circle product-status released-product' : 'far fa-question-circle product-status rumoured-product'} />
       <div className={status ? 'product-status released-product' : 'product-status rumoured-product'}>&nbsp;{status ? 'Released' : 'Rumoured'}</div>
 
       <div className="product-name">{name}</div>
       <div className="product-description">{description}</div>
 
-      { features &&
+      {features &&
         <div className="product-header">
           Features
           <ul className="product-features">
@@ -61,7 +61,7 @@ function ProductContainer({ product: { name, status, description, features, sour
           </ul>
         </div>
       }
-      { sources &&
+      {sources &&
         <div className="product-header">
           Sources
           <ul className="product-features">
@@ -90,7 +90,7 @@ function Modal({ children }) {
 }
 
 function App() {
-  return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months}/>)
+  return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />)
 }
 
 ReactDOM.render(<App />, document.querySelector('.wrapper'))

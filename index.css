@@ -1,40 +1,39 @@
-
 body {
   --site-background: white;
-  --navbar-background: rgba(255,204,0,0.8);
-  --navbar-border: rgba(0,0,0,0.1);
+  --navbar-background: rgba(255, 204, 0, 0.8);
+  --navbar-border: rgba(0, 0, 0, 0.1);
   --text-primary: black;
   --text-secondary: gray;
-  --month-card-background: rgb(245,245,247);
-  --counter-background: rgba(0,0,0,0.1);
-  --released-product: rgb(8,127,6);
-  --announced-product: rgb(198,105,0);
+  --month-card-background: rgb(245, 245, 247);
+  --counter-background: rgba(0, 0, 0, 0.1);
+  --released-product: rgb(8, 127, 6);
+  --announced-product: rgb(230, 125, 6);
   --rumoured-product: grey;
-  --link: rgb(18,116,224);
-  --overlay: rgba(255,255,255,0.5);
-  --product-container-background: rgb(255,255,255);
-  --okay-button: rgba(0,0,0,0.1);
-  --okay-button-hover: rgba(0,0,0,0.2);
+  --link: rgb(18, 116, 224);
+  --overlay: rgb(0, 0, 0, 0.2);
+  --product-container-background: rgb(255, 255, 255);
+  --okay-button: rgba(0, 0, 0, 0.1);
+  --okay-button-hover: rgba(0, 0, 0, 0.2);
+  --blur-value: 12px;
+  --border-radius: 18px;
   margin: 0;
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
   background-color: var(--site-background);
   color: var(--text-primary);
 }
 @media (prefers-color-scheme: dark) {
   body {
     --site-background: black;
-    --navbar-border: rgba(255,255,255,0.1);
+    --navbar-border: rgba(255, 255, 255, 0.1);
     --text-primary: white;
-    --month-card-background: rgb(28,28,30);
-    --counter-background: rgba(255,255,255,0.1);
-
-    --released-product: rgb(76,175,79);
-    --announced-product: #c66900;
-
-    --overlay: rgba(0,0,0,0.2);
-    --product-container-background: rgb(0,0,0);
-    --okay-button: rgba(255,255,255,0.1);
-    --okay-button-hover: rgba(255,255,255,0.2);
+    --month-card-background: rgb(28, 28, 30);
+    --counter-background: rgba(255, 255, 255, 0.1);
+    --released-product: rgb(76, 175, 79);
+    --announced-product: rgb(198, 105, 0);
+    --overlay: rgba(255, 255, 255, 0.2);
+    --product-container-background: rgb(14, 14, 14);
+    --okay-button: rgba(255, 255, 255, 0.1);
+    --okay-button-hover: rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -48,6 +47,7 @@ body {
   background-color: var(--navbar-background);
   color: black;
   -webkit-backdrop-filter: saturate(200%) blur(20px);
+  backdrop-filter: saturate(200%) blur(20px);
   border-bottom: solid 1px var(--navbar-border);
   transition: 200ms;
 }
@@ -84,7 +84,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-
 }
 
 .container {
@@ -99,7 +98,7 @@ body {
   min-width: 200px;
   padding: 12px 18px;
   margin: 12px 12px 12px;
-  border-radius: 18px;
+  border-radius: var(--border-radius);
   background-color: var(--month-card-background);
   font-size: 36px;
   font-weight: 900;
@@ -138,10 +137,10 @@ a {
   background-color: var(--product-container-background);
   font-weight: bold;
   letter-spacing: -0.5px;
-  box-shadow: 0 0 24px rgba(0,0,0,0.2);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
   overflow: scroll;
   max-height: 80%;
-  border-radius: 18px;
+  border-radius: var(--border-radius);
 }
 
 .product-status {
@@ -199,7 +198,7 @@ ul {
   font-size: 1.4em;
   background-color: var(--okay-button);
   color: var(--text-primary);
-  border-radius: 18px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: 100ms;
 }
@@ -212,11 +211,24 @@ ul {
   display: inline-block;
   height: 100%;
   width: 100%;
-  background-color: var(--overlay);
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(var(--blur-value));
+    backdrop-filter: blur(var(--blur-value));
+  }
 }
 
 #modal-container {
@@ -225,13 +237,12 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   /* Prevent modal container from blocking click events */
   pointer-events: none;
+  z-index: 2;
 }
 
 #modal-container > * {
