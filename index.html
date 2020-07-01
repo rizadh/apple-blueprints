@@ -25,12 +25,28 @@
   <script src="./index.jsx"></script>
 
   <script>
-    var lastScrollTop = 0;
+    let lastTop = 0;
+    let lastScrollPosition = 0;
+    const navbar = document.querySelector('#navbar');
+
     window.addEventListener("scroll", function () {
-      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-      if (st > lastScrollTop) document.querySelector("#navbar").style.top = "-84px";
-      else document.getElementById("navbar").style.top = "0";
-      lastScrollTop = st <= 0 ? 0 : st; // for mobile or negative scrolling
+      // Credit: Neil Philip Whitehead https://stackoverflow.com/a/17698713
+      const maxScrollPosition = Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      ) - window.innerHeight;
+
+      const scrollPosition = window.pageYOffset;
+      const delta = scrollPosition - lastScrollPosition;
+      const newTop = scrollPosition <= 0 ? -scrollPosition : Math.max(0, Math.min(84, lastTop + delta));
+
+      navbar.style.transform = `translateY(-${newTop}px)`;
+
+      lastTop = newTop;
+      lastScrollPosition = Math.min(maxScrollPosition, scrollPosition);
     }, false);
   </script>
 
