@@ -48,7 +48,7 @@ export default [
         products: [
           {
             name: "iPhone SE",
-            status: "rumoured",
+            status: "released",
             description: "",
             features: "",
             sources: "",
