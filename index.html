@@ -10,14 +10,8 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <script
-      src="https://unpkg.com/react@16/umd/react.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-      crossorigin
-    ></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
   </head>
 
   <body>
@@ -30,11 +24,11 @@
     <div class="wrapper"></div>
     <div id="modal-container"></div>
 
-    <div class="button-container">
+    <div class="suggest-button-container">
       <a
         href="mailto:appleblueprints@gmail.com?subject=Edit Suggestion&body=What would you like to change?"
         target="_blank"
-        class="button"
+        class="suggest-button"
         ><i class="fas fa-pencil-alt"></i>&nbsp;&nbsp;Suggest an edit</a
       >
     </div>
@@ -61,10 +55,7 @@
 
           const scrollPosition = window.pageYOffset;
           const delta = scrollPosition - lastScrollPosition;
-          const newTop =
-            scrollPosition <= 0
-              ? -scrollPosition
-              : Math.max(0, Math.min(203, lastTop + delta));
+          const newTop = scrollPosition <= 0 ? -scrollPosition : Math.max(0, Math.min(203, lastTop + delta));
 
           navbar.style.transform = `translateY(-${newTop}px)`;
 

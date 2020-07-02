@@ -10,11 +10,7 @@ export default [
             status: "released",
             description:
               "The 11-inch and 12.9-inch iPad Pro models were updated with a faster A12Z Bionic chip, a new 10MP Ultra Wide camera, a LiDAR depth scanner for improved augmented reality experiences, and more.",
-            features: [
-              "LiDAR Scanner",
-              "Trackpad support to iPadOS",
-              "A12Z Bionic chip",
-            ],
+            features: ["LiDAR Scanner", "Trackpad support to iPadOS", "A12Z Bionic chip"],
             sources: [
               {
                 name: "Apple",
@@ -23,11 +19,7 @@ export default [
               },
             ],
           },
-          {
-            name: "Magic Keyboard",
-            status: "released",
-            description: "",
-          },
+          { name: "Magic Keyboard", status: "released", description: "" },
           {
             name: "MacBook Air",
             status: "released",
@@ -56,7 +48,7 @@ export default [
         products: [
           {
             name: "iPhone SE",
-            status: "released",
+            status: "rumoured",
             description: "",
             features: "",
             sources: "",
@@ -86,11 +78,7 @@ export default [
       },
       {
         name: "unknown",
-        products: [
-          { name: "iMac" },
-          { name: "Apple TV" },
-          { name: "AirPods X" },
-        ],
+        products: [{ name: "iMac" }, { name: "Apple TV" }, { name: "AirPods X" }],
       },
     ],
   },
