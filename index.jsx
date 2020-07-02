@@ -27,14 +27,8 @@ function ProductItem({ product }) {
   return (
     <>
       <li>
-        <a href="#" className={status + "-product"} onClick={showModal}>
-          <i
-            // className={
-            //   status ? "fas fa-check-circle" : "far fa-question-circle"
-            // }
-            className={statusIcons[status]}
-          />{" "}
-          {name}
+        <a className={status + "-product"} onClick={showModal}>
+          <i className={statusIcons[status]} /> {name}
         </a>
       </li>
       {showDetails && (
@@ -104,8 +98,10 @@ function ProductContainer({ product: { name, status, description, features, sour
           </ul>
         </div>
       )}
-      <div className="okay-button" onClick={onDismiss}>
-        Okay
+      <div className="dismiss-button-container">
+        <div className="dismiss-button" onClick={onDismiss}>
+          Dismiss
+        </div>
       </div>
     </div>
   );
