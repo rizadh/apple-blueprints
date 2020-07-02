@@ -1,5 +1,23 @@
 import years from "./data";
 
+// function getStatusIcon( status ) {
+//   if (status == "released") return "fas fa-check-circle";
+//   if (status == "announced") return "fas fa-check";
+//   else return "far fa-question-circle";
+// }
+
+const statusIcons = {
+  released: "fas fa-check-circle",
+  announced: "fas fa-check",
+  rumoured: "far fa-question-circle",
+};
+
+const statusLabels = {
+  released: "Released",
+  announced: "Announced",
+  rumoured: "Rumoured",
+};
+
 function ProductItem({ product }) {
   const { name, status } = product;
   const [showDetails, setShowDetails] = React.useState(false);
@@ -11,9 +29,10 @@ function ProductItem({ product }) {
       <li>
         <a href="#" className={status + "-product"} onClick={showModal}>
           <i
-            className={
-              status ? "fas fa-check-circle" : "far fa-question-circle"
-            }
+            // className={
+            //   status ? "fas fa-check-circle" : "far fa-question-circle"
+            // }
+            className={statusIcons[status]}
           />{" "}
           {name}
         </a>
@@ -28,7 +47,7 @@ function ProductItem({ product }) {
   );
 }
 
-function MonthCard({ month, products, status }) {
+function MonthCard({ month, products }) {
   return (
     <ul className="item">
       {month} <span className="counter">{products.length}</span>
@@ -52,29 +71,12 @@ function YearCard({ months, year }) {
   );
 }
 
-function ProductContainer({
-  product: { name, status, description, features, sources },
-  onDismiss,
-}) {
+function ProductContainer({ product: { name, status, description, features, sources }, onDismiss }) {
   return (
     <div className="product-container">
-      <i
-        className={
-          status
-            ? "fas fa-check-circle product-status released-product"
-            : "far fa-question-circle product-status rumoured-product"
-        }
-      />
-      <div
-        className={
-          status
-            ? "product-status released-product"
-            : "product-status rumoured-product"
-        }
-      >
-        &nbsp;{status ? "Released" : "Rumoured"}
+      <div className={"product-status " + status + "-product"}>
+        <i className={statusIcons[status]} /> {statusLabels[status]}
       </div>
-
       <div className="product-name">{name}</div>
       <div className="product-description">{description}</div>
 
@@ -102,7 +104,6 @@ function ProductContainer({
           </ul>
         </div>
       )}
-
       <div className="okay-button" onClick={onDismiss}>
         Okay
       </div>
@@ -124,9 +125,7 @@ function Modal({ children }) {
 }
 
 function App() {
-  return years.map(({ yearName, months }) => (
-    <YearCard key={yearName} year={yearName} months={months} />
-  ));
+  return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />);
 }
 
 ReactDOM.render(<App />, document.querySelector(".wrapper"));
