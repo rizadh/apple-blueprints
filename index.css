@@ -1,9 +1,9 @@
 body {
   --site-background: white;
   --navbar-background: rgba(255, 204, 0, 0.8);
-  --navbar-border: rgba(0, 0, 0, 0.1);
   --text-primary: black;
   --text-secondary: gray;
+  --text-tertiary: rgb(191, 191, 191);
   --month-card-background: rgb(245, 245, 247);
   --counter-background: rgba(0, 0, 0, 0.1);
   --released-product: rgb(8, 127, 6);
@@ -14,9 +14,10 @@ body {
   --product-container-background: rgb(255, 255, 255);
   --button-background: rgba(0, 0, 0, 0.1);
   --button-background-hover: rgba(0, 0, 0, 0.2);
-  --blur-value: 6px;
+  --blur-value: 12px;
   --border-radius: 18px;
   --transition-time: 100ms;
+  --mobile-viewport: 600px;
   margin: 0;
   font-family: "Helvetica Neue";
   background-color: var(--site-background);
@@ -25,12 +26,11 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     --site-background: black;
-    --navbar-border: rgba(255, 255, 255, 0.1);
     --text-primary: white;
     --month-card-background: rgb(28, 28, 30);
     --counter-background: rgba(255, 255, 255, 0.1);
     --released-product: rgb(76, 175, 79);
-    --announced-product: rgb(198, 105, 0);
+    --announced-product: rgb(224, 120, 0);
     --overlay: rgb(255, 255, 255);
     --product-container-background: rgb(14, 14, 14);
     --button-background: rgba(255, 255, 255, 0.1);
@@ -41,14 +41,14 @@ body {
 #navbar {
   position: fixed;
   z-index: 1;
-  top: 42px;
+  top: 24px;
   left: 42px;
   right: 42px;
   text-align: center;
   background-color: var(--navbar-background);
   color: black;
-  -webkit-backdrop-filter: saturate(200%) blur(20px);
-  backdrop-filter: saturate(200%) blur(20px);
+  -webkit-backdrop-filter: saturate(200%) blur(var(--blur-value));
+  backdrop-filter: saturate(200%) blur(var(--blur-value));
   border-radius: 12px;
 }
 @media (max-width: 600px) {
@@ -61,7 +61,7 @@ body {
 }
 
 #spacer {
-  height: 136px;
+  height: 118px;
 }
 @media (max-width: 600px) {
   #spacer {
@@ -88,6 +88,7 @@ body {
   margin: 12px;
   border-radius: 100px;
   background-color: var(--counter-background);
+  color: var(--text-secondary);
   font-size: 0.7em;
   font-weight: bolder;
   position: absolute;
@@ -126,6 +127,7 @@ body {
 li {
   list-style: none;
   line-height: 90%;
+  margin: 0;
 }
 
 a {
@@ -143,7 +145,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 30px;
+  padding: 30px 30px 18px 30px;
   background-color: var(--product-container-background);
   font-weight: bold;
   letter-spacing: -0.5px;
@@ -172,6 +174,12 @@ a {
 }
 .released-product {
   color: var(--released-product);
+  transition: var(--transition-time);
+}
+.released-product:hover {
+  padding: 4px 8px;
+  background-color: rgba(8, 127, 6, 0.14);
+  border-radius: 6px;
 }
 .product-status.released-product {
   background-color: rgba(8, 127, 6, 0.14);
@@ -179,6 +187,12 @@ a {
 
 .announced-product {
   color: var(--announced-product);
+  transition: var(--transition-time);
+}
+.announced-product:hover {
+  padding: 4px 8px;
+  background-color: rgba(230, 125, 6, 0.14);
+  border-radius: 6px;
 }
 .product-status.announced-product {
   background-color: rgba(230, 125, 6, 0.14);
@@ -186,6 +200,12 @@ a {
 
 .rumoured-product {
   color: var(--rumoured-product);
+  transition: var(--transition-time);
+}
+.rumoured-product:hover {
+  padding: 4px 8px;
+  background-color: rgba(128, 126, 128, 0.14);
+  border-radius: 6px;
 }
 .product-status.rumoured-product {
   background-color: rgba(128, 126, 128, 0.14);
@@ -199,7 +219,8 @@ a {
 
 .product-description {
   margin-top: 4px;
-  font-weight: normal;
+  margin-bottom: 12px;
+  font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 0;
   color: var(--text-secondary);
@@ -265,6 +286,7 @@ ul {
   bottom: 0;
   background-color: var(--overlay);
   opacity: 0;
+  cursor: pointer;
   animation-name: fadeIn;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
@@ -297,7 +319,6 @@ ul {
 
 .suggest-button-container {
   margin-top: 28px;
-  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,6 +332,23 @@ ul {
   border-radius: var(--border-radius);
   transition: var(--transition-time);
 }
+
 .suggest-button:hover {
   background-color: var(--button-background-hover);
+}
+
+#last-updated-container {
+  margin-top: 28px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#last-updated {
+  font-size: 1em;
+  color: var(--text-tertiary);
+  padding: 6px 18px;
+  border-radius: var(--border-radius);
+  transition: var(--transition-time);
 }

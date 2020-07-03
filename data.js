@@ -1,3 +1,4 @@
+
 export default [
   {
     yearName: "2020",
@@ -57,7 +58,84 @@ export default [
       },
       {
         name: "may",
-        products: [{ name: '13" MacBook Pro', status: "released" }],
+        products: [
+          {
+            name: '13" MacBook Pro',
+            status: "released",
+            description: "",
+            features: "",
+            sources: "",
+          },
+        ],
+      },
+      {
+        name: "june",
+        products: [
+          {
+            name: "iOS 14",
+            status: "announced",
+            description: "Coming Fall 2020.",
+            features: [
+              "Widgets on home screen ",
+              "New App Library",
+              "App Clips",
+              "Compact Call UI",
+              "Compact Siri UI",
+              "Translate App",
+              "Cycling and EV routes",
+            ],
+            sources: [
+              {
+                name: "iOS 14 Preview - Apple",
+                link: "https://www.apple.com/ios/ios-14-preview/",
+              },
+            ],
+          },
+          {
+            name: "iPadOS 14",
+            status: "announced",
+            description: "Coming Fall 2020.",
+            features: "",
+            sources: [
+              {
+                name: "iPadOS Preview - Apple",
+                link: "https://www.apple.com/ipados/ipados-preview/",
+              },
+            ],
+          },
+          {
+            name: "macOS Big Sur",
+            status: "announced",
+            description: "Coming Fall 2020.",
+            features: "",
+            sources: [
+              {
+                name: "macOS Big Sur Preview - Apple",
+                link: "https://www.apple.com/macos/big-sur-preview/",
+              },
+            ],
+          },
+
+          {
+            name: "watchOS 7",
+            status: "announced",
+            description: "Coming Fall 2020.",
+            features: "",
+            sources: [
+              {
+                name: "watchOS 7 Preview - Apple",
+                link: "https://www.apple.com/watchos/watchos-preview/",
+              },
+            ],
+          },
+          {
+            name: "tvOS 14",
+            status: "announced",
+            description: "Coming Fall 2020.",
+            features: "",
+            sources: "",
+          },
+        ],
       },
       {
         name: "september",
@@ -98,6 +176,20 @@ export default [
             sources: "",
           },
           {
+            name: "iMac",
+            status: "rumoured",
+            description: "",
+            features: "",
+            sources: "",
+          },
+          {
+            name: 'iPad (10.8")',
+            status: "rumoured",
+            description: "",
+            features: "",
+            sources: "",
+          },
+          {
             name: "AirTags",
             status: "rumoured",
             description: "",
@@ -119,28 +211,7 @@ export default [
             sources: "",
           },
           {
-            name: "HomePod Lite",
-            status: "rumoured",
-            description: "",
-            features: "",
-            sources: "",
-          },
-          {
             name: "Small Wireless Charging Pad",
-            status: "rumoured",
-            description: "",
-            features: "",
-            sources: "",
-          },
-          {
-            name: "iPad Air",
-            status: "rumoured",
-            description: "",
-            features: "",
-            sources: "",
-          },
-          {
-            name: 'iPad (10.8")',
             status: "rumoured",
             description: "",
             features: "",
@@ -151,20 +222,6 @@ export default [
       {
         name: "unknown",
         products: [
-          {
-            name: "iMac",
-            status: "rumoured",
-            description: "",
-            features: "",
-            sources: "",
-          },
-          {
-            name: "Apple TV",
-            status: "rumoured",
-            description: "",
-            features: "",
-            sources: "",
-          },
           {
             name: "AirPods X",
             status: "rumoured",
@@ -190,28 +247,35 @@ export default [
             sources: "",
           },
           {
-            name: "Game Controller",
+            name: "Apple Game Controller",
             status: "rumoured",
             description: "",
             features: "",
             sources: "",
           },
           {
-            name: "iPad Pro",
+            name: "MacBook Pro",
             status: "rumoured",
             description: "",
             features: "",
             sources: "",
           },
           {
-            name: "ARM MacBook",
+            name: 'iPad Air (11")',
             status: "rumoured",
             description: "",
             features: "",
             sources: "",
           },
           {
-            name: 'iPad Mini (8.5")',
+            name: 'iPad Mini 6 (8.5")',
+            status: "rumoured",
+            description: "",
+            features: "",
+            sources: "",
+          },
+          {
+            name: "AirPods 3",
             status: "rumoured",
             description: "",
             features: "",
@@ -231,7 +295,7 @@ export default [
             name: "Apple Glass",
             status: "rumoured",
             description: "",
-            features: "wow",
+            features: "",
             sources: "",
           },
         ],
