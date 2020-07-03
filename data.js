@@ -1,4 +1,3 @@
-
 export default [
   {
     yearName: "2020",
@@ -60,7 +59,7 @@ export default [
         name: "may",
         products: [
           {
-            name: '13" MacBook Pro',
+            name: "13\" MacBook Pro",
             status: "released",
             description: "",
             features: "",
@@ -214,7 +213,7 @@ export default [
             name: "Small Wireless Charging Pad",
             status: "rumoured",
             description: "",
-            features: "",
+            features: ["Supports iPhone, Apple Watch, and AirPods"],
             sources: "",
           },
         ],

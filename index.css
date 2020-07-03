@@ -1,3 +1,5 @@
+
+
 body {
   --site-background: white;
   --navbar-background: rgba(255, 204, 0, 0.8);
@@ -27,6 +29,7 @@ body {
   body {
     --site-background: black;
     --text-primary: white;
+    --text-tertiary: rgb(64, 64, 64);
     --month-card-background: rgb(28, 28, 30);
     --counter-background: rgba(255, 255, 255, 0.1);
     --released-product: rgb(76, 175, 79);
@@ -83,19 +86,6 @@ body {
   }
 }
 
-.counter {
-  padding: 4px 12px;
-  margin: 12px;
-  border-radius: 100px;
-  background-color: var(--counter-background);
-  color: var(--text-secondary);
-  font-size: 0.7em;
-  font-weight: bolder;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .container {
   margin: 0 30px;
   padding: 0;
@@ -116,6 +106,19 @@ body {
   flex-grow: 1;
   flex-basis: 0;
   position: relative;
+}
+
+.counter {
+  padding: 4px 12px;
+  margin: 12px;
+  border-radius: 100px;
+  background-color: var(--counter-background);
+  color: var(--text-secondary);
+  font-size: 0.7em;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 600px) {
@@ -178,11 +181,11 @@ a {
 }
 .released-product:hover {
   padding: 4px 8px;
-  background-color: rgba(8, 127, 6, 0.14);
+  background-color: rgba(8, 127, 6, 0.1);
   border-radius: 6px;
 }
 .product-status.released-product {
-  background-color: rgba(8, 127, 6, 0.14);
+  background-color: rgba(8, 127, 6, 0.1);
 }
 
 .announced-product {
@@ -191,7 +194,7 @@ a {
 }
 .announced-product:hover {
   padding: 4px 8px;
-  background-color: rgba(230, 125, 6, 0.14);
+  background-color: rgba(230, 125, 6, 0.1);
   border-radius: 6px;
 }
 .product-status.announced-product {
@@ -351,4 +354,8 @@ ul {
   padding: 6px 18px;
   border-radius: var(--border-radius);
   transition: var(--transition-time);
+}
+
+::selection {
+  background: rgba(255, 204, 0, 0.8);
 }
