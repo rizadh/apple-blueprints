@@ -164,18 +164,31 @@ a {
   }
 }
 .product-status {
+  padding: 4px 8px;
   display: inline-block;
   margin-bottom: 6px;
   font-size: 1.2em;
+  border-radius: 6px;
 }
 .released-product {
   color: var(--released-product);
 }
+.product-status.released-product {
+  background-color: rgba(8, 127, 6, 0.14);
+}
+
 .announced-product {
   color: var(--announced-product);
 }
+.product-status.announced-product {
+  background-color: rgba(230, 125, 6, 0.14);
+}
+
 .rumoured-product {
   color: var(--rumoured-product);
+}
+.product-status.rumoured-product {
+  background-color: rgba(128, 126, 128, 0.14);
 }
 
 .product-name {
