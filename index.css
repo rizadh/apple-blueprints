@@ -111,6 +111,7 @@ body {
 .counter {
   padding: 4px 12px;
   margin: 12px;
+  box-sizing: border-box:
   border-radius: 100px;
   background-color: var(--counter-background);
   color: var(--text-secondary);
