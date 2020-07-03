@@ -228,24 +228,30 @@ ul {
   font-weight: 400;
 }
 
-.dismiss-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dismiss-button {
-  padding: 6px 18px;
-  margin-top: 40px;
-  font-size: 1.4em;
+.close-button {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 30px;
+  right: 30px;
+  font-size: 1.6em;
+  text-align: center;
+  text-transform: none;
   background-color: var(--button-background);
-  color: var(--text-primary);
-  border-radius: var(--border-radius);
+  color: var(--text-secondary);
   cursor: pointer;
+  border-radius: 100px;
+  border: none;
   transition: var(--transition-time);
 }
-.dismiss-button:hover {
+.close-button:hover {
   background-color: var(--button-background-hover);
+}
+@media (max-width: 600px) {
+  .close-button {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .overlay {

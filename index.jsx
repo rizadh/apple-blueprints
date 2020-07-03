@@ -98,11 +98,7 @@ function ProductContainer({ product: { name, status, description, features, sour
           </ul>
         </div>
       )}
-      <div className="dismiss-button-container">
-        <div className="dismiss-button" onClick={onDismiss}>
-          Dismiss
-        </div>
-      </div>
+      <button class="fas fa-times close-button" onClick={onDismiss}></button>
     </div>
   );
 }
