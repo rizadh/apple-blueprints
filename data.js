@@ -214,7 +214,16 @@ export default [
             status: "rumoured",
             description: "",
             features: ["Supports iPhone, Apple Watch, and AirPods"],
-            sources: "",
+            sources: [
+              {
+                name: "Apple RUMORs (LEAKS)",
+                link: "https://twitter.com/a_rumors0000/status/1279055619190697984",
+              },
+              {
+                name: "Soybeys",
+                link: "https://twitter.com/Soybeys/status/1278827594016673793?s=20",
+              },
+            ],
           },
         ],
       },
