@@ -59,7 +59,7 @@ export default [
         name: "may",
         products: [
           {
-            name: "13\" MacBook Pro",
+            name: '13" MacBook Pro',
             status: "released",
             description: "",
             features: "",
@@ -210,7 +210,7 @@ export default [
             sources: "",
           },
           {
-            name: "Small Wireless Charging Pad",
+            name: "AirPower Mini",
             status: "rumoured",
             description: "",
             features: ["Supports iPhone, Apple Watch, and AirPods"],

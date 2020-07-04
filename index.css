@@ -113,6 +113,7 @@ body {
   margin: 12px;
   box-sizing: border-box;
   border-radius: 100px;
+  box-sizing: border-box;
   background-color: var(--counter-background);
   color: var(--text-secondary);
   font-size: 0.7em;
@@ -186,7 +187,7 @@ a {
   border-radius: 6px;
 }
 .product-status.released-product {
-  background-color: rgba(8, 127, 6, 0.1);
+  background-color: rgba(8, 127, 6, 0.14);
 }
 
 .announced-product {
@@ -208,7 +209,7 @@ a {
 }
 .rumoured-product:hover {
   padding: 4px 8px;
-  background-color: rgba(128, 126, 128, 0.14);
+  background-color: rgba(128, 126, 128, 0.1);
   border-radius: 6px;
 }
 .product-status.rumoured-product {
@@ -242,7 +243,7 @@ ul {
 .product-features li {
   list-style-type: inherit;
   line-height: 1.2;
-  font-size: 0.8em;
+  font-size: 1.4rem;
   font-weight: 400;
   margin: 10px 0;
   color: var(--text-secondary);
@@ -251,6 +252,7 @@ ul {
 .source-link {
   color: var(--link);
   font-weight: 400;
+  font-size: 1.4rem;
 }
 
 .close-button {
