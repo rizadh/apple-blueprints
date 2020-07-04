@@ -210,7 +210,7 @@ export default [
             sources: "",
           },
           {
-            name: "Small Wireless Charging Pad",
+            name: "AirPower Mini",
             status: "rumoured",
             description: "",
             features: ["Supports iPhone, Apple Watch, and AirPods"],
