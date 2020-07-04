@@ -59,7 +59,7 @@ export default [
         name: "may",
         products: [
           {
-            name: "13\" MacBook Pro",
+            name: '13" MacBook Pro',
             status: "released",
             description: "",
             features: "",
