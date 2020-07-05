@@ -10,7 +10,12 @@ export default [
             status: "released",
             description:
               "The 11-inch and 12.9-inch iPad Pro models were updated with a faster A12Z Bionic chip, a new 10MP Ultra Wide camera, a LiDAR depth scanner for improved augmented reality experiences, and more.",
-            features: ["LiDAR Scanner", "Trackpad support for iPadOS", "A12Z Bionic chip"],
+            features: [
+              "A12Z Bionic chip",
+              "12MP wide and 10MP ultra wide rear cameras",
+              "LiDAR Scanner",
+              "Trackpad support for iPadOS",
+            ],
             sources: [
               {
                 name: "Apple",
@@ -22,9 +27,16 @@ export default [
           {
             name: "Magic Keyboard",
             status: "released",
-            description: "",
-            features: "",
-            sources: "",
+            description:
+              "Apple introduced the Magic Keyboard, which is a folio-style case that features a full backlit keyboard and, for the first time, a trackpad.",
+            features: ["Floating design", "130° viewing angle", "Scissor mechanism", "Backlit keyboard"],
+            sources: [
+              {
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/04/new-magic-keyboard-for-ipad-pro-now-available-to-order-begins-arriving-next-week/",
+              },
+            ],
           },
           {
             name: "MacBook Air",
