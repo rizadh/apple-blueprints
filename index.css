@@ -56,8 +56,8 @@ body {
   #navbar {
     font-size: 0.8em;
     top: 24px;
-    left: 30px;
-    right: 30px;
+    left: 20px;
+    right: 20px;
   }
 }
 
@@ -80,7 +80,7 @@ body {
 }
 @media (max-width: 600px) {
   .year {
-    margin-left: 48px;
+    margin-left: 38px;
   }
 }
 
@@ -90,6 +90,11 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 20px;
+  }
 }
 
 .item {
@@ -104,6 +109,11 @@ body {
   flex-grow: 1;
   flex-basis: 0;
   position: relative;
+}
+@media (max-width: 600px) {
+  .item {
+    margin: 10px 0 6px;
+  }
 }
 
 .counter {
@@ -121,12 +131,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-}
-
-@media (max-width: 600px) {
-  .item {
-    margin: 10px 0 6px;
-  }
 }
 
 li {
