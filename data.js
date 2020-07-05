@@ -19,7 +19,13 @@ export default [
               },
             ],
           },
-          { name: "Magic Keyboard", status: "released", description: "" },
+          {
+            name: "Magic Keyboard",
+            status: "released",
+            description: "",
+            features: "",
+            sources: "",
+          },
           {
             name: "MacBook Air",
             status: "released",
