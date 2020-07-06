@@ -526,7 +526,7 @@ export default [
             name: 'iPad Air (11")',
             status: "rumoured",
             description: "",
-            features: ["TouchID under the screen"],
+            features: ["Touch ID under the screen"],
             sources: [
               {
                 name: "L0vetodream",
