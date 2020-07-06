@@ -509,7 +509,7 @@ export default [
           {
             name: '14" MacBook Pro',
             status: "rumoured",
-            description: "",
+            description: "This update is expected to bring a rounded display and thinner bezels to MacBook Pro.",
             features: "",
             sources: [
               {
