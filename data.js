@@ -477,37 +477,73 @@ export default [
           {
             name: "iPhone SE Plus",
             status: "rumoured",
-            description: "",
-            features: "",
-            sources: "",
+            description: "This model will be a larger version of the 2020 iPhone SE.",
+            features: [
+              "5.5-inch display",
+              "iPhone 8 Plus design",
+              "A13 Bionic chip",
+              "4GB RAM",
+              "Red, white, and black colours",
+            ],
+            sources: [
+              {
+                name: "9to5mac",
+                link:
+                  "https://9to5mac.com/2020/04/21/kuo-iphone-12-facing-mass-production-delays-iphone-se-plus-release-postponed/",
+              },
+            ],
           },
           {
             name: "Apple Game Controller",
             status: "rumoured",
-            description: "",
+            description: "Apple is alledgedly developing on their own game controller.",
             features: "",
-            sources: "",
+            sources: [
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1236619087465209858",
+              },
+            ],
           },
           {
-            name: "MacBook Pro",
+            name: '14" MacBook Pro',
             status: "rumoured",
             description: "",
             features: "",
-            sources: "",
+            sources: [
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1259830152994754560",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1259831543494774784",
+              },
+            ],
           },
           {
             name: 'iPad Air (11")',
             status: "rumoured",
             description: "",
-            features: "",
-            sources: "",
+            features: ["TouchID under the screen"],
+            sources: [
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1238002469981974528",
+              },
+            ],
           },
           {
             name: 'iPad Mini 6 (8.5")',
             status: "rumoured",
             description: "",
-            features: "",
-            sources: "",
+            features: ["A12 chip"],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
+              },
+            ],
           },
           {
             name: "AirPods (3rd generation)",
