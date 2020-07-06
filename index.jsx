@@ -70,7 +70,7 @@ function ProductContainer({ product: { name, status, description, features, sour
 
       {features && (
         <div className="product-header">
-          New Features
+          Features
           <ul className="product-features">
             {features.map((feature) => (
               <li key={feature}>{feature}</li>

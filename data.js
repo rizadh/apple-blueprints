@@ -314,7 +314,7 @@ export default [
           {
             name: "Apple Watch Series 6",
             status: "rumoured",
-            description: "This Apple Watch updated will bring a slew of health-related updates, and more.",
+            description: "This Apple Watch update will bring a slew of health-related updates, and more.",
             features: [
               "Starting at $399",
               "More battery life",
@@ -335,7 +335,7 @@ export default [
           {
             name: "iMac",
             status: "rumoured",
-            description: "This refresh to the iMac will bring powerful new upgrades.",
+            description: "This refresh will bring powerful new upgrades to the iMac.",
             features: [
               "iPad Pro design language",
               "Rounded display",
@@ -384,6 +384,28 @@ export default [
               },
             ],
           },
+
+          {
+            name: "AirPower Mini",
+            status: "rumoured",
+            description: "AirPower is expected to be revived alongside the 2020 iPhone models.",
+            features: ["Supports iPhone, Apple Watch, and AirPods"],
+            sources: [
+              {
+                name: "Apple RUMORs (LEAKS)",
+                link: "https://twitter.com/a_rumors0000/status/1279055619190697984",
+              },
+              {
+                name: "Soybeys",
+                link: "https://twitter.com/Soybeys/status/1278827594016673793?s=20",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "october",
+        products: [
           {
             name: "AirPods Studio",
             status: "rumoured",
@@ -408,6 +430,18 @@ export default [
             ],
           },
           {
+            name: "AirPods X",
+            status: "rumoured",
+            description: "These new headphones will be similar to BeatsX, aimed for sports and running.",
+            features: ["Priced at around $200"],
+            sources: [
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
+              },
+            ],
+          },
+          {
             name: "HomePod",
             status: "rumoured",
             description: "This update is expected to be a refresh to the current version of HomePod.",
@@ -428,39 +462,6 @@ export default [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
-              },
-            ],
-          },
-          {
-            name: "AirPower Mini",
-            status: "rumoured",
-            description: "AirPower is expected to be revived alongside the 2020 iPhone models.",
-            features: ["Supports iPhone, Apple Watch, and AirPods"],
-            sources: [
-              {
-                name: "Apple RUMORs (LEAKS)",
-                link: "https://twitter.com/a_rumors0000/status/1279055619190697984",
-              },
-              {
-                name: "Soybeys",
-                link: "https://twitter.com/Soybeys/status/1278827594016673793?s=20",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: "unknown",
-        products: [
-          {
-            name: "AirPods X",
-            status: "rumoured",
-            description: "These new headphones will be similar to BeatsX, aimed for sports and running.",
-            features: ["Priced at around $200"],
-            sources: [
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
               },
             ],
           },
