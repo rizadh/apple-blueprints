@@ -1,11 +1,5 @@
 import years from "./data";
 
-// function getStatusIcon( status ) {
-//   if (status == "released") return "fas fa-check-circle";
-//   if (status == "announced") return "fas fa-check";
-//   else return "far fa-question-circle";
-// }
-
 const statusIcons = {
   released: "fas fa-check-circle",
   announced: "fas fa-check",
@@ -76,7 +70,7 @@ function ProductContainer({ product: { name, status, description, features, sour
 
       {features && (
         <div className="product-header">
-          Features
+          New Features
           <ul className="product-features">
             {features.map((feature) => (
               <li key={feature}>{feature}</li>
