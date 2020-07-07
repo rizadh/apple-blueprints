@@ -59,7 +59,7 @@ export default [
           {
             name: "Mac mini",
             status: "released",
-            description: "Apple refreshed the Mac mini with with double the storage capacity.",
+            description: "Apple refreshed the Mac mini with double the storage capacity.",
             features: ["Double the storage capacity", "$799 configuration comes standard with 256GB"],
             sources: [
               {
