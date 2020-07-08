@@ -333,12 +333,25 @@ export default [
             ],
           },
           {
+            name: '13" MacBook Pro',
+            status: "rumoured",
+            description: "This MacBook Pro is expected to be Apple's first Mac with Apple Silicon.",
+            features: "",
+            sources: [
+              {
+                name: "The Verge",
+                link:
+                  "https://www.theverge.com/2020/6/21/21298607/first-arm-mac-macbook-pro-imac-ming-chi-kuo-wwdc-2020",
+              },
+            ],
+          },
+          {
             name: "iMac",
             status: "rumoured",
-            description: "This refresh will bring powerful new upgrades to the iMac.",
+            description: "This redesign is expected to bring powerful new upgrades to the iMac.",
             features: [
               "iPad Pro design language",
-              "Rounded display",
+              "24-inch rounded corner display",
               "T2 chip",
               "10th-generation Intel Core i9 Comet Lake-S chip",
               "AMD Radeon Pro 5300 graphics card",
@@ -375,7 +388,7 @@ export default [
             name: "AirTags",
             status: "rumoured",
             description:
-              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product.",
+              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
             features: "",
             sources: [
               {
@@ -384,11 +397,11 @@ export default [
               },
             ],
           },
-
           {
             name: "AirPower Mini",
             status: "rumoured",
-            description: "AirPower is expected to be revived alongside the 2020 iPhone models.",
+            description:
+              "Apple is expected to releasing its own wireless charging mat alongside the 2020 iPhone models.",
             features: ["Supports iPhone, Apple Watch, and AirPods"],
             sources: [
               {
@@ -494,23 +507,12 @@ export default [
               },
             ],
           },
-          {
-            name: "Apple Game Controller",
-            status: "rumoured",
-            description: "Apple is alledgedly developing on their own game controller.",
-            features: "",
-            sources: [
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1236619087465209858",
-              },
-            ],
-          },
+
           {
             name: '14" MacBook Pro',
             status: "rumoured",
-            description: "This update is expected to bring a rounded display and thinner bezels to MacBook Pro.",
-            features: "",
+            description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
+            features: ["Mini LED display technology", "Rounded corner display", "Thinner bezels"],
             sources: [
               {
                 name: "L0vetodream",
@@ -519,6 +521,35 @@ export default [
               {
                 name: "Jon Prosser",
                 link: "https://twitter.com/jon_prosser/status/1259831543494774784",
+              },
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
+              },
+            ],
+          },
+          {
+            name: '16" MacBook Pro',
+            status: "rumoured",
+            description: "This update is expected to bring new display technology to the larger MacBook Pro.",
+            features: ["Mini LED display technology", "Rounded corner display", "Thinner bezels"],
+            sources: [
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
+              },
+            ],
+          },
+          {
+            name: "iMac",
+            status: "rumoured",
+            description: "This update is expected bring Apple Silicon to the iMac.",
+            features: "",
+            sources: [
+              {
+                name: "The Verge",
+                link:
+                  "https://www.theverge.com/2020/6/21/21298607/first-arm-mac-macbook-pro-imac-ming-chi-kuo-wwdc-2020",
               },
             ],
           },
@@ -547,6 +578,18 @@ export default [
             ],
           },
           {
+            name: 'iPad Pro (12.9")',
+            status: "rumoured",
+            description: "This update is expected to debut Apple's transition to mini LED.",
+            features: ["Mini LED display technology", "A14X Bionic chip"],
+            sources: [
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
+              },
+            ],
+          },
+          {
             name: "AirPods (3rd generation)",
             status: "rumoured",
             description: "This update will bring minor internal updates to AirPods.",
@@ -567,6 +610,18 @@ export default [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/2020/04/23/kuo-airpods-third-gen-first-half-2020/",
+              },
+            ],
+          },
+          {
+            name: "Game Controller",
+            status: "rumoured",
+            description: "Apple is alledgedly developing on their own game controller.",
+            features: "",
+            sources: [
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1236619087465209858",
               },
             ],
           },
