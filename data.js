@@ -351,16 +351,16 @@ export default [
             description: "This redesign is expected to bring powerful new upgrades to the iMac.",
             features: [
               "iPad Pro design language",
-              "24-inch rounded corner display",
-              "T2 chip",
+              "24-inch & 32-inch rounded corner display",
               "10th-generation Intel Core i9 Comet Lake-S chip",
               "AMD Radeon Pro 5300 graphics card",
+              "T2 chip",
             ],
             sources: [
               {
                 name: "Sonny Dickson",
                 link:
-                  "https://twitter.com/SonnyDickson/status/1270339867491184644?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1270339867491184644%7Ctwgr%5E&ref_url=https%3A%2F%2Fwww.macrumors.com%2F2020%2F06%2F09%2Fimac-redesign-wwdc%2F",
+                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
               },
               {
                 name: "CoinX",
