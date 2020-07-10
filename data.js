@@ -512,7 +512,7 @@ export default [
             name: '14" MacBook Pro',
             status: "rumoured",
             description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
-            features: ["Mini LED display technology", "Rounded corner display", "Thinner bezels"],
+            features: ["Apple silicon chip", "Mini LED display technology", "Rounded corner display", "Thinner bezels"],
             sources: [
               {
                 name: "L0vetodream",
@@ -526,17 +526,37 @@ export default [
                 name: "9to5mac",
                 link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
               },
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
+              },
             ],
           },
           {
             name: '16" MacBook Pro',
             status: "rumoured",
             description: "This update is expected to bring new display technology to the larger MacBook Pro.",
-            features: ["Mini LED display technology", "Rounded corner display", "Thinner bezels"],
+            features: ["Apple silicon chip", "Mini LED display technology", "Rounded corner display", "Thinner bezels"],
             sources: [
               {
                 name: "9to5mac",
                 link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
+              },
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
+              },
+            ],
+          },
+          {
+            name: "MacBook Air",
+            status: "rumoured",
+            description: "This update is expected to bring new Apple silicon to the larger MacBook Air.",
+            features: ["Apple silicon chip"],
+            sources: [
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
               },
             ],
           },
