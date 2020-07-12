@@ -595,6 +595,10 @@ export default [
                 name: "MacRumors",
                 link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
               },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/l0vetodream/status/1238002469981974528",
+              },
             ],
           },
           {
