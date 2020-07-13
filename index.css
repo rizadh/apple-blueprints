@@ -340,9 +340,6 @@ ul {
 
 .footer-button {
   margin: 4px;
-}
-
-#suggest-button {
   background-color: var(--button-background);
   font-size: 1.2em;
   color: var(--text-secondary);
@@ -350,21 +347,7 @@ ul {
   border-radius: var(--border-radius);
   transition: var(--transition-time);
 }
-
-#suggest-button:hover {
-  background-color: var(--button-background-hover);
-}
-
-#donate-button {
-  background-color: var(--button-background);
-  font-size: 1.2em;
-  color: var(--text-secondary);
-  padding: 6px 18px;
-  border-radius: var(--border-radius);
-  transition: var(--transition-time);
-}
-
-#donate-button:hover {
+.footer-button:hover {
   background-color: var(--button-background-hover);
 }
 
