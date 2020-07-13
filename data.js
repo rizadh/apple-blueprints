@@ -131,7 +131,7 @@ export default [
               "App Clips",
               "Compact Siri UI",
               "Compact incoming call screen",
-              "New Translate app",
+              "New translate app",
               "Cycling and EV routes",
             ],
             sources: [
