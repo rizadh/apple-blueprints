@@ -29,7 +29,7 @@ body {
     --site-background: black;
     --text-primary: white;
     --text-tertiary: rgb(64, 64, 64);
-    --month-card-background: rgb(28, 28, 30);
+    --month-card-background: rgb(28, 28, 28);
     --counter-background: rgba(255, 255, 255, 0.05);
     --released-product: rgb(76, 175, 79);
     --announced-product: rgb(224, 120, 0);
@@ -37,6 +37,7 @@ body {
     --product-container-background: rgb(14, 14, 14);
     --button-background: rgba(255, 255, 255, 0.1);
     --button-background-hover: rgba(255, 255, 255, 0.2);
+    --footer-background: rgb(10, 10, 10);
   }
 }
 
