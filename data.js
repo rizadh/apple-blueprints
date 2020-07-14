@@ -240,11 +240,20 @@ export default [
               "Dual rear cameras",
               "Support for 5G (Sub-6GHz)",
               "Aluminum body",
+              "New Lightning to USB-C braided cable",
             ],
             sources: [
               {
                 name: "Tom's Guide",
                 link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
+              },
+              {
+                name: "DuanRui",
+                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
               },
             ],
           },
@@ -261,11 +270,20 @@ export default [
               "Dual rear cameras",
               "Support for 5G (Sub-6GHz)",
               "Aluminum body",
+              "New Lightning to USB-C braided cable",
             ],
             sources: [
               {
                 name: "Tom's Guide",
                 link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
+              },
+              {
+                name: "DuanRui",
+                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
               },
             ],
           },
@@ -282,11 +300,20 @@ export default [
               "Triple rear cameras + LiDAR",
               "Support for 5G (Sub-6GHz, mmWave)",
               "Stainless steel body",
+              "New Lightning to USB-C braided cable",
             ],
             sources: [
               {
                 name: "Tom's Guide",
                 link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
+              },
+              {
+                name: "DuanRui",
+                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
               },
             ],
           },
@@ -303,11 +330,20 @@ export default [
               "Triple rear cameras + LiDAR",
               "Support for 5G (Sub-6GHz, mmWave)",
               "Stainless steel body",
+              "New Lightning to USB-C braided cable",
             ],
             sources: [
               {
                 name: "Tom's Guide",
                 link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
+              },
+              {
+                name: "DuanRui",
+                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
               },
             ],
           },
