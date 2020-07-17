@@ -35,8 +35,8 @@ body {
     --announced-product: rgb(224, 120, 0);
     --overlay: rgb(255, 255, 255);
     --product-container-background: rgb(14, 14, 14);
-    --button-background: rgba(255, 255, 255, 0.1);
-    --button-background-hover: rgba(255, 255, 255, 0.2);
+    --button-background: rgba(255, 255, 255, 0.05);
+    --button-background-hover: rgba(255, 255, 255, 0.1);
     --footer-background: rgb(10, 10, 10);
   }
 }
