@@ -368,51 +368,12 @@ export default [
               },
             ],
           },
+
           {
-            name: '13" MacBook Pro',
-            status: "rumoured",
-            description: "This MacBook Pro is expected to be Apple's first Mac with Apple Silicon.",
-            features: "",
-            sources: [
-              {
-                name: "The Verge",
-                link:
-                  "https://www.theverge.com/2020/6/21/21298607/first-arm-mac-macbook-pro-imac-ming-chi-kuo-wwdc-2020",
-              },
-            ],
-          },
-          {
-            name: "iMac",
-            status: "rumoured",
-            description: "This redesign is expected to bring powerful new upgrades to the iMac.",
-            features: [
-              "iPad Pro design language",
-              "24-inch & 32-inch rounded corner display",
-              "10th-generation Intel Core i9 Comet Lake-S chip",
-              "AMD Radeon Pro 5300 graphics card",
-              "T2 chip",
-            ],
-            sources: [
-              {
-                name: "Sonny Dickson",
-                link:
-                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
-              },
-              {
-                name: "CoinX",
-                link: "https://twitter.com/coiiiiiiiin/status/1235240148452782080",
-              },
-              {
-                name: "_rogame",
-                link: "https://twitter.com/_rogame/status/1278124856924614656",
-              },
-            ],
-          },
-          {
-            name: 'iPad (10.8")',
+            name: "iPad (8th generation)",
             status: "rumoured",
             description: "This could be an update either to the existing 10.2-inch iPad or  10.5-inch iPad Air.",
-            features: "",
+            features: ["10.8-inch display"],
             sources: [
               {
                 name: "MacRumors",
@@ -455,6 +416,46 @@ export default [
       {
         name: "october",
         products: [
+          {
+            name: '13" MacBook Pro',
+            status: "rumoured",
+            description: "This MacBook Pro is expected to be Apple's first Mac with Apple Silicon.",
+            features: "",
+            sources: [
+              {
+                name: "The Verge",
+                link:
+                  "https://www.theverge.com/2020/6/21/21298607/first-arm-mac-macbook-pro-imac-ming-chi-kuo-wwdc-2020",
+              },
+            ],
+          },
+          {
+            name: "iMac",
+            status: "rumoured",
+            description: "This redesign is expected to bring powerful new upgrades to the iMac.",
+            features: [
+              "iPad Pro design language",
+              "24-inch & 32-inch rounded corner display",
+              "10th-generation Intel Core i9 Comet Lake-S chip",
+              "AMD Radeon Pro 5300 graphics card",
+              "T2 chip",
+            ],
+            sources: [
+              {
+                name: "Sonny Dickson",
+                link:
+                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
+              },
+              {
+                name: "CoinX",
+                link: "https://twitter.com/coiiiiiiiin/status/1235240148452782080",
+              },
+              {
+                name: "_rogame",
+                link: "https://twitter.com/_rogame/status/1278124856924614656",
+              },
+            ],
+          },
           {
             name: "AirPods Studio",
             status: "rumoured",
