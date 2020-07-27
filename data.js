@@ -225,6 +225,33 @@ export default [
         ],
       },
       {
+        name: "august",
+        products: [
+          {
+            name: "iMac",
+            status: "rumoured",
+            description: "This update will be the last Intel iMac ahead of the full redesign in September.",
+            features: [
+              "Same existing design",
+              "10th-generation Intel Core i9 Comet Lake-S chip",
+              "AMD Radeon Pro 5300 graphics card",
+              "T2 chip",
+            ],
+            sources: [
+              {
+                name: "Sonny Dickson",
+                link:
+                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1287517052509605890",
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "september",
         products: [
           {
@@ -432,27 +459,13 @@ export default [
           {
             name: "iMac",
             status: "rumoured",
-            description: "This redesign is expected to bring powerful new upgrades to the iMac.",
-            features: [
-              "iPad Pro design language",
-              "24-inch & 32-inch rounded corner display",
-              "10th-generation Intel Core i9 Comet Lake-S chip",
-              "AMD Radeon Pro 5300 graphics card",
-              "T2 chip",
-            ],
+            description: "This update is expected to bring a Apple Silicon and a full redesign to iMac.",
+            features: ["iPad Pro design language", "24-inch & 32-inch rounded corner display", "Apple silicon chip"],
             sources: [
               {
                 name: "Sonny Dickson",
                 link:
                   "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
-              },
-              {
-                name: "CoinX",
-                link: "https://twitter.com/coiiiiiiiin/status/1235240148452782080",
-              },
-              {
-                name: "_rogame",
-                link: "https://twitter.com/_rogame/status/1278124856924614656",
               },
             ],
           },
