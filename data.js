@@ -228,24 +228,26 @@ export default [
         name: "august",
         products: [
           {
-            name: "iMac",
-            status: "rumoured",
-            description: "This update will be the last Intel iMac ahead of the full redesign in September.",
+            name: "iMac (27-inch model)",
+            status: "released",
+            description:
+              "This update brings faster performance and higher quality camera, speakers, and mics to the iMac.",
             features: [
-              "Same existing design",
-              "10th-generation Intel Core i9 Comet Lake-S chip",
-              "AMD Radeon Pro 5300 graphics card",
+              "Faster Intel processors up to 10 cores",
+              "Double the memory capacity",
+              "Next-generation AMD graphics",
+              "New SSDs with four times the storage capacity",
+              "New nano-texture glass option",
+              "1080p FaceTime HD camera",
+              "Higher fidelity speakers",
+              "Studio-quality mics",
+              "True tone",
               "T2 chip",
             ],
             sources: [
               {
-                name: "Sonny Dickson",
-                link:
-                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1287517052509605890",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2020/08/27-inch-imac-gets-a-major-update/",
               },
             ],
           },
@@ -255,7 +257,7 @@ export default [
         name: "september",
         products: [
           {
-            name: 'iPhone 12 (5.4")',
+            name: "iPhone 12",
             status: "rumoured",
             description: "This iPhone will be the entry-level model of the four models releasing this fall.",
             features: [
@@ -285,7 +287,7 @@ export default [
             ],
           },
           {
-            name: 'iPhone 12 Max (6.1")',
+            name: "iPhone 12 Max",
             status: "rumoured",
             description: "This iPhone will be the larger version of the entry-level models releasing this fall.",
             features: [
@@ -315,7 +317,7 @@ export default [
             ],
           },
           {
-            name: 'iPhone 12 Pro (6.1")',
+            name: "iPhone 12 Pro",
             status: "rumoured",
             description: "This iPhone will be the smaller version of the premium models releasing this fall.",
             features: [
@@ -345,7 +347,7 @@ export default [
             ],
           },
           {
-            name: 'iPhone 12 Pro Max (6.7")',
+            name: "iPhone 12 Pro Max",
             status: "rumoured",
             description: "This iPhone will be the larger version of the premium models releasing this fall. ",
             features: [
@@ -422,7 +424,7 @@ export default [
             ],
           },
           {
-            name: "AirPower Mini",
+            name: "AirPower mini",
             status: "rumoured",
             description:
               "Apple is expected to releasing its own wireless charging mat alongside the 2020 iPhone models.",
@@ -529,6 +531,10 @@ export default [
             ],
           },
         ],
+      },
+      {
+        name: "unknown",
+        products: [],
       },
     ],
   },
