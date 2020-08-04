@@ -254,7 +254,7 @@ export default [
         ],
       },
       {
-        name: "september",
+        name: "october",
         products: [
           {
             name: "iPhone 12",
@@ -443,13 +443,13 @@ export default [
         ],
       },
       {
-        name: "october",
+        name: "november",
         products: [
           {
             name: '13" MacBook Pro',
             status: "rumoured",
             description: "This MacBook Pro is expected to be Apple's first Mac with Apple Silicon.",
-            features: "",
+            features: ["Apple silicon chip"],
             sources: [
               {
                 name: "The Verge",
@@ -458,6 +458,12 @@ export default [
               },
             ],
           },
+        ]
+      },
+      {
+        name: "unknown",
+        products: [
+
           {
             name: "iMac",
             status: "rumoured",
@@ -531,10 +537,6 @@ export default [
             ],
           },
         ],
-      },
-      {
-        name: "unknown",
-        products: [],
       },
     ],
   },
