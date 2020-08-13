@@ -254,6 +254,52 @@ export default [
         ],
       },
       {
+        name: "september",
+        products: [
+          {
+            name: "Apple Watch Series 6",
+            status: "rumoured",
+            description: "This Apple Watch update will bring a slew of health-related updates, and more.",
+            features: [
+              "Starting at $399",
+              "More battery life",
+              "Sleep tracking",
+              "Blood oxygen detection",
+              "Mental health features",
+              "MicroLED display",
+              "Optical sensor",
+              "Better performance and water resistance",
+            ],
+            sources: [
+              {
+                name: "Tom's Guide",
+                link: "https://www.tomsguide.com/news/apple-watch-6",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+              },
+            ],
+          },
+          {
+            name: "iPad (8th generation)",
+            status: "rumoured",
+            description: "This could be an update either to the existing 10.2-inch iPad or  10.5-inch iPad Air.",
+            features: ["10.8-inch display"],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "october",
         products: [
           {
@@ -283,6 +329,10 @@ export default [
               {
                 name: "DuanRui",
                 link: "https://twitter.com/duanrui1205/status/1283085822724456449",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
               },
             ],
           },
@@ -314,6 +364,10 @@ export default [
                 name: "DuanRui",
                 link: "https://twitter.com/duanrui1205/status/1283085822724456449",
               },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+              },
             ],
           },
           {
@@ -343,6 +397,10 @@ export default [
               {
                 name: "DuanRui",
                 link: "https://twitter.com/duanrui1205/status/1283085822724456449",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
               },
             ],
           },
@@ -374,42 +432,13 @@ export default [
                 name: "DuanRui",
                 link: "https://twitter.com/duanrui1205/status/1283085822724456449",
               },
-            ],
-          },
-          {
-            name: "Apple Watch Series 6",
-            status: "rumoured",
-            description: "This Apple Watch update will bring a slew of health-related updates, and more.",
-            features: [
-              "Starting at $399",
-              "More battery life",
-              "Sleep tracking",
-              "Blood oxygen detection",
-              "Mental health features",
-              "MicroLED display",
-              "Optical sensor",
-              "Better performance and water resistance",
-            ],
-            sources: [
               {
-                name: "Tom's Guide",
-                link: "https://www.tomsguide.com/news/apple-watch-6",
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
               },
             ],
           },
 
-          {
-            name: "iPad (8th generation)",
-            status: "rumoured",
-            description: "This could be an update either to the existing 10.2-inch iPad or  10.5-inch iPad Air.",
-            features: ["10.8-inch display"],
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
-              },
-            ],
-          },
           {
             name: "AirTags",
             status: "rumoured",
@@ -458,12 +487,11 @@ export default [
               },
             ],
           },
-        ]
+        ],
       },
       {
         name: "unknown",
         products: [
-
           {
             name: "iMac",
             status: "rumoured",
