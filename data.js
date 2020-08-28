@@ -284,7 +284,7 @@ export default [
           {
             name: "iPad (8th generation)",
             status: "rumoured",
-            description: "This could be an update either to the existing 10.2-inch iPad or  10.5-inch iPad Air.",
+            description: "This update is expected to refresh the existing iPad.",
             features: ["10.8-inch display"],
             sources: [
               {
@@ -294,6 +294,29 @@ export default [
               {
                 name: "Jon Prosser",
                 link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+              },
+            ],
+          },
+          {
+            name: "iPad Air (4th generation)",
+            status: "rumoured",
+            description: "This update is expected to bring the iPad Pro design to iPad Air.",
+            features: [
+              "Full-screen design",
+              "Rounded corner display",
+              "Touch ID on power button",
+              "Magic Keyboard support",
+              "Apple Pencil 2 support",
+              "USB-C connector",
+            ],
+            sources: [
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1298648130515357696",
+              },
+              {
+                name: "DuanRui",
+                link: "https://twitter.com/duanrui1205/status/1298842866962186240",
               },
             ],
           },
