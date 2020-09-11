@@ -564,18 +564,6 @@ export default [
             ],
           },
           {
-            name: "HomePod",
-            status: "rumoured",
-            description: "This update is expected to be a refresh to the current version of HomePod.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
-              },
-            ],
-          },
-          {
             name: "HomePod mini",
             status: "rumoured",
             description: "This smaller version is expected to be a low-cost version of the HomePod.",
