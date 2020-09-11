@@ -518,7 +518,7 @@ export default [
           {
             name: "iMac",
             status: "rumoured",
-            description: "This update is expected to bring a Apple Silicon and a full redesign to iMac.",
+            description: "This update is expected to redesign and bring Apple silicon chips to iMac.",
             features: ["iPad Pro design language", "24-inch & 32-inch rounded corner display", "Apple silicon chip"],
             sources: [
               {
@@ -666,19 +666,6 @@ export default [
               {
                 name: "9to5mac",
                 link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
-              },
-            ],
-          },
-          {
-            name: "iMac",
-            status: "rumoured",
-            description: "This update is expected bring Apple Silicon to the iMac.",
-            features: "",
-            sources: [
-              {
-                name: "The Verge",
-                link:
-                  "https://www.theverge.com/2020/6/21/21298607/first-arm-mac-macbook-pro-imac-ming-chi-kuo-wwdc-2020",
               },
             ],
           },
