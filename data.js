@@ -582,8 +582,8 @@ export default [
             features: ["Faster processors", "New Apple TV remote with tracking capabilites"],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/08/31/bloomberg-apple-tv-new-remote/",
               },
             ],
           },
