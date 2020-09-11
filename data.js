@@ -302,8 +302,8 @@ export default [
             status: "rumoured",
             description: "This update is expected to bring the iPad Pro design to iPad Air.",
             features: [
-              "Full-screen design",
-              "Rounded corner display",
+              "11-inch rounded corner display",
+              "Thinner bezels",
               "Touch ID on power button",
               "Magic Keyboard support",
               "Apple Pencil 2 support",
