@@ -575,6 +575,18 @@ export default [
               },
             ],
           },
+          {
+            name: "Apple TV",
+            status: "rumoured",
+            description: "This version ",
+            features: ["Faster processors", "New Apple TV remote with tracking capabilites"],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
+              },
+            ],
+          },
         ],
       },
     ],
