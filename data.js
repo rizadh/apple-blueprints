@@ -578,7 +578,7 @@ export default [
           {
             name: "Apple TV",
             status: "rumoured",
-            description: "This version ",
+            description: "Apple is expected to refresh the Apple TV with updated processors and a new remote.",
             features: ["Faster processors", "New Apple TV remote with tracking capabilites"],
             sources: [
               {
