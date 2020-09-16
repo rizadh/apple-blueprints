@@ -122,7 +122,7 @@ export default [
         products: [
           {
             name: "iOS 14",
-            status: "announced",
+            status: "released",
             description:
               "Apple introduced iOS 14, which brings major updates to the home screen, new features, and other UI tweaks.",
             features: [
@@ -143,7 +143,7 @@ export default [
           },
           {
             name: "iPadOS 14",
-            status: "announced",
+            status: "released",
             description:
               "Apple introduced iPadOS 14, which brings updates similar to iOS 14 and new features designed specifically for iPad.",
             features: [
@@ -185,7 +185,7 @@ export default [
 
           {
             name: "watchOS 7",
-            status: "announced",
+            status: "released",
             description:
               "Apple introduced watchOS 7, which brings significant personalization, health, and fitness features to Apple Watch.",
             features: [
@@ -205,7 +205,7 @@ export default [
           },
           {
             name: "tvOS 14",
-            status: "announced",
+            status: "released",
             description:
               "Apple introduced tvOS 14, which brings minors updates like HomeKit intergreation, support for multiple users for Apple Arcade games, and more.",
             features: [
@@ -258,65 +258,73 @@ export default [
         products: [
           {
             name: "Apple Watch Series 6",
-            status: "rumoured",
-            description: "This Apple Watch update will bring a slew of health-related updates, and more.",
+            status: "announced",
+            description: "This update brings a new blood oxygen sensors, altimeter, and new colors to Apple Watch.",
             features: [
+              "Blood oxygen sensor",
+              "S6 chip",
+              "U1 chip",
+              "2.5x brighter always-on display",
+              "Always-on altimeter",
+              "New colors: Blue and PRODUCT(RED)",
               "Starting at $399",
-              "More battery life",
-              "Sleep tracking",
-              "Blood oxygen detection",
-              "Mental health features",
-              "MicroLED display",
-              "Optical sensor",
-              "Better performance and water resistance",
             ],
             sources: [
               {
-                name: "Tom's Guide",
-                link: "https://www.tomsguide.com/news/apple-watch-6",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
               },
+            ],
+          },
+          {
+            name: "Apple Watch SE",
+            status: "announced",
+            description:
+              "This cheaper model features essential features of Apple Watch with a modern design and cheaper price.",
+            features: ["S5 chip", "No ECG", "No always-on display", "Starting at $279"],
+            sources: [
               {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/09/apple-watch-se-the-ultimate-combination-of-design-function-and-value/",
               },
             ],
           },
           {
             name: "iPad (8th generation)",
-            status: "rumoured",
-            description: "This update is expected to refresh the existing iPad.",
-            features: ["10.8-inch display"],
+            status: "announced",
+            description: "This update is brings new internal to the exiting iPad.",
+            features: ["10.2-inch display", "A12 Bionic chip", "Starting at $329"],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/09/apple-introduces-eighth-generation-ipad-with-a-huge-jump-in-performance/",
               },
             ],
           },
           {
             name: "iPad Air (4th generation)",
-            status: "rumoured",
-            description: "This update is expected to bring the iPad Pro design to iPad Air.",
+            status: "announced",
+            description: "This update brings iPad Pro-like design and features to the iPad Air.",
             features: [
-              "11-inch rounded corner display",
-              "Thinner bezels",
+              "All-screen design",
+              "Larger 10.9-inch display",
+              "A14 Bionic chip",
+              "12MP rear camera",
               "Touch ID on power button",
               "Magic Keyboard support",
-              "Apple Pencil 2 support",
               "USB-C connector",
+              "3 new colors: Rose Gold, Green, and Sky Blue",
+              "Starting from 64GB",
+              "Starting at $599",
             ],
             sources: [
               {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1298648130515357696",
-              },
-              {
-                name: "DuanRui",
-                link: "https://twitter.com/duanrui1205/status/1298842866962186240",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/09/apple-unveils-all-new-ipad-air-with-a14-bionic-apples-most-advanced-chip/",
               },
             ],
           },
@@ -461,7 +469,29 @@ export default [
               },
             ],
           },
-
+          {
+            name: "AirPods Studio",
+            status: "rumoured",
+            description: "AirPods Studio is Apple's upcoming over-ear headphones.",
+            features: [
+              "Active noise cancellation",
+              "Transparency Mode",
+              "Equalizer settings",
+              "Head and neck detection",
+              "Swappable ear cups and padding",
+              "Priced at $349",
+            ],
+            sources: [
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1259097894025662464?lang=en",
+              },
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/05/11/airpods-studio-features-exclusive/",
+              },
+            ],
+          },
           {
             name: "AirTags",
             status: "rumoured",
@@ -498,15 +528,14 @@ export default [
         name: "november",
         products: [
           {
-            name: '13" MacBook Pro',
+            name: "12-inch MacBook",
             status: "rumoured",
-            description: "This MacBook Pro is expected to be Apple's first Mac with Apple Silicon.",
-            features: ["Apple silicon chip"],
+            description: "This MacBook is expected to be Apple's first Mac with Apple Silicon.",
+            features: ["Apple silicon chip", "Possible redesign with rounded corner display"],
             sources: [
               {
-                name: "The Verge",
-                link:
-                  "https://www.theverge.com/2020/6/21/21298607/first-arm-mac-macbook-pro-imac-ming-chi-kuo-wwdc-2020",
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/08/31/12-inch-macbook-returning/",
               },
             ],
           },
@@ -529,29 +558,6 @@ export default [
             ],
           },
           {
-            name: "AirPods Studio",
-            status: "rumoured",
-            description: "AirPods Studio is Apple's upcoming over-ear headphones.",
-            features: [
-              "Active noise cancellation",
-              "Transparency Mode",
-              "Equalizer settings",
-              "Head and neck detection",
-              "Swappable ear cups and padding",
-              "Priced at $349",
-            ],
-            sources: [
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1259097894025662464?lang=en",
-              },
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/05/11/airpods-studio-features-exclusive/",
-              },
-            ],
-          },
-          {
             name: "AirPods X",
             status: "rumoured",
             description: "These new headphones will be similar to BeatsX, aimed for sports and running.",
@@ -560,18 +566,6 @@ export default [
               {
                 name: "Jon Prosser",
                 link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
-              },
-            ],
-          },
-          {
-            name: "HomePod",
-            status: "rumoured",
-            description: "This update is expected to be a refresh to the current version of HomePod.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
               },
             ],
           },
