@@ -581,6 +581,18 @@ export default [
               },
             ],
           },
+          {
+            name: "Apple TV",
+            status: "rumoured",
+            description: "Apple is expected to refresh the Apple TV with updated processors and a new remote.",
+            features: ["Faster processors", "New Apple TV remote with tracking capabilites"],
+            sources: [
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/08/31/bloomberg-apple-tv-new-remote/",
+              },
+            ],
+          },
         ],
       },
     ],
