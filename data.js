@@ -258,7 +258,7 @@ export default [
         products: [
           {
             name: "Apple Watch Series 6",
-            status: "announced",
+            status: "released",
             description: "This update brings a new blood oxygen sensors, altimeter, and new colors to Apple Watch.",
             features: [
               "Blood oxygen sensor",
@@ -279,7 +279,7 @@ export default [
           },
           {
             name: "Apple Watch SE",
-            status: "announced",
+            status: "released",
             description:
               "This cheaper model features essential features of Apple Watch with a modern design and cheaper price.",
             features: ["S5 chip", "No ECG", "No always-on display", "Starting at $279"],
@@ -293,7 +293,7 @@ export default [
           },
           {
             name: "iPad (8th generation)",
-            status: "announced",
+            status: "released",
             description: "This update is brings new internal to the exiting iPad.",
             features: ["10.2-inch display", "A12 Bionic chip", "Starting at $329"],
             sources: [
