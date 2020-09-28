@@ -334,11 +334,10 @@ export default [
         name: "october",
         products: [
           {
-            name: "iPhone 12",
+            name: "iPhone 12 mini",
             status: "rumoured",
             description: "This iPhone will be the entry-level model of the four models releasing this fall.",
             features: [
-              "Starting at $649",
               "5.4-inch Super Retina OLED display",
               "A14 Bionic chip",
               "4GB RAM",
@@ -347,6 +346,7 @@ export default [
               "Support for 5G (Sub-6GHz)",
               "Aluminum body",
               "New Lightning to USB-C braided cable",
+              "Starting at $699",
             ],
             sources: [
               {
@@ -355,7 +355,7 @@ export default [
               },
               {
                 name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
+                link: "https://twitter.com/L0vetodream/status/1308009156486467584",
               },
               {
                 name: "DuanRui",
@@ -372,7 +372,6 @@ export default [
             status: "rumoured",
             description: "This iPhone will be the larger version of the entry-level models releasing this fall.",
             features: [
-              "Starting at $649",
               "6.1-inch Super Retina OLED display",
               "A14 Bionic chip",
               "4GB RAM",
@@ -381,6 +380,7 @@ export default [
               "Support for 5G (Sub-6GHz)",
               "Aluminum body",
               "New Lightning to USB-C braided cable",
+              "Starting at $799",
             ],
             sources: [
               {
