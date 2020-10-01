@@ -336,7 +336,7 @@ export default [
           {
             name: "iPhone 12 mini",
             status: "rumoured",
-            description: "This iPhone will be the first model to have \"mini\" in its name.",
+            description: "This model will be the first iPhone to have \"mini\" in its name.",
             features: [
               "5.4-inch Super Retina OLED display",
               "A14 Bionic chip",
