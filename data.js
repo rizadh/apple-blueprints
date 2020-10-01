@@ -370,7 +370,7 @@ export default [
           {
             name: "iPhone 12",
             status: "rumoured",
-            description: "This iPhone will be the larger model of the iPhone mini.",
+            description: "This iPhone will be the larger model of the iPhone 12 mini.",
             features: [
               "6.1-inch Super Retina OLED display",
               "A14 Bionic chip",
