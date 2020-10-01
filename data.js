@@ -336,7 +336,7 @@ export default [
           {
             name: "iPhone 12 mini",
             status: "rumoured",
-            description: "This iPhone will be the entry-level model of the four models releasing this fall.",
+            description: "This iPhone will be the first model to have \"mini\" in its name.",
             features: [
               "5.4-inch Super Retina OLED display",
               "A14 Bionic chip",
@@ -368,9 +368,9 @@ export default [
             ],
           },
           {
-            name: "iPhone 12 Max",
+            name: "iPhone 12",
             status: "rumoured",
-            description: "This iPhone will be the larger version of the entry-level models releasing this fall.",
+            description: "This iPhone will be the larger model of the iPhone mini.",
             features: [
               "6.1-inch Super Retina OLED display",
               "A14 Bionic chip",
