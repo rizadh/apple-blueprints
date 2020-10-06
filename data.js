@@ -506,6 +506,18 @@ export default [
             ],
           },
           {
+            name: "HomePod mini",
+            status: "rumoured",
+            description: "This smaller version is expected to be a low-cost version of the HomePod.",
+            features: "",
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
+              },
+            ],
+          },
+          {
             name: "AirPower mini",
             status: "rumoured",
             description:
@@ -566,18 +578,6 @@ export default [
               {
                 name: "Jon Prosser",
                 link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
-              },
-            ],
-          },
-          {
-            name: "HomePod mini",
-            status: "rumoured",
-            description: "This smaller version is expected to be a low-cost version of the HomePod.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
               },
             ],
           },
