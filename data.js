@@ -335,137 +335,114 @@ export default [
         products: [
           {
             name: "iPhone 12 mini",
-            status: "rumoured",
-            description: "This model will be the first iPhone to have \"mini\" in its name.",
+            status: "announced",
             features: [
-              "5.4-inch Super Retina OLED display",
+              "5.4-inch Super Retina XDR display",
+              "New flat-edge design",
+              "New colors",
+              "5G support",
               "A14 Bionic chip",
-              "4GB RAM",
-              "128GB, 256GB storage capacities",
-              "Dual rear cameras",
-              "Support for 5G (Sub-6GHz)",
-              "Aluminum body",
-              "New Lightning to USB-C braided cable",
+              "Upgraded dual-lens rear camera system",
+              "Support for MagSafe accessories",
               "Starting at $699",
             ],
             sources: [
               {
-                name: "Tom's Guide",
-                link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1308009156486467584",
-              },
-              {
-                name: "DuanRui",
-                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
               },
             ],
           },
           {
             name: "iPhone 12",
-            status: "rumoured",
-            description: "This iPhone will be the larger model of the iPhone 12 mini.",
+            status: "announced",
             features: [
-              "6.1-inch Super Retina OLED display",
+              "6.1-inch Super Retina XDR display",
+              "New flat-edge design",
+              "New colors",
+              "5G support",
               "A14 Bionic chip",
-              "4GB RAM",
-              "128GB, 256GB storage capacities",
-              "Dual rear cameras",
-              "Support for 5G (Sub-6GHz)",
-              "Aluminum body",
-              "New Lightning to USB-C braided cable",
+              "Upgraded dual-lens rear camera system",
+              "Support for MagSafe accessories",
               "Starting at $799",
             ],
             sources: [
               {
-                name: "Tom's Guide",
-                link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
-              },
-              {
-                name: "DuanRui",
-                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
               },
             ],
           },
           {
             name: "iPhone 12 Pro",
-            status: "rumoured",
-            description: "This iPhone will be the smaller version of the premium models releasing this fall.",
+            status: "announced",
             features: [
-              "Starting at $999",
-              "6.1-inch Super Retina XDR OLED display",
+              "6.1-inch Super Retina XDR display",
+              "New flat-edge design",
+              "New colours",
+              "5G support",
               "A14 Bionic chip",
-              "6GB RAM",
-              "128GB, 256GB, 512GB storage capacities",
-              "Triple rear cameras + LiDAR",
-              "Support for 5G (Sub-6GHz, mmWave)",
-              "Stainless steel body",
-              "New Lightning to USB-C braided cable",
+              "Upgraded cameras + LiDAR scanner",
+              "Support for MagSafe accessories",
+              "Starting at $999",
             ],
             sources: [
               {
-                name: "Tom's Guide",
-                link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
-              },
-              {
-                name: "DuanRui",
-                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/10/apple-introduces-iphone-12-pro-and-iphone-12-pro-max-with-5g/",
               },
             ],
           },
           {
             name: "iPhone 12 Pro Max",
-            status: "rumoured",
-            description: "This iPhone will be the larger version of the premium models releasing this fall. ",
+            status: "announced",
             features: [
-              "Starting at $1,099",
-              "6.7-inch Super Retina XDR OLED display",
+              "6.7-inch Super Retina XDR display",
+              "New flat-edge design",
+              "New colors",
+              "5G support",
               "A14 Bionic chip",
-              "6GB RAM",
-              "128GB, 256GB, 512GB storage capacities",
-              "Triple rear cameras + LiDAR",
-              "Support for 5G (Sub-6GHz, mmWave)",
-              "Stainless steel body",
-              "New Lightning to USB-C braided cable",
+              "Upgraded cameras + LiDAR scanner",
+              "Support for MagSafe accessories",
+              "Starting at $1,099",
             ],
             sources: [
               {
-                name: "Tom's Guide",
-                link: "https://www.tomsguide.com/news/new-iphone-12-release-date-price-specs-and-leaks",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/10/apple-introduces-iphone-12-pro-and-iphone-12-pro-max-with-5g/",
               },
+            ],
+          },
+          {
+            name: "HomePod mini",
+            status: "announced",
+            features: ["Spherical design", "S5 chip", "3.3-inches tall", "U1 chip", 'New "Intercom" feature'],
+            sources: [
               {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1283090159878017026",
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/10/apple-introduces-homepod-mini-a-powerful-smart-speaker-with-amazing-sound/",
               },
+            ],
+          },
+        ],
+      },
+      {
+        name: "november",
+        products: [
+          {
+            name: "12-inch MacBook",
+            status: "rumoured",
+            description: "This MacBook is expected to be Apple's first Mac with Apple Silicon.",
+            features: ["Apple silicon chip", "Possible redesign with rounded corner display"],
+            sources: [
               {
-                name: "DuanRui",
-                link: "https://twitter.com/duanrui1205/status/1283085822724456449",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1293682812411936768",
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/08/31/12-inch-macbook-returning/",
               },
             ],
           },
@@ -489,53 +466,6 @@ export default [
               {
                 name: "9to5mac",
                 link: "https://9to5mac.com/2020/05/11/airpods-studio-features-exclusive/",
-              },
-            ],
-          },
-          {
-            name: "AirTags",
-            status: "rumoured",
-            description:
-              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/04/02/airtags-apple-support-video/",
-              },
-            ],
-          },
-          {
-            name: "AirPower mini",
-            status: "rumoured",
-            description:
-              "Apple is expected to releasing its own wireless charging mat alongside the 2020 iPhone models.",
-            features: ["Supports iPhone, Apple Watch, and AirPods"],
-            sources: [
-              {
-                name: "Apple RUMORs (LEAKS)",
-                link: "https://twitter.com/a_rumors0000/status/1279055619190697984",
-              },
-              {
-                name: "Soybeys",
-                link: "https://twitter.com/Soybeys/status/1278827594016673793?s=20",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: "november",
-        products: [
-          {
-            name: "12-inch MacBook",
-            status: "rumoured",
-            description: "This MacBook is expected to be Apple's first Mac with Apple Silicon.",
-            features: ["Apple silicon chip", "Possible redesign with rounded corner display"],
-            sources: [
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/08/31/12-inch-macbook-returning/",
               },
             ],
           },
@@ -569,18 +499,7 @@ export default [
               },
             ],
           },
-          {
-            name: "HomePod mini",
-            status: "rumoured",
-            description: "This smaller version is expected to be a low-cost version of the HomePod.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2018/06/25/gurman-higher-end-airpods/",
-              },
-            ],
-          },
+
           {
             name: "Apple TV",
             status: "rumoured",
@@ -622,7 +541,19 @@ export default [
               },
             ],
           },
-
+          {
+            name: "AirTags",
+            status: "rumoured",
+            description:
+              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
+            features: "",
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2020/04/02/airtags-apple-support-video/",
+              },
+            ],
+          },
           {
             name: '14" MacBook Pro',
             status: "rumoured",
