@@ -499,7 +499,6 @@ export default [
               },
             ],
           },
-
           {
             name: "Apple TV",
             status: "rumoured",
