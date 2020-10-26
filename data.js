@@ -447,25 +447,31 @@ export default [
             ],
           },
           {
-            name: "AirPods Studio",
+            name: "13-inch MacBook",
             status: "rumoured",
-            description: "AirPods Studio is Apple's upcoming over-ear headphones.",
-            features: [
-              "Active noise cancellation",
-              "Transparency Mode",
-              "Equalizer settings",
-              "Head and neck detection",
-              "Swappable ear cups and padding",
-              "Priced at $349",
-            ],
+            description: "This MacBook is expected to be Apple's first MacBook Pro with Apple Silicon.",
+            features: ["Apple silicon chip"],
             sources: [
               {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1259097894025662464?lang=en",
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2020/10/26/2020-16-inch-macbook-pro-boot-camp/",
+              },
+            ],
+          },
+          {
+            name: "AirTags",
+            status: "rumoured",
+            description:
+              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
+            features: "",
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2020/04/02/airtags-apple-support-video/",
               },
               {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/05/11/airpods-studio-features-exclusive/",
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1319665420387889152",
               },
             ],
           },
@@ -519,6 +525,52 @@ export default [
     yearName: "2021",
     months: [
       {
+        name: "march",
+        products: [
+          {
+            name: "AirPods (3rd generation)",
+            status: "rumoured",
+            description: "This update will bring the AirPods Pro form factor the new low-end AirPods.",
+            features: [
+              "Same design as AirPods Pro",
+              "Shorter stem and replaceable ear tips",
+              "Better battery life",
+              "No noise cancelling",
+            ],
+            sources: [
+              {
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
+              },
+            ],
+          },
+          {
+            name: "AirPods Studio",
+            status: "rumoured",
+            description: "AirPods Studio is Apple's upcoming over-ear headphones.",
+            features: [
+              "Active noise cancellation",
+              "Transparency Mode",
+              "Equalizer settings",
+              "Head and neck detection",
+              "Swappable ear cups and padding",
+              "Priced at $349",
+            ],
+            sources: [
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1259097894025662464?lang=en",
+              },
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/05/11/airpods-studio-features-exclusive/",
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "unknown",
         products: [
           {
@@ -537,19 +589,6 @@ export default [
                 name: "9to5mac",
                 link:
                   "https://9to5mac.com/2020/04/21/kuo-iphone-12-facing-mass-production-delays-iphone-se-plus-release-postponed/",
-              },
-            ],
-          },
-          {
-            name: "AirTags",
-            status: "rumoured",
-            description:
-              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/04/02/airtags-apple-support-video/",
               },
             ],
           },
@@ -645,27 +684,17 @@ export default [
               },
             ],
           },
-          {
-            name: "AirPods (3rd generation)",
-            status: "rumoured",
-            description: "This update will bring minor internal updates to AirPods.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/04/23/kuo-airpods-third-gen-first-half-2020/",
-              },
-            ],
-          },
+
           {
             name: "AirPods Pro (2nd generation)",
             status: "rumoured",
-            description: "",
-            features: "",
+            description: "This update is expected to make the earbuds more compact.",
+            features: ["No stem", "Rounded shape"],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/04/23/kuo-airpods-third-gen-first-half-2020/",
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
               },
             ],
           },
