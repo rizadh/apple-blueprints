@@ -306,7 +306,7 @@ export default [
           },
           {
             name: "iPad Air (4th generation)",
-            status: "announced",
+            status: "released",
             description: "This update brings iPad Pro-like design and features to the iPad Air.",
             features: [
               "All-screen design",
@@ -356,7 +356,7 @@ export default [
           },
           {
             name: "iPhone 12",
-            status: "announced",
+            status: "released",
             features: [
               "6.1-inch Super Retina XDR display",
               "New flat-edge design",
@@ -377,7 +377,7 @@ export default [
           },
           {
             name: "iPhone 12 Pro",
-            status: "announced",
+            status: "released",
             features: [
               "6.1-inch Super Retina XDR display",
               "New flat-edge design",
