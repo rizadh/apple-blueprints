@@ -336,6 +336,7 @@ export default [
           {
             name: "iPhone 12 mini",
             status: "announced",
+            description: "This model will be available for preorder on November 6 and available November 13.",
             features: [
               "5.4-inch Super Retina XDR display",
               "New flat-edge design",
@@ -399,6 +400,7 @@ export default [
           {
             name: "iPhone 12 Pro Max",
             status: "announced",
+            description: "This model will be available for preorder on November 6 and available November 13.",
             features: [
               "6.7-inch Super Retina XDR display",
               "New flat-edge design",
@@ -420,6 +422,7 @@ export default [
           {
             name: "HomePod mini",
             status: "announced",
+            description: "The HomePod mini is a low-end model of the original HomePod with a cheaper price.",
             features: ["Spherical design", "S5 chip", "3.3-inches tall", "U1 chip", 'New "Intercom" feature'],
             sources: [
               {
@@ -435,26 +438,51 @@ export default [
         name: "november",
         products: [
           {
-            name: "12-inch MacBook",
+            name: 'MacBook Pro 13"',
             status: "rumoured",
-            description: "This MacBook is expected to be Apple's first Mac with Apple Silicon.",
-            features: ["Apple silicon chip", "Possible redesign with rounded corner display"],
-            sources: [
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/08/31/12-inch-macbook-returning/",
-              },
-            ],
-          },
-          {
-            name: "13-inch MacBook",
-            status: "rumoured",
-            description: "This MacBook is expected to be Apple's first MacBook Pro with Apple Silicon.",
+            description: "This MacBook is expected to be Apple's first MacBook Pro with an Apple silicon chip.",
             features: ["Apple silicon chip"],
             sources: [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/2020/10/26/2020-16-inch-macbook-pro-boot-camp/",
+              },
+              {
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+              },
+            ],
+          },
+          {
+            name: "MacBook Air",
+            status: "rumoured",
+            description: "This update is expected to bring new Apple silicon to the MacBook Air.",
+            features: ["Apple silicon chip"],
+            sources: [
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
+              },
+              {
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+              },
+            ],
+          },
+
+          {
+            name: "Mac Pro",
+            status: "rumoured",
+            description:
+              "This redesigned Mac Pro is expected to have a smaller form factor with an Apple silicon chip.",
+            features: ["Smaller form factor", "Apple silicon chip"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
               },
             ],
           },
@@ -632,18 +660,7 @@ export default [
               },
             ],
           },
-          {
-            name: "MacBook Air",
-            status: "rumoured",
-            description: "This update is expected to bring new Apple silicon to the larger MacBook Air.",
-            features: ["Apple silicon chip"],
-            sources: [
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
-              },
-            ],
-          },
+
           {
             name: 'iPad Air (11")',
             status: "rumoured",
