@@ -438,6 +438,23 @@ export default [
         name: "november",
         products: [
           {
+            name: "MacBook Air",
+            status: "rumoured",
+            description: "This update is expected to bring new Apple silicon to the MacBook Air.",
+            features: ["Apple silicon chip"],
+            sources: [
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
+              },
+              {
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+              },
+            ],
+          },
+          {
             name: 'MacBook Pro 13"',
             status: "rumoured",
             description: "This MacBook is expected to be Apple's first MacBook Pro with an Apple silicon chip.",
@@ -455,23 +472,18 @@ export default [
             ],
           },
           {
-            name: "MacBook Air",
+            name: 'MacBook Pro 16"',
             status: "rumoured",
-            description: "This update is expected to bring new Apple silicon to the MacBook Air.",
+            description: "This MacBook is expected to be Apple's first MacBook Pro with an Apple silicon chip.",
             features: ["Apple silicon chip"],
             sources: [
               {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
-              },
-              {
                 name: "Bloomberg",
                 link:
-                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+                  "https://www.bloomberg.com/amp/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
               },
             ],
           },
-
           {
             name: "Mac Pro",
             status: "rumoured",
@@ -486,53 +498,11 @@ export default [
               },
             ],
           },
-          {
-            name: "AirTags",
-            status: "rumoured",
-            description:
-              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/04/02/airtags-apple-support-video/",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1319665420387889152",
-              },
-            ],
-          },
         ],
       },
       {
         name: "unknown",
         products: [
-          {
-            name: "iMac",
-            status: "rumoured",
-            description: "This update is expected to redesign and bring Apple silicon chips to iMac.",
-            features: ["iPad Pro design language", "24-inch & 32-inch rounded corner display", "Apple silicon chip"],
-            sources: [
-              {
-                name: "Sonny Dickson",
-                link:
-                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
-              },
-            ],
-          },
-          {
-            name: "AirPods X",
-            status: "rumoured",
-            description: "These new headphones will be similar to BeatsX, aimed for sports and running.",
-            features: ["Priced at around $200"],
-            sources: [
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
-              },
-            ],
-          },
           {
             name: "Apple TV",
             status: "rumoured",
@@ -596,6 +566,23 @@ export default [
               },
             ],
           },
+          {
+            name: "AirTags",
+            status: "rumoured",
+            description:
+              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
+            features: "",
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2020/04/02/airtags-apple-support-video/",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1319665420387889152",
+              },
+            ],
+          },
         ],
       },
       {
@@ -621,7 +608,7 @@ export default [
             ],
           },
           {
-            name: '14" MacBook Pro',
+            name: 'MacBook Pro 14"',
             status: "rumoured",
             description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
             features: ["Apple silicon chip", "Mini LED display technology", "Rounded corner display", "Thinner bezels"],
@@ -645,7 +632,7 @@ export default [
             ],
           },
           {
-            name: '16" MacBook Pro',
+            name: 'MacBook Pro 16"',
             status: "rumoured",
             description: "This update is expected to bring new display technology to the larger MacBook Pro.",
             features: ["Apple silicon chip", "Mini LED display technology", "Rounded corner display", "Thinner bezels"],
@@ -660,7 +647,19 @@ export default [
               },
             ],
           },
-
+          {
+            name: "iMac",
+            status: "rumoured",
+            description: "This update is expected to redesign and bring Apple silicon chips to iMac.",
+            features: ["iPad Pro design language", "24-inch & 32-inch rounded corner display", "Apple silicon chip"],
+            sources: [
+              {
+                name: "Sonny Dickson",
+                link:
+                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
+              },
+            ],
+          },
           {
             name: 'iPad Air (11")',
             status: "rumoured",
@@ -701,7 +700,6 @@ export default [
               },
             ],
           },
-
           {
             name: "AirPods Pro (2nd generation)",
             status: "rumoured",
@@ -712,6 +710,18 @@ export default [
                 name: "Bloomberg",
                 link:
                   "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
+              },
+            ],
+          },
+          {
+            name: "AirPods X",
+            status: "rumoured",
+            description: "These new headphones will be similar to BeatsX, aimed for sports and running.",
+            features: ["Priced at around $200"],
+            sources: [
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
               },
             ],
           },
