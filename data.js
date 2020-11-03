@@ -484,20 +484,6 @@ export default [
               },
             ],
           },
-          {
-            name: "Mac Pro",
-            status: "rumoured",
-            description:
-              "This redesigned Mac Pro is expected to have a smaller form factor with an Apple silicon chip.",
-            features: ["Smaller form factor", "Apple silicon chip"],
-            sources: [
-              {
-                name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
-              },
-            ],
-          },
         ],
       },
       {
@@ -657,6 +643,20 @@ export default [
                 name: "Sonny Dickson",
                 link:
                   "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
+              },
+            ],
+          },
+          {
+            name: "Mac Pro",
+            status: "rumoured",
+            description:
+              "This redesigned Mac Pro is expected to have a smaller form factor with an Apple silicon chip.",
+            features: ["Smaller form factor", "Apple silicon chip"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
               },
             ],
           },
