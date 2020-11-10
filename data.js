@@ -439,48 +439,68 @@ export default [
         products: [
           {
             name: "MacBook Air",
-            status: "rumoured",
-            description: "This update is expected to bring new Apple silicon to the MacBook Air.",
-            features: ["Apple silicon chip"],
+            status: "announced",
+            description: "This update brings Apple's new M1 chip to MacBook Air.",
+            features: [
+              "Apple-designed M1 chip with 8‑core CPU and 8‑core GPU",
+              "A completely silent, fanless design",
+              "Up to 3.5x faster CPU, up to 5x faster graphics, and up to 2x faster SSD",
+              "Up to 9x faster machine learning",
+              "13-inch Retina display with True Tone and P3 wide color gamut support",
+              "Up to 2TB of SSD storage and up to 16GB of memory",
+              "Up to 18 hours of battery life",
+              "Two Thunderbolt ports with USB 4 support",
+              "Magic Keyboard, Force Touch trackpad, and Touch ID",
+              "Wi-Fi 6",
+              "Starting at $999 USD",
+            ],
             sources: [
               {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
-              },
-              {
-                name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2020/11/introducing-the-next-generation-of-mac/",
               },
             ],
           },
           {
             name: 'MacBook Pro 13"',
-            status: "rumoured",
-            description: "This MacBook is expected to be Apple's first MacBook Pro with an Apple silicon chip.",
-            features: ["Apple silicon chip"],
+            status: "announced",
+            description: "This update brings Apple's new M1 chip to MacBook Pro.",
+            features: [
+              "Apple-designed M1 chip with 8‑core CPU and 8‑core GPU",
+              "Compile code in Xcode up to three times faster",
+              "13-inch Retina display with True Tone and P3 wide color gamut support",
+              "Higher quality mics",
+              "Two Thunderbolt ports with USB 4 support",
+              "Magic Keyboard",
+              "Starting at $1,299 USD",
+            ],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/10/26/2020-16-inch-macbook-pro-boot-camp/",
-              },
-              {
-                name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2020/11/introducing-the-next-generation-of-mac/",
               },
             ],
           },
           {
-            name: 'MacBook Pro 16"',
-            status: "rumoured",
-            description: "This MacBook is expected to be Apple's first MacBook Pro with an Apple silicon chip.",
-            features: ["Apple silicon chip"],
+            name: "Mac mini",
+            status: "announced",
+            description: "This update brings Apple's new M1 chip to Mac mini.",
+            features: [
+              "Apple-designed M1 chip with 8‑core CPU",
+              "Faster performance",
+              "Compile code in Xcode up to three times faster",
+              "Play games with up to four times higher frame rates",
+              "Render complex timeline in Final Cut Pro up to six times faster",
+              "Advanced thermal design to sustain performance",
+              "Supports up to two displays",
+              "Supports Wi-Fi 6",
+              "Supports Thunderbolt 3 and USB4 support",
+              "Starting at $699 USD",
+            ],
             sources: [
               {
-                name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/amp/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2020/11/introducing-the-next-generation-of-mac/",
               },
             ],
           },
@@ -630,6 +650,11 @@ export default [
               {
                 name: "9to5mac",
                 link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
+              },
+              {
+                name: "Bloomberg",
+                link:
+                  "https://www.bloomberg.com/amp/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
               },
             ],
           },
