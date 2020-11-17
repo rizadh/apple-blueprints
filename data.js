@@ -336,7 +336,6 @@ export default [
           {
             name: "iPhone 12 mini",
             status: "released",
-            description: "This model will be available for preorder on November 6 and available November 13.",
             features: [
               "5.4-inch Super Retina XDR display",
               "New flat-edge design",
@@ -400,7 +399,6 @@ export default [
           {
             name: "iPhone 12 Pro Max",
             status: "released",
-            description: "This model will be available for preorder on November 6 and available November 13.",
             features: [
               "6.7-inch Super Retina XDR display",
               "New flat-edge design",
