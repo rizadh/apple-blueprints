@@ -163,7 +163,7 @@ export default [
           },
           {
             name: "macOS Big Sur",
-            status: "announced",
+            status: "released",
             description:
               "Apple introduced macOS Big Sur, which brings a refined new design, useful controls, and more customization options.",
             features: [
@@ -335,7 +335,7 @@ export default [
         products: [
           {
             name: "iPhone 12 mini",
-            status: "announced",
+            status: "released",
             description: "This model will be available for preorder on November 6 and available November 13.",
             features: [
               "5.4-inch Super Retina XDR display",
@@ -399,7 +399,7 @@ export default [
           },
           {
             name: "iPhone 12 Pro Max",
-            status: "announced",
+            status: "released",
             description: "This model will be available for preorder on November 6 and available November 13.",
             features: [
               "6.7-inch Super Retina XDR display",
@@ -421,7 +421,7 @@ export default [
           },
           {
             name: "HomePod mini",
-            status: "announced",
+            status: "released",
             description: "The HomePod mini is a low-end model of the original HomePod with a cheaper price.",
             features: ["Spherical design", "S5 chip", "3.3-inches tall", "U1 chip", 'New "Intercom" feature'],
             sources: [
@@ -439,7 +439,7 @@ export default [
         products: [
           {
             name: "MacBook Air",
-            status: "announced",
+            status: "released",
             description: "This update brings Apple's new M1 chip to MacBook Air.",
             features: [
               "Apple-designed M1 chip with 8‑core CPU and 8‑core GPU",
@@ -463,7 +463,7 @@ export default [
           },
           {
             name: 'MacBook Pro 13"',
-            status: "announced",
+            status: "released",
             description: "This update brings Apple's new M1 chip to MacBook Pro.",
             features: [
               "Apple-designed M1 chip with 8‑core CPU and 8‑core GPU",
@@ -483,7 +483,7 @@ export default [
           },
           {
             name: "Mac mini",
-            status: "announced",
+            status: "released",
             description: "This update brings Apple's new M1 chip to Mac mini.",
             features: [
               "Apple-designed M1 chip with 8‑core CPU",
@@ -501,23 +501,6 @@ export default [
               {
                 name: "Apple",
                 link: "https://www.apple.com/newsroom/2020/11/introducing-the-next-generation-of-mac/",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: "unknown",
-        products: [
-          {
-            name: "Apple TV",
-            status: "rumoured",
-            description: "Apple is expected to refresh the Apple TV with updated processors and a new remote.",
-            features: ["Faster processors", "New Apple TV remote with tracking capabilites"],
-            sources: [
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/08/31/bloomberg-apple-tv-new-remote/",
               },
             ],
           },
@@ -722,6 +705,18 @@ export default [
               {
                 name: "9to5mac",
                 link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
+              },
+            ],
+          },
+          {
+            name: "Apple TV",
+            status: "rumoured",
+            description: "Apple is expected to refresh the Apple TV with updated processors and a new remote.",
+            features: ["Faster processors", "New Apple TV remote with tracking capabilites"],
+            sources: [
+              {
+                name: "9to5mac",
+                link: "https://9to5mac.com/2020/08/31/bloomberg-apple-tv-new-remote/",
               },
             ],
           },
