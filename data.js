@@ -504,6 +504,31 @@ export default [
           },
         ],
       },
+      {
+        name: "december",
+        products: [
+          {
+            name: "AirPods Max",
+            status: "announced",
+            description: "AirPods Max is Apple's first over-ear noise-cancelling headphones.",
+            features: [
+              "High-fidelity audio",
+              "Adaptive EQ",
+              "Active Noise Cancellation",
+              "Spatial audio",
+              "Comes in five colors: Space Gray, Silver, Sky Blue, Green, and Pink",
+              "Starting at $549 USD",
+            ],
+            sources: [
+              {
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2020/12/apple-introduces-airpods-max-the-magic-of-airpods-in-a-stunning-over-ear-design/",
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -527,29 +552,6 @@ export default [
                 name: "Bloomberg",
                 link:
                   "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
-              },
-            ],
-          },
-          {
-            name: "AirPods Studio",
-            status: "rumoured",
-            description: "AirPods Studio is Apple's upcoming over-ear headphones.",
-            features: [
-              "Active noise cancellation",
-              "Transparency Mode",
-              "Equalizer settings",
-              "Head and neck detection",
-              "Swappable ear cups and padding",
-              "Priced at $349",
-            ],
-            sources: [
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1259097894025662464?lang=en",
-              },
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/05/11/airpods-studio-features-exclusive/",
               },
             ],
           },
