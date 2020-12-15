@@ -509,7 +509,7 @@ export default [
         products: [
           {
             name: "AirPods Max",
-            status: "announced",
+            status: "released",
             description: "AirPods Max is Apple's first over-ear noise-cancelling headphones.",
             features: [
               "High-fidelity audio",
