@@ -20,7 +20,8 @@ body {
   --transition-time: 100ms;
   --mobile-viewport: 600px;
   margin: 0;
-  font-family: "Helvetica Neue";
+  font-family: -apple-system, system-ui , BlinkMacSystemFont, "Segoe UI","Roboto","Helvetica Neue" ,"Arial" ,"sans-serif";
+  
   background-color: var(--site-background);
   color: var(--text-primary);
 }
