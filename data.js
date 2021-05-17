@@ -99,7 +99,7 @@ export default [
         name: "may",
         products: [
           {
-            name: '13" MacBook Pro',
+            name: 'MacBook Pro 13"',
             status: "released",
             description:
               "Apple updated the 13-inch MacBook Pro with Magic Keyboard, double the storage, and faster performance.",
@@ -228,7 +228,7 @@ export default [
         name: "august",
         products: [
           {
-            name: "iMac (27-inch model)",
+            name: 'iMac 27"',
             status: "released",
             description:
               "This update brings faster performance and higher quality camera, speakers, and mics to the iMac.",
@@ -292,7 +292,7 @@ export default [
             ],
           },
           {
-            name: "iPad (8th generation)",
+            name: "iPad",
             status: "released",
             description: "This update is brings new internal to the exiting iPad.",
             features: ["10.2-inch display", "A12 Bionic chip", "Starting at $329"],
@@ -305,7 +305,7 @@ export default [
             ],
           },
           {
-            name: "iPad Air (4th generation)",
+            name: "iPad Air",
             status: "released",
             description: "This update brings iPad Pro-like design and features to the iPad Air.",
             features: [
@@ -535,10 +535,95 @@ export default [
     yearName: "2021",
     months: [
       {
-        name: "march",
+        name: "april",
         products: [
           {
-            name: "AirPods (3rd generation)",
+            name: 'iMac 24"',
+            status: "released",
+            description:
+              "The new iMac includes the M1 chip, a 24-inch 4.5K Retina display, and offered in 7 bright colours.",
+            features: [
+              "24-inch 4.5K display",
+              "M1 chip",
+              "Touch ID keyboard",
+              "Improved webcam, speakers, and mics",
+              "Starting at $1,299 USD",
+            ],
+            sources: [
+              {
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2021/04/imac-features-all-new-design-in-vibrant-colors-m1-chip-and-45k-retina-display/",
+              },
+            ],
+          },
+          {
+            name: "iPad Pro",
+            status: "announced",
+            description: "The new iPad Pro features the M1 chip, 5G support, and a Liquid Retina XDR display",
+            features: ["Liquid Retina XDR display", "M1 chip", "5G support", "Upgraded 12MP camera"],
+            sources: [
+              {
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2021/04/apple-unveils-new-ipad-pro-with-m1-chip-and-stunning-liquid-retina-xdr-display/",
+              },
+            ],
+          },
+          {
+            name: "iPhone 12 in purple",
+            status: "released",
+            description: "The iPhone 12 and iPhone 12 mini now come in a new purple finish.",
+            features: ["New purple colour"],
+            sources: [
+              {
+                name: "Apple",
+                link:
+                  "https://www.apple.com/newsroom/2021/04/apple-introduces-iphone-12-and-iphone-12-mini-in-a-stunning-new-purple/",
+              },
+            ],
+          },
+          {
+            name: "AirTag",
+            status: "released",
+            description:
+              "AirTags are small tracking tiles with Bluetooth and the Find My network that can be used to find lost items.",
+            features: [
+              "Stainless steel back",
+              "Water and dust-resistant",
+              "Removable back cover",
+              "Precision Finding using U1 chip",
+              "Uses Find My network",
+              "$29 each, $99 for pack of 4",
+            ],
+            sources: [
+              {
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/04/apple-introduces-airtag/",
+              },
+            ],
+          },
+          {
+            name: "Apple TV 4K",
+            status: "announced",
+            description:
+              "The new Apple TV 4K includes an all-new Siri Remote, high frame rate HDR support, and new colour balance technology.",
+            features: ["Siri Remote with clickpad", "High frame rate HDR support", "Colour balance feature"],
+            sources: [
+              {
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/04/apple-unveils-the-next-generation-of-apple-tv-4k/",
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        name: "unknown",
+        products: [
+          {
+            name: "AirPods",
             status: "rumoured",
             description: "This update will bring the AirPods Pro form factor the new low-end AirPods.",
             features: [
@@ -559,7 +644,7 @@ export default [
             name: "AirTags",
             status: "rumoured",
             description:
-              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items. Apple has accidently confirmed the existence of this product in an Apple Support video.",
+              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items.",
             features: "",
             sources: [
               {
@@ -572,11 +657,6 @@ export default [
               },
             ],
           },
-        ],
-      },
-      {
-        name: "unknown",
-        products: [
           {
             name: "iPhone SE Plus",
             status: "rumoured",
@@ -721,7 +801,7 @@ export default [
             ],
           },
           {
-            name: "AirPods Pro (2nd generation)",
+            name: "AirPods Pro",
             status: "rumoured",
             description: "This update is expected to make the earbuds more compact.",
             features: ["No stem", "Rounded shape"],
