@@ -560,7 +560,7 @@ export default [
           {
             name: "iPad Pro",
             status: "released",
-            description: "The new iPad Pro features the M1 chip, 5G support, and a Liquid Retina XDR display",
+            description: "The new iPad Pro features the M1 chip, 5G support, and a Liquid Retina XDR display.",
             features: ["Liquid Retina XDR display", "M1 chip", "5G support", "Upgraded 12MP camera"],
             sources: [
               {
@@ -587,7 +587,7 @@ export default [
             name: "AirTag",
             status: "released",
             description:
-              "AirTags are small tracking tiles with Bluetooth and the Find My network that can be used to find lost items.",
+              "AirTags are small tracking tiles that use Bluetooth and Apple's Find My network which can be used to find lost items.",
             features: [
               "Stainless steel back",
               "Water and dust-resistant",
@@ -637,23 +637,6 @@ export default [
                 name: "Bloomberg",
                 link:
                   "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
-              },
-            ],
-          },
-          {
-            name: "AirTags",
-            status: "rumoured",
-            description:
-              "AirTags are small tracking tiles with Bluetooth connectivity that can be used to find lost items.",
-            features: "",
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/04/02/airtags-apple-support-video/",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1319665420387889152",
               },
             ],
           },
@@ -722,19 +705,6 @@ export default [
             ],
           },
           {
-            name: "iMac",
-            status: "rumoured",
-            description: "This update is expected to redesign and bring Apple silicon chips to iMac.",
-            features: ["iPad Pro design language", "24-inch & 32-inch rounded corner display", "Apple silicon chip"],
-            sources: [
-              {
-                name: "Sonny Dickson",
-                link:
-                  "https://sonnydickson.com/2020/07/07/apples-silicon-strategy-how-apples-custom-chips-may-change-their-product-lineup/",
-              },
-            ],
-          },
-          {
             name: "Mac Pro",
             status: "rumoured",
             description:
@@ -773,30 +743,6 @@ export default [
               {
                 name: "L0vetodream",
                 link: "https://twitter.com/l0vetodream/status/1238002469981974528",
-              },
-            ],
-          },
-          {
-            name: 'iPad Pro (12.9")',
-            status: "rumoured",
-            description: "This update is expected to debut Apple's transition to mini LED.",
-            features: ["Mini LED display technology", "A14X Bionic chip"],
-            sources: [
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
-              },
-            ],
-          },
-          {
-            name: "Apple TV",
-            status: "rumoured",
-            description: "Apple is expected to refresh the Apple TV with updated processors and a new remote.",
-            features: ["Faster processors", "New Apple TV remote with tracking capabilites"],
-            sources: [
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/08/31/bloomberg-apple-tv-new-remote/",
               },
             ],
           },
