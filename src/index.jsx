@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import { render, createPortal } from "react-dom";
 import years from "./resources/data/products";
 
