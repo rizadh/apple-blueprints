@@ -559,7 +559,7 @@ export default [
           },
           {
             name: "iPad Pro",
-            status: "announced",
+            status: "released",
             description: "The new iPad Pro features the M1 chip, 5G support, and a Liquid Retina XDR display",
             features: ["Liquid Retina XDR display", "M1 chip", "5G support", "Upgraded 12MP camera"],
             sources: [
@@ -605,7 +605,7 @@ export default [
           },
           {
             name: "Apple TV 4K",
-            status: "announced",
+            status: "released",
             description:
               "The new Apple TV 4K includes an all-new Siri Remote, high frame rate HDR support, and new colour balance technology.",
             features: ["Siri Remote with clickpad", "High frame rate HDR support", "Colour balance feature"],
