@@ -1,3 +1,5 @@
+import React, { useState, useCallback, useRef } from "react";
+import { render, createPortal } from "react-dom";
 import years from "./resources/data/products";
 
 const statusIcons = {
@@ -14,9 +16,9 @@ const statusLabels = {
 
 function ProductItem({ product }) {
   const { name, status } = product;
-  const [showDetails, setShowDetails] = React.useState(false);
-  const showModal = React.useCallback(() => setShowDetails(true));
-  const closeModal = React.useCallback(() => setShowDetails(false));
+  const [showDetails, setShowDetails] = useState(false);
+  const showModal = useCallback(() => setShowDetails(true));
+  const closeModal = useCallback(() => setShowDetails(false));
 
   return (
     <>
@@ -38,7 +40,7 @@ function ProductItem({ product }) {
 function MonthCard({ month, products }) {
   return (
     <ul className="item">
-      {month} <span className="counter">{products.length}</span>
+      <span className="month">{month}</span> <span className="counter">{products.length}</span>
       {products.map((product) => (
         <ProductItem key={product.name} product={product} />
       ))}
@@ -98,20 +100,20 @@ function ProductContainer({ product: { name, status, description, features, sour
 }
 
 function Modal({ children }) {
-  const element = React.useRef(document.createElement("div"));
+  const element = useRef(document.createElement("div"));
 
-  React.useEffect(() => {
+  useEffect(() => {
     const parentNode = document.querySelector("#modal-container");
     parentNode.appendChild(element.current);
 
     return () => element.current.remove();
   });
 
-  return ReactDOM.createPortal(children, element.current);
+  return createPortal(children, element.current);
 }
 
 function App() {
   return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />);
 }
 
-ReactDOM.render(<App />, document.querySelector(".wrapper"));
+render(<App />, document.querySelector(".wrapper"));
