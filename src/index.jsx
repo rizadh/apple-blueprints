@@ -1,4 +1,4 @@
-import years from "./data";
+import years from "./resources/data/products";
 
 const statusIcons = {
   released: "fas fa-check-circle",
