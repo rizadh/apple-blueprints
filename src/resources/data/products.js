@@ -285,7 +285,7 @@ export default [
           {
             name: "iPad",
             status: "released",
-            description: "This update is brings new internal to the existing iPad.",
+            description: "This update brings new internals to the existing iPad.",
             features: ["10.2-inch display", "A12 Bionic chip", "Starting at $329"],
             sources: [
               {
