@@ -40,7 +40,8 @@ function ProductItem({ product }) {
 function MonthCard({ month, products }) {
   return (
     <ul className="item">
-      <span className="month">{month}</span> <span className="counter">{products.length}</span>
+      <span className="month">{month}</span>
+      {/* <span className="counter">{products.length}</span>  */}
       {products.map((product) => (
         <ProductItem key={product.name} product={product} />
       ))}
