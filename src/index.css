@@ -1,5 +1,5 @@
 body {
-  --site-background: rgb(250,250,250);
+  --site-background: rgb(250, 250, 250);
   --navbar-background: rgba(255, 204, 0, 0.8);
   --text-primary: black;
   --text-secondary: gray;
@@ -14,14 +14,17 @@ body {
   --overlay: rgb(0, 0, 0);
   --product-container-background: rgb(255, 255, 255);
   --button-background: rgba(0, 0, 0, 0.05);
-  --button-background-hover: rgba(0, 0, 0, 0.1);
+  --button-background-hover: rgba(255, 204, 0, 0.1);
+  --button-border-hover: rgb(255, 204, 0);
+  --footer-text-hover: rgb(145, 116, 0);
   --footer-background: rgb(245, 245, 245);
   --blur-value: 12px;
   --border-radius: 18px;
   --transition-time: 100ms;
   --mobile-viewport: 600px;
   margin: 0;
-  font-family: -apple-system, system-ui , BlinkMacSystemFont, "Segoe UI","Roboto","Helvetica Neue" ,"Arial" ,"sans-serif";
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
+    "sans-serif";
   background-color: var(--site-background);
   color: var(--text-primary);
 }
@@ -357,7 +360,9 @@ ul {
 
 .footer-button {
   margin: 6px;
-  background-color: var(--button-background);
+  background-color: var(--footer-background);
+  border: 1px solid;
+  border-color: var(--border-colour);
   font-size: 1.2em;
   color: var(--text-secondary);
   padding: 6px 12px;
@@ -366,6 +371,8 @@ ul {
 }
 .footer-button:hover {
   background-color: var(--button-background-hover);
+  border-color: var(--button-border-hover);
+  color: var(--footer-text-hover);
 }
 
 #last-updated {

@@ -19,8 +19,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/03/apple-unveils-new-ipad-pro-with-lidar-scanner-and-trackpad-support-in-ipados/",
+                link: "https://www.apple.com/newsroom/2020/03/apple-unveils-new-ipad-pro-with-lidar-scanner-and-trackpad-support-in-ipados/",
               },
             ],
           },
@@ -33,8 +32,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/04/new-magic-keyboard-for-ipad-pro-now-available-to-order-begins-arriving-next-week/",
+                link: "https://www.apple.com/newsroom/2020/04/new-magic-keyboard-for-ipad-pro-now-available-to-order-begins-arriving-next-week/",
               },
             ],
           },
@@ -110,8 +108,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/05/apple-updates-13-inch-macbook-pro-with-magic-keyboard-double-the-storage-and-faster-performance/",
+                link: "https://www.apple.com/newsroom/2020/05/apple-updates-13-inch-macbook-pro-with-magic-keyboard-double-the-storage-and-faster-performance/",
               },
             ],
           },
@@ -156,8 +153,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/06/ipados-14-introduces-new-features-designed-specifically-for-ipad/",
+                link: "https://www.apple.com/newsroom/2020/06/ipados-14-introduces-new-features-designed-specifically-for-ipad/",
               },
             ],
           },
@@ -177,8 +173,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/06/apple-introduces-macos-big-sur-with-a-beautiful-new-design/",
+                link: "https://www.apple.com/newsroom/2020/06/apple-introduces-macos-big-sur-with-a-beautiful-new-design/",
               },
             ],
           },
@@ -198,8 +193,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/06/watchos-7-adds-significant-personalization-health-and-fitness-features-to-apple-watch/",
+                link: "https://www.apple.com/newsroom/2020/06/watchos-7-adds-significant-personalization-health-and-fitness-features-to-apple-watch/",
               },
             ],
           },
@@ -217,8 +211,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/06/13-new-innovative-technologies-and-features-unveiled-at-wwdc20/",
+                link: "https://www.apple.com/newsroom/2020/06/13-new-innovative-technologies-and-features-unveiled-at-wwdc20/",
               },
             ],
           },
@@ -272,8 +265,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
+                link: "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
               },
             ],
           },
@@ -286,8 +278,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/09/apple-watch-se-the-ultimate-combination-of-design-function-and-value/",
+                link: "https://www.apple.com/newsroom/2020/09/apple-watch-se-the-ultimate-combination-of-design-function-and-value/",
               },
             ],
           },
@@ -299,8 +290,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/09/apple-introduces-eighth-generation-ipad-with-a-huge-jump-in-performance/",
+                link: "https://www.apple.com/newsroom/2020/09/apple-introduces-eighth-generation-ipad-with-a-huge-jump-in-performance/",
               },
             ],
           },
@@ -323,8 +313,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/09/apple-unveils-all-new-ipad-air-with-a14-bionic-apples-most-advanced-chip/",
+                link: "https://www.apple.com/newsroom/2020/09/apple-unveils-all-new-ipad-air-with-a14-bionic-apples-most-advanced-chip/",
               },
             ],
           },
@@ -349,8 +338,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
+                link: "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
               },
             ],
           },
@@ -370,8 +358,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
+                link: "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
               },
             ],
           },
@@ -391,8 +378,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/10/apple-introduces-iphone-12-pro-and-iphone-12-pro-max-with-5g/",
+                link: "https://www.apple.com/newsroom/2020/10/apple-introduces-iphone-12-pro-and-iphone-12-pro-max-with-5g/",
               },
             ],
           },
@@ -412,8 +398,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/10/apple-introduces-iphone-12-pro-and-iphone-12-pro-max-with-5g/",
+                link: "https://www.apple.com/newsroom/2020/10/apple-introduces-iphone-12-pro-and-iphone-12-pro-max-with-5g/",
               },
             ],
           },
@@ -425,8 +410,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/10/apple-introduces-homepod-mini-a-powerful-smart-speaker-with-amazing-sound/",
+                link: "https://www.apple.com/newsroom/2020/10/apple-introduces-homepod-mini-a-powerful-smart-speaker-with-amazing-sound/",
               },
             ],
           },
@@ -522,8 +506,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2020/12/apple-introduces-airpods-max-the-magic-of-airpods-in-a-stunning-over-ear-design/",
+                link: "https://www.apple.com/newsroom/2020/12/apple-introduces-airpods-max-the-magic-of-airpods-in-a-stunning-over-ear-design/",
               },
             ],
           },
@@ -552,8 +535,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2021/04/imac-features-all-new-design-in-vibrant-colors-m1-chip-and-45k-retina-display/",
+                link: "https://www.apple.com/newsroom/2021/04/imac-features-all-new-design-in-vibrant-colors-m1-chip-and-45k-retina-display/",
               },
             ],
           },
@@ -565,8 +547,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2021/04/apple-unveils-new-ipad-pro-with-m1-chip-and-stunning-liquid-retina-xdr-display/",
+                link: "https://www.apple.com/newsroom/2021/04/apple-unveils-new-ipad-pro-with-m1-chip-and-stunning-liquid-retina-xdr-display/",
               },
             ],
           },
@@ -578,8 +559,7 @@ export default [
             sources: [
               {
                 name: "Apple",
-                link:
-                  "https://www.apple.com/newsroom/2021/04/apple-introduces-iphone-12-and-iphone-12-mini-in-a-stunning-new-purple/",
+                link: "https://www.apple.com/newsroom/2021/04/apple-introduces-iphone-12-and-iphone-12-mini-in-a-stunning-new-purple/",
               },
             ],
           },
@@ -618,7 +598,158 @@ export default [
           },
         ],
       },
-
+      {
+        name: "june",
+        products: [
+          {
+            name: "iOS 15",
+            status: "rumoured",
+            description: "iOS 15 is expected to be announced at WWDC21 on June 7th, 2021.",
+            features: [
+              "New notification preferences based on user status (driving, working, sleeping, etc.)",
+              "Updated Lock Screen",
+              "iMessage automatic replies depending on user status",
+              "Privacy updates",
+              "No compatibility with iPhone 6s, 6s Plus, and iPhone SE (1st generation)",
+            ],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-04-22/apple-plans-notifications-ipad-home-screen-upgrades-for-ios-15",
+              },
+            ],
+          },
+          {
+            name: "iPadOS 15",
+            status: "rumoured",
+            description: "iPadOS 15 is expected to be announced at WWDC21 on June 7th, 2021.",
+            features: ["Ability to place widgets anywhere on Home Screen", "Privacy updates"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-04-22/apple-plans-notifications-ipad-home-screen-upgrades-for-ios-15",
+              },
+            ],
+          },
+          {
+            name: "macOS 12",
+            status: "rumoured",
+            description: "macOS 12 is expected to be announced at WWDC21 on June 7th, 2021.",
+            features: ["Minor updates"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-04-22/apple-plans-notifications-ipad-home-screen-upgrades-for-ios-15",
+              },
+            ],
+          },
+          {
+            name: "watchOS 8",
+            status: "rumoured",
+            description: "watchOS 8 is expected to be announced at WWDC21 on June 7th, 2021.",
+            features: ["Minor updates"],
+            sources: [
+              {
+                name: "TechRadar",
+                link: "https://www.techradar.com/news/watchos-8",
+              },
+            ],
+          },
+          {
+            name: "tvOS 15",
+            status: "rumoured",
+            description: "tvOS 15 is expected to be announced at WWDC21 on June 7th, 2021.",
+            features: ["Major UI redesign", "Full parental controls", "Screen Time management", "Children mode"],
+            sources: [
+              {
+                name: "iPhoneHacks",
+                link: "https://www.iphonehacks.com/2021/01/tvos-15-feature-major-redesign-powerful-apple-tv-refresh.html",
+              },
+              {
+                name: "Medium (Yash Patak)",
+                link: "https://medium.com/adventures-in-consumer-technology/tvos-15-everything-we-currently-know-2c7edaee9d79",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "september",
+        products: [
+          {
+            name: "iPhone 12S mini",
+            status: "rumoured",
+            description: "iPhone 12S mini is rumoured to feature a similar design to the current iPhone 12 mini.",
+            features: [
+              "5.4-inch display",
+              "Smaller notch",
+              "120Hz ProMotion display",
+              "Camera improvements",
+              "A15 Chip",
+            ],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/roundup/iphone-13/",
+              },
+            ],
+          },
+          {
+            name: "iPhone 12S",
+            status: "rumoured",
+            description: "iPhone 12S is rumoured to feature a similar design to the current iPhone 12.",
+            features: [
+              "6.1-inch display",
+              "Smaller notch",
+              "120Hz ProMotion display",
+              "Camera improvements",
+              "A15 Chip",
+            ],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/roundup/iphone-13/",
+              },
+            ],
+          },
+          {
+            name: "iPhone 12S Pro",
+            status: "rumoured",
+            description: "iPhone 12S Pro is rumoured to feature a similar design to the current iPhone 12 Pro.",
+            features: [
+              "6.1-inch display",
+              "Smaller notch",
+              "120Hz ProMotion display",
+              "Camera improvements",
+              "A15 Chip",
+            ],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/roundup/iphone-13/",
+              },
+            ],
+          },
+          {
+            name: "iPhone 12S Pro Max",
+            status: "rumoured",
+            description: "iPhone 12S Pro Max is rumoured to feature a similar design to the current iPhone 12 Pro Max.",
+            features: [
+              "6.7-inch display",
+              "Smaller notch",
+              "120Hz ProMotion display",
+              "Camera improvements",
+              "A15 Chip",
+            ],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/roundup/iphone-13/",
+              },
+            ],
+          },
+        ],
+      },
       {
         name: "unknown",
         products: [
@@ -635,8 +766,7 @@ export default [
             sources: [
               {
                 name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
+                link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
               },
             ],
           },
@@ -654,8 +784,7 @@ export default [
             sources: [
               {
                 name: "9to5mac",
-                link:
-                  "https://9to5mac.com/2020/04/21/kuo-iphone-12-facing-mass-production-delays-iphone-se-plus-release-postponed/",
+                link: "https://9to5mac.com/2020/04/21/kuo-iphone-12-facing-mass-production-delays-iphone-se-plus-release-postponed/",
               },
             ],
           },
@@ -699,8 +828,7 @@ export default [
               },
               {
                 name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/amp/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+                link: "https://www.bloomberg.com/amp/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
               },
             ],
           },
@@ -713,8 +841,7 @@ export default [
             sources: [
               {
                 name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
+                link: "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
               },
             ],
           },
@@ -754,8 +881,7 @@ export default [
             sources: [
               {
                 name: "Bloomberg",
-                link:
-                  "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
+                link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
               },
             ],
           },

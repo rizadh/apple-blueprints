@@ -4,7 +4,7 @@ import years from "./resources/data/products";
 
 const statusIcons = {
   released: "fas fa-check-circle",
-  announced: "fas fa-check",
+  announced: "far fa-check-circle",
   rumoured: "far fa-question-circle",
 };
 
