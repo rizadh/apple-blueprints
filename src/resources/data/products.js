@@ -671,6 +671,52 @@ export default [
               },
             ],
           },
+          {
+            name: 'MacBook Pro 14"',
+            status: "rumoured",
+            description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
+            features: [
+              "Minor design changes",
+              "No Touch Bar",
+              "Apple M1 chip",
+              "SD card slot",
+              "HDMI port",
+              "MagSafe charging",
+            ],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1396915038154334214?s=20",
+              },
+            ],
+          },
+          {
+            name: 'MacBook Pro 16"',
+            status: "rumoured",
+            description: "This update is expected to bring new display technology to the larger MacBook Pro.",
+            features: [
+              "Minor design changes",
+              "No Touch Bar",
+              "Apple M1 chip",
+              "SD card slot",
+              "HDMI port",
+              "MagSafe charging",
+            ],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1396915038154334214?s=20",
+              },
+            ],
+          },
         ],
       },
       {
@@ -748,11 +794,113 @@ export default [
               },
             ],
           },
+          {
+            name: "Apple Watch Series 7",
+            status: "rumoured",
+            description: "description",
+            features: ["feature"],
+            sources: [
+              {
+                name: "source",
+                link: "#",
+              },
+            ],
+          },
         ],
       },
       {
         name: "unknown",
         products: [
+          {
+            name: 'iMac 27"',
+            status: "rumoured",
+            description:
+              'The larger 27" iMac is expected to include the M1 chip and feature a redesign similar to the Pro Display XDR.',
+            features: ["Major redesign", "Design similar to Pro XDR Disaply", "M1 chip"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+            ],
+          },
+          {
+            name: "Mac Pro (M1)",
+            status: "rumoured",
+            description: "This redesigned Mac Pro is expected to have a smaller form factor with an M1 chip.",
+            features: ["Smaller form factor", "M1 chip"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+            ],
+          },
+          {
+            name: "Mac Pro (Intel)",
+            status: "rumoured",
+            description: "This Mac Pro is expected to bring updated Intel chips to the existing Mac Pro.",
+            features: ["Updated Intel chip"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+            ],
+          },
+          {
+            name: "MacBook Air",
+            status: "rumoured",
+            description: "Apple is rumoured to be developing a thinner and lighter MacBook.",
+            features: ["Major redesign", "Thinner and lighter design", "MagSafe charger"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+            ],
+          },
+
+          {
+            name: "iPad",
+            status: "rumoured",
+            description: "The new iPad will bring updated internals.",
+            features: ["Updated chip"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+            ],
+          },
+          {
+            name: "iPad Air",
+            status: "rumoured",
+            description: "The new iPad Air will include an 11-inch display and possibly Touch ID under the screen.",
+            features: ["11-inch display", "Touch ID under the screen"],
+            sources: [
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1238002469981974528",
+              },
+            ],
+          },
+          {
+            name: "iPad Mini",
+            status: "rumoured",
+            description: "The new iPad Mini will include a bigger display and updated internals.",
+            features: ["8.5-inch display", "A12 chip"],
+            sources: [
+              {
+                name: "MacRumors",
+                link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/l0vetodream/status/1238002469981974528",
+              },
+            ],
+          },
           {
             name: "AirPods",
             status: "rumoured",
@@ -770,6 +918,27 @@ export default [
               },
             ],
           },
+          {
+            name: "AirPods Pro",
+            status: "rumoured",
+            description: "This update is expected to make the earbuds more compact.",
+            features: ["No stem", "Rounded shape"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearName: "unknown",
+    months: [
+      {
+        products: [
           {
             name: "iPhone SE Plus",
             status: "rumoured",
@@ -789,106 +958,9 @@ export default [
             ],
           },
           {
-            name: 'MacBook Pro 14"',
-            status: "rumoured",
-            description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
-            features: ["Apple silicon chip", "Mini LED display technology", "Rounded corner display", "Thinner bezels"],
-            sources: [
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1259830152994754560",
-              },
-              {
-                name: "Jon Prosser",
-                link: "https://twitter.com/jon_prosser/status/1259831543494774784",
-              },
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
-              },
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
-              },
-            ],
-          },
-          {
-            name: 'MacBook Pro 16"',
-            status: "rumoured",
-            description: "This update is expected to bring new display technology to the larger MacBook Pro.",
-            features: ["Apple silicon chip", "Mini LED display technology", "Rounded corner display", "Thinner bezels"],
-            sources: [
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/08/apple-mini-led-14-inch-macbook-ipad/",
-              },
-              {
-                name: "9to5mac",
-                link: "https://9to5mac.com/2020/07/10/apple-silicon-macbook-pro/",
-              },
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/amp/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
-              },
-            ],
-          },
-          {
-            name: "Mac Pro",
-            status: "rumoured",
-            description:
-              "This redesigned Mac Pro is expected to have a smaller form factor with an Apple silicon chip.",
-            features: ["Smaller form factor", "Apple silicon chip"],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2020-11-02/apple-to-hold-nov-10-event-to-announce-macs-with-own-chips",
-              },
-            ],
-          },
-          {
-            name: 'iPad Air (11")',
-            status: "rumoured",
-            description: "",
-            features: ["Touch ID under the screen"],
-            sources: [
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1238002469981974528",
-              },
-            ],
-          },
-          {
-            name: 'iPad Mini 6 (8.5")',
-            status: "rumoured",
-            description: "",
-            features: ["A12 chip"],
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/l0vetodream/status/1238002469981974528",
-              },
-            ],
-          },
-          {
-            name: "AirPods Pro",
-            status: "rumoured",
-            description: "This update is expected to make the earbuds more compact.",
-            features: ["No stem", "Rounded shape"],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
-              },
-            ],
-          },
-          {
             name: "AirPods X",
             status: "rumoured",
-            description: "These new headphones will be similar to BeatsX, aimed for sports and running.",
+            description: "These new headphones will look similar to BeatsX, aimed for sports and running.",
             features: ["Priced at around $200"],
             sources: [
               {
@@ -898,42 +970,31 @@ export default [
             ],
           },
           {
-            name: "Game Controller",
-            status: "rumoured",
-            description: "Apple is alledgedly developing on their own game controller.",
-            features: "",
-            sources: [
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1236619087465209858",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    yearName: "2022",
-    months: [
-      {
-        name: "unknown",
-        products: [
-          {
             name: "Apple Glass",
             status: "rumoured",
             description:
               "Apple Glass is Apple's upcoming AR glasses. Expect to see features like displaying messages and emails, navigation through maps, and maybe even games. ",
             features: [
-              "Starting at $499",
               "Option for prescription lenses at an extra cost",
               "Interactive displays using gestures in both lenses ",
               "Early prototype featured LiDAR and wireless charging",
+              "Starting at $499",
             ],
             sources: [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/2020/05/19/apple-glasses-price-prescription-lenses-rumors/",
+              },
+            ],
+          },
+          {
+            name: "Game Controller",
+            status: "rumoured",
+            description: "Apple is alledgedly developing on their own game controller.",
+            sources: [
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1236619087465209858",
               },
             ],
           },
