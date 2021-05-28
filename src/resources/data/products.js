@@ -904,29 +904,16 @@ export default [
           {
             name: "AirPods",
             status: "rumoured",
-            description: "This update will bring the AirPods Pro form factor the new low-end AirPods.",
-            features: [
-              "Same design as AirPods Pro",
-              "Shorter stem and replaceable ear tips",
-              "Better battery life",
-              "No noise cancelling",
-            ],
+            description: "This update will bring the AirPods Pro form factor the new entry-level AirPods.",
+            features: ["Similar design to AirPods Pro", "Shorter stem", "Better battery life", "New case"],
             sources: [
               {
-                name: "Bloomberg",
+                name: "Bloomberg (1)",
                 link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
               },
-            ],
-          },
-          {
-            name: "AirPods Pro",
-            status: "rumoured",
-            description: "This update is expected to make the earbuds more compact.",
-            features: ["No stem", "Rounded shape"],
-            sources: [
               {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
+                name: "Bloomberg (2)",
+                link: "https://www.bloomberg.com/news/articles/2021-05-28/apple-plans-redesigned-airpods-for-2021-new-airpods-pro-in-2022",
               },
             ],
           },
@@ -934,6 +921,34 @@ export default [
       },
     ],
   },
+
+  {
+    yearName: "2022",
+    months: [
+      {
+        name: "unknown",
+        products: [
+          {
+            name: "AirPods Pro",
+            status: "rumoured",
+            description: "This update is expected to bring new fitness tracking with updated motion sensors.",
+            features: ["Updated motion sensors"],
+            sources: [
+              {
+                name: "Bloomberg (1)",
+                link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
+              },
+              {
+                name: "Bloomberg (2)",
+                link: "https://www.bloomberg.com/news/articles/2021-05-28/apple-plans-redesigned-airpods-for-2021-new-airpods-pro-in-2022",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
   {
     yearName: "unknown",
     months: [
@@ -957,15 +972,57 @@ export default [
               },
             ],
           },
+
+          {
+            name: "AirPods Max",
+            status: "rumoured",
+            description: "Apple is currently considering adding new colour variants to the existing AirPods Max.",
+            features: ["New colours"],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-28/apple-plans-redesigned-airpods-for-2021-new-airpods-pro-in-2022",
+              },
+            ],
+          },
           {
             name: "AirPods X",
             status: "rumoured",
             description: "These new headphones will look similar to BeatsX, aimed for sports and running.",
-            features: ["Priced at around $200"],
+            features: ["Similar desgin to BeatsX", "Priced at around $200 USD"],
             sources: [
               {
                 name: "Jon Prosser",
                 link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
+              },
+            ],
+          },
+          {
+            name: "HomePod",
+            status: "rumoured",
+            description: "The new HomePod will feature a built-in screen and other minor improvements.",
+            features: ["Built-in screen"],
+            sources: [
+              {
+                name: "Jon Prosser",
+                link: "https://twitter.com/jon_prosser/status/1247498140468547585?lang=en",
+              },
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-28/apple-plans-redesigned-airpods-for-2021-new-airpods-pro-in-2022",
+              },
+            ],
+          },
+          {
+            name: "HomePod Pro",
+            status: "rumoured",
+            description:
+              "An all-new HomePod is under development which would combine the features of the HomePod, Facetime camera, and Apple TV into one device.",
+            features: ["Combination of HomePod, Facetime camera, and Apple TV."],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-28/apple-plans-redesigned-airpods-for-2021-new-airpods-pro-in-2022",
               },
             ],
           },
