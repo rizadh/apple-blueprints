@@ -732,11 +732,16 @@ export default [
               "120Hz ProMotion display",
               "Camera improvements",
               "A15 Chip",
+              "Larger battery",
             ],
             sources: [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/roundup/iphone-13/",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
               },
             ],
           },
@@ -750,11 +755,16 @@ export default [
               "120Hz ProMotion display",
               "Camera improvements",
               "A15 Chip",
+              "Larger battery",
             ],
             sources: [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/roundup/iphone-13/",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
               },
             ],
           },
@@ -768,11 +778,16 @@ export default [
               "120Hz ProMotion display",
               "Camera improvements",
               "A15 Chip",
+              "Larger battery",
             ],
             sources: [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/roundup/iphone-13/",
+              },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
               },
             ],
           },
@@ -786,23 +801,32 @@ export default [
               "120Hz ProMotion display",
               "Camera improvements",
               "A15 Chip",
+              "Larger battery",
             ],
             sources: [
               {
                 name: "MacRumors",
                 link: "https://www.macrumors.com/roundup/iphone-13/",
               },
+              {
+                name: "L0vetodream",
+                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
+              },
             ],
           },
           {
             name: "Apple Watch Series 7",
             status: "rumoured",
-            description: "description",
-            features: ["feature"],
+            description: "The new Apple Watch is expected to feature a redesign with flat edges and new sensors",
+            features: ["Flat-edged design", "New sensors", "Minor improvements"],
             sources: [
               {
-                name: "source",
-                link: "#",
+                name: "Jon Prosser",
+                link: "https://www.youtube.com/watch?v=oBJm1_Ctxg0",
+              },
+              {
+                name: "Wareable",
+                link: "https://www.wareable.com/apple/apple-watch-7-release-date-price-specs-8293",
               },
             ],
           },
