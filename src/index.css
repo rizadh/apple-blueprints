@@ -15,8 +15,8 @@ body {
   --product-container-background: rgb(255, 255, 255);
   --button-background: rgba(0, 0, 0, 0.05);
   --button-background-hover: rgba(255, 204, 0, 0.1);
-  --button-border-hover: rgb(255, 204, 0);
-  --footer-text-hover: rgb(145, 116, 0);
+  --button-border-hover: rgba(255, 204, 0, 0.5);
+  --footer-text-hover: rgba(255, 204, 0, 1);
   --footer-background: rgb(245, 245, 245);
   --blur-value: 12px;
   --border-radius: 18px;
@@ -41,7 +41,7 @@ body {
     --overlay: rgb(255, 255, 255);
     --product-container-background: rgb(14, 14, 14);
     --button-background: rgba(255, 255, 255, 0.05);
-    --button-background-hover: rgba(255, 255, 255, 0.1);
+    --button-background-hover: rgba(255, 204, 0, 0.05);
     --footer-background: rgb(10, 10, 10);
   }
 }
@@ -363,7 +363,7 @@ ul {
   background-color: var(--footer-background);
   border: 1px solid;
   border-color: var(--border-colour);
-  font-size: 1.2em;
+  font-size: 1em;
   color: var(--text-secondary);
   padding: 6px 12px;
   border-radius: 6px;
