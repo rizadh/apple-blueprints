@@ -606,9 +606,10 @@ export default [
             status: "rumoured",
             description: "iOS 15 is expected to be announced at WWDC21 on June 7th, 2021.",
             features: [
-              "New notification preferences based on user status (driving, working, sleeping, etc.)",
               "Updated Lock Screen",
+              "Updates to Safari, Health, Maps and iMessage",
               "iMessage automatic replies depending on user status",
+              "New notification preferences based on user status (driving, working, sleeping, etc.)",
               "Privacy updates",
               "No compatibility with iPhone 6s, 6s Plus, and iPhone SE (1st generation)",
             ],
@@ -616,6 +617,10 @@ export default [
               {
                 name: "Bloomberg",
                 link: "https://www.bloomberg.com/news/articles/2021-04-22/apple-plans-notifications-ipad-home-screen-upgrades-for-ios-15",
+              },
+              {
+                name: "Joanna Stern",
+                link: "https://twitter.com/JoannaStern/status/1400845550958911495",
               },
             ],
           },
