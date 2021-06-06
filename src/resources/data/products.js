@@ -647,11 +647,15 @@ export default [
             name: "watchOS 8",
             status: "rumoured",
             description: "watchOS 8 is expected to be announced at WWDC21 on June 7th, 2021.",
-            features: ["Minor updates"],
+            features: ["New Mind app for managing mental health", "New Contacts app", "New Tips app", "Minor updates"],
             sources: [
               {
                 name: "TechRadar",
                 link: "https://www.techradar.com/news/watchos-8",
+              },
+              {
+                name: "Khaos Tian",
+                link: "https://twitter.com/KhaosT/status/1401294687374233600",
               },
             ],
           },
@@ -840,7 +844,7 @@ export default [
             status: "rumoured",
             description:
               'The larger 27" iMac is expected to include the M1 chip and feature a redesign similar to the Pro Display XDR.',
-            features: ["Major redesign", "Design similar to Pro XDR Disaply", "M1 chip"],
+            features: ["Major redesign", "Design similar to Pro XDR Display", "M1 chip"],
             sources: [
               {
                 name: "Bloomberg",
