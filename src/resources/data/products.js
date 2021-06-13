@@ -719,49 +719,6 @@ export default [
         ],
       },
       {
-        name: "july",
-        products: [
-          {
-            name: 'MacBook Pro 14"',
-            status: "rumoured",
-            description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
-            features: [
-              "Minor design changes",
-              "No Touch Bar",
-              "Apple M1 chip",
-              "SD card slot",
-              "HDMI port",
-              "MagSafe charging",
-            ],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
-              },
-            ],
-          },
-          {
-            name: 'MacBook Pro 16"',
-            status: "rumoured",
-            description: "This update is expected to bring new display technology to the larger MacBook Pro.",
-            features: [
-              "Minor design changes",
-              "No Touch Bar",
-              "Apple M1 chip",
-              "SD card slot",
-              "HDMI port",
-              "MagSafe charging",
-            ],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
-              },
-            ],
-          },
-        ],
-      },
-      {
         name: "september",
         products: [
           {
@@ -877,6 +834,44 @@ export default [
       {
         name: "unknown",
         products: [
+          {
+            name: 'MacBook Pro 14"',
+            status: "rumoured",
+            description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
+            features: [
+              "Minor design changes",
+              "No Touch Bar",
+              "Apple M1X chip",
+              "SD card slot",
+              "HDMI port",
+              "MagSafe charging",
+            ],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+            ],
+          },
+          {
+            name: 'MacBook Pro 16"',
+            status: "rumoured",
+            description: "This update is expected to bring new display technology to the larger MacBook Pro.",
+            features: [
+              "Minor design changes",
+              "No Touch Bar",
+              "Apple M1X chip",
+              "SD card slot",
+              "HDMI port",
+              "MagSafe charging",
+            ],
+            sources: [
+              {
+                name: "Bloomberg",
+                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+              },
+            ],
+          },
           {
             name: 'iMac 27"',
             status: "rumoured",
