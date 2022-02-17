@@ -603,7 +603,7 @@ export default [
         products: [
           {
             name: "iOS 15",
-            status: "announced",
+            status: "released",
             description: "iOS 15 was announced at WWDC21 and will available in Fall 2021.",
             features: [
               "Screen-sharing for FaceTime",
@@ -631,7 +631,7 @@ export default [
           },
           {
             name: "iPadOS 15",
-            status: "announced",
+            status: "released",
             description: "iPadOS 15 was announced at WWDC21 and will available in Fall 2021.",
             features: [
               "More intuitive multitasking experience",
@@ -661,7 +661,7 @@ export default [
           },
           {
             name: "macOS Monterey",
-            status: "announced",
+            status: "released",
             description: "macOS Monterey was announced at WWDC21 and will available in Fall 2021.",
             features: [
               "Screen-sharing for FaceTime",
@@ -683,7 +683,7 @@ export default [
           },
           {
             name: "watchOS 8",
-            status: "announced",
+            status: "released",
             description: "watchOS 8 was announced at WWDC21 and will available in Fall 2021.",
             features: [
               "Redesigned Home app",
@@ -706,7 +706,7 @@ export default [
           },
           {
             name: "tvOS 15",
-            status: "announced",
+            status: "released",
             description: "tvOS 15 was announced at WWDC21 and will available in Fall 2021.",
             features: ["Spatial Audio support", "Screen-sharing for FaceTime"],
             sources: [
