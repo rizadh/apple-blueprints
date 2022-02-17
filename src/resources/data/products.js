@@ -722,7 +722,7 @@ export default [
         name: "september",
         products: [
           {
-            name: "iPhone 12S mini",
+            name: "iPhone 13 mini",
             status: "rumoured",
             description: "iPhone 12S mini is rumoured to feature a similar design to the current iPhone 12 mini.",
             features: [
@@ -745,7 +745,7 @@ export default [
             ],
           },
           {
-            name: "iPhone 12S",
+            name: "iPhone 13",
             status: "rumoured",
             description: "iPhone 12S is rumoured to feature a similar design to the current iPhone 12.",
             features: [
@@ -768,7 +768,7 @@ export default [
             ],
           },
           {
-            name: "iPhone 12S Pro",
+            name: "iPhone 13 Pro",
             status: "rumoured",
             description: "iPhone 12S Pro is rumoured to feature a similar design to the current iPhone 12 Pro.",
             features: [
@@ -791,7 +791,7 @@ export default [
             ],
           },
           {
-            name: "iPhone 12S Pro Max",
+            name: "iPhone 13 Pro Max",
             status: "rumoured",
             description: "iPhone 12S Pro Max is rumoured to feature a similar design to the current iPhone 12 Pro Max.",
             features: [
