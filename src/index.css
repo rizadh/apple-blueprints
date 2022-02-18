@@ -45,6 +45,9 @@ body {
     --footer-background: rgb(10, 10, 10);
   }
 }
+body {
+  background: var(--site-background);
+}
 
 #navbar {
   position: fixed;
