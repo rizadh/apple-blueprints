@@ -30,7 +30,7 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    --site-background: black;
+    --site-background: rgb(10,10,10);
     --text-primary: white;
     --text-tertiary: rgb(64, 64, 64);
     --month-card-background: rgb(16, 16, 16);
