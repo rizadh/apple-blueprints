@@ -33,7 +33,7 @@ body {
     --site-background: rgb(10,10,10);
     --text-primary: white;
     --text-tertiary: rgb(64, 64, 64);
-    --month-card-background: rgb(16, 16, 16);
+    --month-card-background: rgb(20, 20, 20);
     --border-colour: rgb(64, 64, 64);
     --counter-background: rgba(255, 255, 255, 0.05);
     --released-product: rgb(76, 175, 79);
@@ -42,7 +42,7 @@ body {
     --product-container-background: rgb(14, 14, 14);
     --button-background: rgba(255, 255, 255, 0.05);
     --button-background-hover: rgba(255, 204, 0, 0.05);
-    --footer-background: rgb(10, 10, 10);
+    --footer-background: rgb(15,15,15);
   }
 }
 
