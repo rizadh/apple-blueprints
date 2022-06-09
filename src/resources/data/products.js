@@ -847,11 +847,18 @@ export default [
         name: "october",
         products: [
           {
-            name: 'MacBook Pro (14" and 16")',
+            name: "MacBook Pro",
             status: "released",
             description:
               "The new MacBook Pro features an all-new design bringing back some of the ports of the previous models, a larger display, and faster chips.",
-            features: [""],
+            features: [
+              'New 14" and 16" mini-LED displays',
+              "More ports including MagSafe charging",
+              "No Touch Bar",
+              "M1 Pro or M1 Max chip",
+              "Camera notch",
+              "All-black keyboard",
+            ],
             sources: [
               {
                 name: "Apple",
