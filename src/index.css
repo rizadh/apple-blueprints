@@ -164,7 +164,7 @@ a {
   transform: translate(-50%, -50%);
   padding: 30px 30px 18px 30px;
   background-color: var(--product-container-background);
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: -0.5px;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
   overflow: scroll;

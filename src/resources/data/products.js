@@ -723,54 +723,34 @@ export default [
         products: [
           {
             name: "iPhone 13 mini",
-            status: "rumoured",
-            description: "iPhone 12S mini is rumoured to feature a similar design to the current iPhone 12 mini.",
-            features: [
-              "5.4-inch display",
-              "Smaller notch",
-              "120Hz ProMotion display",
-              "Camera improvements",
-              "A15 Chip",
-              "Larger battery",
-            ],
+            status: "released",
+            description:
+              "iPhone 13 mini features a similar design to the iPhone 12 mini with a slightly smaller notch with camera, chip, and battery improvements.",
+            features: ["5.4-inch display", "Smaller notch", "Camera improvements", "A15 Chip", "Larger battery"],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/roundup/iphone-13/",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/09/apple-introduces-iphone-13-and-iphone-13-mini/",
               },
             ],
           },
           {
             name: "iPhone 13",
-            status: "rumoured",
-            description: "iPhone 12S is rumoured to feature a similar design to the current iPhone 12.",
-            features: [
-              "6.1-inch display",
-              "Smaller notch",
-              "120Hz ProMotion display",
-              "Camera improvements",
-              "A15 Chip",
-              "Larger battery",
-            ],
+            status: "released",
+            description:
+              "iPhone 13 features a similar design to the iPhone 12 with a slightly smaller notch with camera, chip, and battery improvements.",
+            features: ["6.1-inch display", "Smaller notch", "Camera improvements", "A15 Chip", "Larger battery"],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/roundup/iphone-13/",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/09/apple-introduces-iphone-13-and-iphone-13-mini/",
               },
             ],
           },
           {
             name: "iPhone 13 Pro",
-            status: "rumoured",
-            description: "iPhone 12S Pro is rumoured to feature a similar design to the current iPhone 12 Pro.",
+            status: "released",
+            description: "iPhone 13 Pro is rumoured to feature a similar design to the current iPhone 12 Pro.",
             features: [
               "6.1-inch display",
               "Smaller notch",
@@ -781,19 +761,15 @@ export default [
             ],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/roundup/iphone-13/",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/09/apple-introduces-iphone-13-and-iphone-13-mini/",
               },
             ],
           },
           {
             name: "iPhone 13 Pro Max",
-            status: "rumoured",
-            description: "iPhone 12S Pro Max is rumoured to feature a similar design to the current iPhone 12 Pro Max.",
+            status: "released",
+            description: "iPhone 13 Pro Max is rumoured to feature a similar design to the current iPhone 12 Pro Max.",
             features: [
               "6.7-inch display",
               "Smaller notch",
@@ -804,177 +780,106 @@ export default [
             ],
             sources: [
               {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/roundup/iphone-13/",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1399717871584907265",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/09/apple-introduces-iphone-13-and-iphone-13-mini/",
               },
             ],
           },
           {
             name: "Apple Watch Series 7",
-            status: "rumoured",
-            description: "The new Apple Watch is expected to feature a redesign with flat edges and new sensors",
-            features: ["Flat-edged design", "New sensors", "Minor improvements"],
+            status: "released",
+            description: "The new Apple Watch brings larger sizes, new colours, and faster charging, and more.",
+            features: [
+              "Larger display",
+              "New 41mm and 45mm sizes",
+              "New colours (midnight, starlight, green, blue and red)",
+              "IP6X dust and water resistance",
+              "Faster charging",
+            ],
             sources: [
               {
-                name: "Jon Prosser",
-                link: "https://www.youtube.com/watch?v=oBJm1_Ctxg0",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/09/apple-reveals-apple-watch-series-7-featuring-the-largest-most-advanced-display/",
               },
+            ],
+          },
+          {
+            name: "iPad mini (6th generation)",
+            status: "released",
+            description: "The new iPad mini brings a larger 8.3-inch display, A15 Bionic chip, Touch ID, and more.",
+            features: [
+              "8.3-inch display",
+              "A15 Bionic chip",
+              "5G support on cellular models",
+              "Apple Pencil 2 support",
+              "Touch ID power button",
+              "USB-C port",
+            ],
+            sources: [
               {
-                name: "Wareable",
-                link: "https://www.wareable.com/apple/apple-watch-7-release-date-price-specs-8293",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/09/apple-unveils-new-ipad-mini-with-breakthrough-performance-in-stunning-new-design/",
+              },
+            ],
+          },
+          {
+            name: "iPad (9th generation)",
+            status: "released",
+            description: "The new iPad includes an A13 Bionic chip, Apple Pencil support, Touch ID, ane more.",
+            features: [
+              "A13 Bionic chip",
+              "Apple Pencil support",
+              "64 and 256GB capacities",
+              "12-megapixel Ultra Wide front camera with Center Stage",
+              "8-megapixel rear camera",
+              "Touch ID",
+            ],
+            sources: [
+              {
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/09/apples-most-popular-ipad-delivers-even-more-performance-and-advanced-features/",
               },
             ],
           },
         ],
       },
       {
-        name: "unknown",
+        name: "october",
         products: [
           {
-            name: 'MacBook Pro 14"',
-            status: "rumoured",
-            description: "This update is expected to bring new display technology to the entry-level MacBook Pro.",
-            features: [
-              "Minor design changes",
-              "No Touch Bar",
-              "Apple M1X chip",
-              "SD card slot",
-              "HDMI port",
-              "MagSafe charging",
-            ],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
-              },
-            ],
-          },
-          {
-            name: 'MacBook Pro 16"',
-            status: "rumoured",
-            description: "This update is expected to bring new display technology to the larger MacBook Pro.",
-            features: [
-              "Minor design changes",
-              "No Touch Bar",
-              "Apple M1X chip",
-              "SD card slot",
-              "HDMI port",
-              "MagSafe charging",
-            ],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
-              },
-            ],
-          },
-          {
-            name: 'iMac 27"',
-            status: "rumoured",
+            name: 'MacBook Pro (14" and 16")',
+            status: "released",
             description:
-              'The larger 27" iMac is expected to include the M1 chip and feature a redesign similar to the Pro Display XDR.',
-            features: ["Major redesign", "Design similar to Pro XDR Display", "M1 chip"],
+              "The new MacBook Pro features an all-new design bringing back some of the ports of the previous models, a larger display, and faster chips.",
+            features: [""],
             sources: [
               {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/10/apple-unveils-game-changing-macbook-pro/",
               },
             ],
           },
           {
-            name: "Mac Pro (M1)",
-            status: "rumoured",
-            description: "This redesigned Mac Pro is expected to have a smaller form factor with an M1 chip.",
-            features: ["Smaller form factor", "M1 chip"],
+            name: "AirPods (3rd generation)",
+            status: "released",
+            description: "This update brings a redesign to the AirPods with shorter stems",
+            features: ["Shorter stems", "MagSafe charging case", "Adaptive EQ", "Spatial audio", "Sweat resistant"],
             sources: [
               {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/10/introducing-the-next-generation-of-airpods/",
               },
             ],
           },
           {
-            name: "Mac Pro (Intel)",
-            status: "rumoured",
-            description: "This Mac Pro is expected to bring updated Intel chips to the existing Mac Pro.",
-            features: ["Updated Intel chip"],
+            name: "HomePod mini",
+            status: "released",
+            description: "This minor update brings three new colours to the existing HomePod mini.",
+            features: ["New yellow, orange, and blue colour"],
             sources: [
               {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
-              },
-            ],
-          },
-          {
-            name: "MacBook Air",
-            status: "rumoured",
-            description: "Apple is rumoured to be developing a thinner and lighter MacBook.",
-            features: ["Major redesign", "Thinner and lighter design", "MagSafe charger"],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
-              },
-            ],
-          },
-
-          {
-            name: "iPad",
-            status: "rumoured",
-            description: "The new iPad will bring updated internals.",
-            features: ["Updated chip"],
-            sources: [
-              {
-                name: "Bloomberg",
-                link: "https://www.bloomberg.com/news/articles/2021-05-18/apple-readies-macbook-pro-macbook-air-revamps-with-faster-chips",
-              },
-            ],
-          },
-          {
-            name: "iPad Air",
-            status: "rumoured",
-            description: "The new iPad Air will include an 11-inch display and possibly Touch ID under the screen.",
-            features: ["11-inch display", "Touch ID under the screen"],
-            sources: [
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/L0vetodream/status/1238002469981974528",
-              },
-            ],
-          },
-          {
-            name: "iPad Mini",
-            status: "rumoured",
-            description: "The new iPad Mini will include a bigger display and updated internals.",
-            features: ["8.5-inch display", "A12 chip"],
-            sources: [
-              {
-                name: "MacRumors",
-                link: "https://www.macrumors.com/2020/06/28/ipad-mini-6-release-date-rumors/",
-              },
-              {
-                name: "L0vetodream",
-                link: "https://twitter.com/l0vetodream/status/1238002469981974528",
-              },
-            ],
-          },
-          {
-            name: "AirPods",
-            status: "rumoured",
-            description: "This update will bring the AirPods Pro form factor the new entry-level AirPods.",
-            features: ["Similar design to AirPods Pro", "Shorter stem", "Better battery life", "New case"],
-            sources: [
-              {
-                name: "Bloomberg (1)",
-                link: "https://www.bloomberg.com/news/articles/2020-10-26/apple-developing-smaller-airpods-pro-revamped-entry-level-model",
-              },
-              {
-                name: "Bloomberg (2)",
-                link: "https://www.bloomberg.com/news/articles/2021-05-28/apple-plans-redesigned-airpods-for-2021-new-airpods-pro-in-2022",
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2021/10/apple-introduces-homepod-mini-in-new-bold-and-expressive-colors/",
               },
             ],
           },
@@ -988,6 +893,88 @@ export default [
     months: [
       {
         name: "unknown",
+        products: [
+          {
+            name: "Mac Studio",
+            status: "rumoured",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "Studio Display",
+            status: "rumoured",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "iPad Air",
+            status: "rumoured",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "iPhone SE",
+            status: "rumoured",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "iPhone 13",
+            status: "rumoured",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "iPhone 13 Pro",
+            status: "rumoured",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    yearName: "unknown",
+    months: [
+      {
         products: [
           {
             name: "AirPods Pro",
@@ -1005,16 +992,6 @@ export default [
               },
             ],
           },
-        ],
-      },
-    ],
-  },
-
-  {
-    yearName: "unknown",
-    months: [
-      {
-        products: [
           {
             name: "iPhone SE Plus",
             status: "rumoured",
