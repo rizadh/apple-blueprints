@@ -990,7 +990,67 @@ export default [
         name: "june",
         products: [
           {
+            name: "MacBook Air",
+            status: "announced",
+            // description: "",
+            // features: [""],
+            // sources: [
+            //   {
+            //     name: "Apple",
+            //     link: "",
+            //   },
+            // ],
+          },
+          {
             name: "iOS 16",
+            status: "announced",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "macOS Ventura",
+            status: "announced",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "iPadOS 16",
+            status: "announced",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: "watchOS 9",
+            status: "announced",
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
+          },
+          {
+            name: 'MacBook Pro 13"',
             status: "announced",
             description: "",
             features: [""],
