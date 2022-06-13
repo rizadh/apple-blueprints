@@ -899,71 +899,99 @@ export default [
     yearName: "2022",
     months: [
       {
-        name: "unknown",
+        name: "march",
         products: [
           {
             name: "Mac Studio",
-            status: "rumoured",
-            description: "",
-            features: [""],
+            status: "released",
+            description:
+              "The Mac Studio is an all-new desktop computer that equips the M1 Max or M1 Ultra chip, a variety of ports and a new thermal design.",
+            features: [
+              "M1 Max or M1 Ultra chip",
+              "20-core CPU",
+              "Up to 64-core GPU",
+              "Up to 128GB Unified Memory",
+              "Up to 8TB SSD",
+              "Up to 6 Thunderbolt 4 ports",
+            ],
             sources: [
               {
                 name: "Apple",
-                link: "",
+                link: "https://www.apple.com/newsroom/2022/03/apple-unveils-all-new-mac-studio-and-studio-display/",
               },
             ],
           },
           {
             name: "Studio Display",
-            status: "rumoured",
-            description: "",
-            features: [""],
+            status: "released",
+            description:
+              "The Studio Display is an all-new 27-inch 5K desktop display which features an A13 chip, a 12-megapixel camera, 6-speaker sound system, and more.",
+            features: [
+              "27-inch 5K display",
+              "A13 Bionic chip",
+              "12MP ultra wide camera",
+              "6-speaker sound system",
+              "3 USB-C ports",
+              "Spatial audio support",
+            ],
             sources: [
               {
                 name: "Apple",
-                link: "",
+                link: "https://www.apple.com/newsroom/2022/03/apple-unveils-all-new-mac-studio-and-studio-display/",
               },
             ],
           },
           {
-            name: "iPad Air",
-            status: "rumoured",
-            description: "",
-            features: [""],
+            name: "iPad Air (5th generation)",
+            status: "released",
+            description: "The new iPad Air features the new M1 chip, Touch ID, 5G connectivety, and more.",
+            features: [
+              "10.9-inch display",
+              "True Tone",
+              "M1 chip",
+              "Touch ID",
+              "Apple Pencil 2 and Magic Keyboard support",
+              "5G model",
+            ],
             sources: [
               {
                 name: "Apple",
-                link: "",
+                link: "https://www.apple.com/newsroom/2022/03/apple-introduces-the-most-powerful-and-versatile-ipad-air-ever/",
               },
             ],
           },
           {
-            name: "iPhone SE",
-            status: "rumoured",
-            description: "",
-            features: [""],
+            name: "iPhone SE (3rd generation)",
+            status: "released",
+            description: "The new iPhone SE features updated internals and 5G connectivity.",
+            features: ["iPhone 8 design", "A15 Bionic chip", "4GB RAM", "5G connectivity"],
             sources: [
               {
                 name: "Apple",
-                link: "",
+                link: "https://www.apple.com/newsroom/2022/03/apple-announces-the-new-iphone-se-a-powerful-smartphone-in-an-iconic-design/",
               },
             ],
           },
           {
-            name: "iPhone 13",
-            status: "rumoured",
-            description: "",
-            features: [""],
+            name: "iPhone 13 & iPhone 13 Pro",
+            status: "released",
+            description: "The iPhone 13 and 13 Pro now is available in a new green colour",
+            features: ["New alpine green colour"],
             sources: [
               {
                 name: "Apple",
-                link: "",
+                link: "https://www.apple.com/newsroom/2022/03/apple-introduces-gorgeous-new-green-finishes-for-the-iphone-13-lineup/",
               },
             ],
           },
+        ],
+      },
+      {
+        name: "june",
+        products: [
           {
-            name: "iPhone 13 Pro",
-            status: "rumoured",
+            name: "iOS 16",
+            status: "announced",
             description: "",
             features: [""],
             sources: [
