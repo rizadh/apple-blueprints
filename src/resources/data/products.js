@@ -990,76 +990,88 @@ export default [
         name: "june",
         products: [
           {
-            name: "MacBook Air",
+            name: "MacBook Air (M2 chip)",
             status: "announced",
-            // description: "",
-            // features: [""],
-            // sources: [
-            //   {
-            //     name: "Apple",
-            //     link: "",
-            //   },
-            // ],
+            description: "The new MacBook Air features an all-new redesign and a new M2 chip.",
+            features: [
+              "Redesigned unibody enclosuer",
+              "13.6-inch display",
+              "M2 chip",
+              "8-core CPU and up to 10-core GPU",
+              "1080p webcam",
+              "Up to 24GB RAM",
+              "Up to 2TB SSD",
+              "MagSafe charging",
+              "4-speaker sound system",
+              "New colours (starlight and midnight)",
+            ],
+            sources: [
+              {
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2022/06/apple-unveils-all-new-macbook-air-supercharged-by-the-new-m2-chip/",
+              },
+            ],
           },
           {
             name: "iOS 16",
             status: "announced",
-            // description: "",
-            // features: [""],
-            // sources: [
-            //   {
-            //     name: "Apple",
-            //     link: "",
-            //   },
-            // ],
+            description:
+              "iOS 16 brings lock screen customization, , new Messages improvements, and more.",
+            features: ["Lock screen customization (font, font color, )"],
+            sources: [
+              {
+                name: "Apple",
+                link: "https://www.apple.com/newsroom/2022/06/apple-unveils-new-ways-to-share-and-communicate-in-ios-16/",
+              },
+            ],
           },
           {
             name: "macOS Ventura",
             status: "announced",
-            // description: "",
-            // features: [""],
-            // sources: [
-            //   {
-            //     name: "Apple",
-            //     link: "",
-            //   },
-            // ],
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
           },
           {
             name: "iPadOS 16",
             status: "announced",
-            // description: "",
-            // features: [""],
-            // sources: [
-            //   {
-            //     name: "Apple",
-            //     link: "",
-            //   },
-            // ],
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
           },
           {
             name: "watchOS 9",
             status: "announced",
-            // description: "",
-            // features: [""],
-            // sources: [
-            //   {
-            //     name: "Apple",
-            //     link: "",
-            //   },
-            // ],
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
           },
           {
             name: 'MacBook Pro 13"',
             status: "announced",
-            // description: "",
-            // features: [""],
-            // sources: [
-            //   {
-            //     name: "Apple",
-            //     link: "",
-            //   },
-            // ],
+            description: "",
+            features: [""],
+            sources: [
+              {
+                name: "Apple",
+                link: "",
+              },
+            ],
           },
         ],
       },
