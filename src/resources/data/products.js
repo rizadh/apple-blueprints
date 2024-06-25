@@ -1,3 +1,39 @@
+const contentful = require('contentful');
+
+// Configure Contentful client
+const client = contentful.createClient({
+  space: 'product',
+  accessToken: 'CFPAT-5Js3doe8eNSaSLdSCGUY8Eq0EnvRpCljK0QkjAFy2cc'
+});
+
+// Fetch entries
+client.getEntries({ content_type: 'product' })
+  .then((response) => {
+    const products = response.items.map((item) => item.fields);
+    displayProducts(products);
+  })
+  .catch(console.error);
+
+// Function to display products
+function displayProducts(products) {
+  const container = document.getElementById('products-container');
+  container.innerHTML = '';
+  
+  products.forEach(product => {
+    const productElement = document.createElement('div');
+    productElement.className = 'product';
+    
+    productElement.innerHTML = `
+      <h2>${product.name}</h2>
+      <p>Release Date: ${new Date(product.releaseDate).toDateString()}</p>
+      <p>${product.description}</p>
+      <img src="${product.image.fields.file.url}" alt="${product.name}">
+    `;
+    
+    container.appendChild(productElement);
+  });
+}
+
 export default [
   {
     yearName: "2020",
