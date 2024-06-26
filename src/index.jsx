@@ -1,7 +1,35 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { createPortal, render } from 'react-dom';
+import React, { useState, useCallback, useRef, useEffect } from "react";
+import { render, createPortal } from "react-dom";
+import years from "./resources/data/products";
 
-// Constants for status icons and labels
+document.addEventListener('DOMContentLoaded', () => {
+  const spaceId = '1zn4b0ow3sim';
+  const accessToken = 'xkzA96ThdMaC5DW91RubOhJhrMi8ZHPrxCCWZ7DbZek';
+  const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
+  const listContainer = document.getElementById('contentful-list');
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then(data => renderContentfulList(data.items || []))
+    .catch(error => console.error('Error fetching data from Contentful:', error));
+
+  
+  function renderContentfulList(items) {
+    if (!items.length) console.log('No items found in Contentful response.');
+    items.forEach(item => {
+      const listItem = document.createElement('li');
+      const productName = item.fields['productName'];
+      const status = item.fields['status']; 
+      
+      listItem.textContent = `${productName} - Status: ${status}`;
+      listContainer.appendChild(listItem);
+    });
+  }
+});
+
 const statusIcons = {
   released: "fas fa-check-circle",
   announced: "far fa-check-circle",
@@ -14,29 +42,11 @@ const statusLabels = {
   rumoured: "Rumoured",
 };
 
-// Fetch data from Contentful
-const fetchData = async () => {
-  const spaceId = '1zn4b0ow3sim';
-  const accessToken = 'xkzA96ThdMaC5DW91RubOhJhrMi8ZHPrxCCWZ7DbZek';
-  const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
-
-  try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) throw new Error('Network response was not ok');
-    const data = await response.json();
-    return data.items || [];
-  } catch (error) {
-    console.error('Error fetching data from Contentful:', error);
-    return [];
-  }
-};
-
-// Component to render individual product items
 function ProductItem({ product }) {
-  const { name, status } = product.fields;
+  const { name, status } = product;
   const [showDetails, setShowDetails] = useState(false);
-  const showModal = useCallback(() => setShowDetails(true), []);
-  const closeModal = useCallback(() => setShowDetails(false), []);
+  const showModal = useCallback(() => setShowDetails(true));
+  const closeModal = useCallback(() => setShowDetails(false));
 
   return (
     <>
@@ -55,19 +65,18 @@ function ProductItem({ product }) {
   );
 }
 
-// Component to render products for a month
 function MonthCard({ month, products }) {
   return (
     <ul className="item">
       <span className="month">{month}</span>
+      {/* <span className="counter">{products.length}</span>  */}
       {products.map((product) => (
-        <ProductItem key={product.sys.id} product={product} />
+        <ProductItem key={product.name} product={product} />
       ))}
     </ul>
   );
 }
 
-// Component to render year-wise products
 function YearCard({ months, year }) {
   return (
     <>
@@ -81,9 +90,7 @@ function YearCard({ months, year }) {
   );
 }
 
-// Component to render product details in a modal
-function ProductContainer({ product, onDismiss }) {
-  const { name, status, description, features, sources } = product.fields;
+function ProductContainer({ product: { name, status, description, features, sources }, onDismiss }) {
   return (
     <div className="product-container">
       <div className={"product-status " + status + "-product"}>
@@ -107,20 +114,20 @@ function ProductContainer({ product, onDismiss }) {
           Sources
           <ul className="product-features">
             {sources.map((source) => (
-              <li key={source.fields.link} className="source-link">
-                <a href={source.fields.link} target="_blank" className="source-link">
-                  {source.fields.name}
+              <li key={source} className="source-link">
+                <a href={source.link} target="_blank" className="source-link">
+                  {source.name}
                 </a>
               </li>
             ))}
           </ul>
         </div>
       )}
+      {/* <button className="fas fa-times close-button" onClick={onDismiss} /> */}
     </div>
   );
 }
 
-// Modal component
 function Modal({ children }) {
   const element = useRef(document.createElement("div"));
 
@@ -129,51 +136,14 @@ function Modal({ children }) {
     parentNode.appendChild(element.current);
 
     return () => element.current.remove();
-  }, []);
+  });
 
   return createPortal(children, element.current);
 }
 
-// Main App component
 function App() {
-  const [years, setYears] = useState([]);
-
-  useEffect(() => {
-    fetchData().then(data => {
-      // Process and group data by year and month
-      const groupedData = groupByYearAndMonth(data);
-      setYears(groupedData);
-    });
-  }, []);
-
-  return years.map(({ yearName, months }) => (
-    <YearCard key={yearName} year={yearName} months={months} />
-  ));
+  return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />);
 }
 
-// Helper function to group products by year and month
-const groupByYearAndMonth = (data) => {
-  const grouped = {};
-
-  data.forEach(item => {
-    const date = new Date(item.fields.releaseDate);
-    const year = date.getFullYear();
-    const month = date.toLocaleString('default', { month: 'long' });
-
-    if (!grouped[year]) grouped[year] = {};
-    if (!grouped[year][month]) grouped[year][month] = [];
-
-    grouped[year][month].push(item);
-  });
-
-  return Object.keys(grouped).map(year => ({
-    yearName: year,
-    months: Object.keys(grouped[year]).map(month => ({
-      name: month,
-      products: grouped[year][month]
-    }))
-  }));
-};
-
-// Render the App
 render(<App />, document.querySelector(".wrapper"));
+
