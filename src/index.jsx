@@ -1,12 +1,12 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { render, createPortal } from "react-dom";
-import years from "./resources/data/products";
+// import years from "./resources/data/products";
 
 document.addEventListener('DOMContentLoaded', () => {
   const spaceId = '1zn4b0ow3sim';
   const accessToken = 'xkzA96ThdMaC5DW91RubOhJhrMi8ZHPrxCCWZ7DbZek';
   const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
-  const listContainer = document.getElementById('contentful-list');
+  const listContainer = document.getElementById('item');
 
   fetch(apiUrl)
     .then(response => {
