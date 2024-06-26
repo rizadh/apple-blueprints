@@ -2,6 +2,34 @@ import React, { useState, useCallback, useRef, useEffect } from "react";
 import { render, createPortal } from "react-dom";
 import years from "./resources/data/products";
 
+document.addEventListener('DOMContentLoaded', () => {
+  const spaceId = '1zn4b0ow3sim';
+  const accessToken = 'xkzA96ThdMaC5DW91RubOhJhrMi8ZHPrxCCWZ7DbZek';
+  const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
+  const listContainer = document.getElementById('contentful-list');
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then(data => renderContentfulList(data.items || []))
+    .catch(error => console.error('Error fetching data from Contentful:', error));
+
+  
+  function renderContentfulList(items) {
+    if (!items.length) console.log('No items found in Contentful response.');
+    items.forEach(item => {
+      const listItem = document.createElement('li');
+      const productName = item.fields['productName'];
+      const status = item.fields['status']; 
+      
+      listItem.textContent = `${productName} - Status: ${status}`;
+      listContainer.appendChild(listItem);
+    });
+  }
+});
+
 const statusIcons = {
   released: "fas fa-check-circle",
   announced: "far fa-check-circle",
