@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => renderContentfulList(data.items || []))
     .catch(error => console.error('Error fetching data from Contentful:', error));
 
-  
   function renderContentfulList(items) {
     if (!items.length) console.log('No items found in Contentful response.');
     items.forEach(item => {
