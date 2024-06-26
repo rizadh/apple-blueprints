@@ -107,9 +107,9 @@ function ProductContainer({ product, onDismiss }) {
           Sources
           <ul className="product-features">
             {sources.map((source) => (
-              <li key={source} className="source-link">
-                <a href={source.link} target="_blank" className="source-link">
-                  {source.name}
+              <li key={source.fields.link} className="source-link">
+                <a href={source.fields.link} target="_blank" className="source-link">
+                  {source.fields.name}
                 </a>
               </li>
             ))}
@@ -153,7 +153,6 @@ function App() {
 
 // Helper function to group products by year and month
 const groupByYearAndMonth = (data) => {
-  // Logic to group data by year and month
   const grouped = {};
 
   data.forEach(item => {
