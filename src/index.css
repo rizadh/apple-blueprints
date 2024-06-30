@@ -232,6 +232,7 @@ a {
   align-items: center;
   flex-wrap: wrap-reverse;
   margin-bottom: var(--content-section-gap);
+  letter-spacing: -0.5px;
 }
 
 .product-name {
