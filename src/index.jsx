@@ -189,7 +189,7 @@ async function fetchData() {
     const date = new Date(item.fields.date);
     const year = date.getUTCFullYear();
     const monthIndex = date.getUTCMonth();
-    const monthName = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date).toLocaleLowerCase();
+    const monthName = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
 
     let productsForYear = products.find((yearObject) => yearObject.yearName === year);
     if (!productsForYear) {

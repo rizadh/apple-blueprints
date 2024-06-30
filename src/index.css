@@ -118,6 +118,10 @@ body {
   position: relative;
 }
 
+.month {
+  text-transform: lowercase;
+}
+
 .counter {
   padding: 4px 12px;
   min-height: 38px;
