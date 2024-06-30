@@ -167,7 +167,7 @@ function App() {
             className="footer-button"
             id="twitter-button"
           >
-            <i className="fab fa-x-twitter"></i>&nbsp;&nbsp;X
+            <i className="fab fa-x-twitter"></i>&nbsp;&nbsp;Follow
           </a>
           <a
             href="https://www.buymeacoffee.com/appleblueprints"
