@@ -120,15 +120,65 @@ function Modal({ children }) {
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [lastUpdated, setLastUpdated] = useState(null);
 
   useEffect(() => {
-    fetchProducts().then((products) => setProducts(products));
+    fetchData().then((data) => {
+      setProducts(data.products);
+      setLastUpdated(data.lastUpdated);
+    });
   }, []);
 
-  return products.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />);
+  const lastUpdatedDateString = new Intl.DateTimeFormat(navigator.language, {
+    day: "numeric",
+    year: "numeric",
+    month: "long",
+    hour: "numeric",
+    minute: "numeric",
+  }).format(lastUpdated);
+
+  return (
+    <>
+      {products.map(({ yearName, months }) => (
+        <YearCard key={yearName} year={yearName} months={months} />
+      ))}
+
+      <div id="footer">
+        <div id="footer-button-container">
+          <a
+            href="mailto:appleblueprints@gmail.com?subject=Suggest an edit&body=What would you like to change?"
+            target="_blank"
+            className="footer-button"
+            id="suggest-button"
+          >
+            <i className="fas fa-wrench"></i>&nbsp;&nbsp;Suggest an edit
+          </a>
+          <a
+            href="https://www.twitter.com/appleblueprints"
+            target="_blank"
+            className="footer-button"
+            id="twitter-button"
+          >
+            <i className="fab fa-twitter"></i>&nbsp;&nbsp;Twitter
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/appleblueprints"
+            target="_blank"
+            className="footer-button"
+            id="donate-button"
+          >
+            <i className="far fa-grin"></i>&nbsp;&nbsp;Donate
+          </a>
+        </div>
+        <div title="Last updated" id="last-updated">
+          Last updated: {lastUpdatedDateString}
+        </div>
+      </div>
+    </>
+  );
 }
 
-async function fetchProducts() {
+async function fetchData() {
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
   const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
   const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=product`;
@@ -170,7 +220,13 @@ async function fetchProducts() {
   products.sort((a, b) => a.yearName - b.yearName);
   products.forEach((year) => year.months.sort((a, b) => a.index - b.index));
 
-  return products;
+  const lastUpdated = data.items
+    .map((item) => new Date(item.sys.updatedAt))
+    .sort((a, b) => a.getTime() - b.getTime())
+    .pop();
+
+  console.log({ data, lastUpdated });
+  return { products, lastUpdated };
 }
 
 render(<App />, document.querySelector(".wrapper"));
