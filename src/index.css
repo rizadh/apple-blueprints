@@ -22,6 +22,7 @@ body {
   --border-radius: 18px;
   --transition-time: 100ms;
   --mobile-viewport: 600px;
+  --content-section-gap: 24px;
   margin: 0;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
     "sans-serif";
@@ -30,7 +31,7 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    --site-background: rgb(10,10,10);
+    --site-background: rgb(10, 10, 10);
     --text-primary: white;
     --text-tertiary: rgb(64, 64, 64);
     --month-card-background: rgb(20, 20, 20);
@@ -42,7 +43,7 @@ body {
     --product-container-background: rgb(14, 14, 14);
     --button-background: rgba(255, 255, 255, 0.05);
     --button-background-hover: rgba(255, 204, 0, 0.05);
-    --footer-background: rgb(15,15,15);
+    --footer-background: rgb(15, 15, 15);
   }
 }
 
@@ -62,9 +63,6 @@ body {
 @media (max-width: 600px) {
   #navbar {
     font-size: 0.8em;
-    top: 24px;
-    left: 24px;
-    right: 24px;
   }
 }
 
@@ -107,7 +105,7 @@ body {
 .item {
   min-width: 200px;
   padding: 12px 18px;
-  margin: 12px 12px 12px;
+  margin: 12px;
   border: 1px solid;
   border-color: var(--border-colour);
   border-radius: var(--border-radius);
@@ -118,11 +116,6 @@ body {
   flex-grow: 1;
   flex-basis: 0;
   position: relative;
-}
-@media (max-width: 600px) {
-  .item {
-    margin: 10px 0 6px;
-  }
 }
 
 .counter {
@@ -236,11 +229,17 @@ a {
 
 .product-description {
   margin-top: 4px;
-  margin-bottom: 12px;
+  margin-bottom: var(--content-section-gap);
   font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 0;
   color: var(--text-secondary);
+}
+
+.product-image {
+  width: 100%;
+  margin-bottom: var(--content-section-gap);
+  border-radius: 6px;
 }
 
 ul {

@@ -1,34 +1,6 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { render, createPortal } from "react-dom";
-import years from "./resources/data/products";
-
-document.addEventListener('DOMContentLoaded', () => {
-  const spaceId = '1zn4b0ow3sim';
-  const accessToken = 'xkzA96ThdMaC5DW91RubOhJhrMi8ZHPrxCCWZ7DbZek';
-  const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
-  const listContainer = document.getElementById('item');
-
-  fetch(apiUrl)
-    .then(response => {
-      if (!response.ok) throw new Error('Network response was not ok');
-      return response.json();
-    })
-    .then(data => renderContentfulList(data.items || []))
-    .catch(error => console.error('Error fetching data from Contentful:', error));
-
-  
-  function renderContentfulList(items) {
-    if (!items.length) console.log('No items found in Contentful response.');
-    items.forEach(item => {
-      const listItem = document.createElement('li');
-      const productName = item.fields['productName'];
-      const status = item.fields['status']; 
-      
-      listItem.textContent = `${productName} - Status: ${status}`;
-      listContainer.appendChild(listItem);
-    });
-  }
-});
+// import years from "./resources/data/products";
 
 const statusIcons = {
   released: "fas fa-check-circle",
@@ -90,7 +62,7 @@ function YearCard({ months, year }) {
   );
 }
 
-function ProductContainer({ product: { name, status, description, features, sources }, onDismiss }) {
+function ProductContainer({ product: { name, status, description, features, sources, images }, onDismiss }) {
   return (
     <div className="product-container">
       <div className={"product-status " + status + "-product"}>
@@ -98,7 +70,13 @@ function ProductContainer({ product: { name, status, description, features, sour
       </div>
       <div className="product-name">{name}</div>
       <div className="product-description">{description}</div>
-
+      {images && (
+        <div className="product-image-container">
+          {images.map((image) => (
+            <img key={image.file.url} className="product-image" src={image.file.url} alt={image.description} />
+          ))}
+        </div>
+      )}
       {features && (
         <div className="product-header">
           Features
@@ -115,8 +93,8 @@ function ProductContainer({ product: { name, status, description, features, sour
           <ul className="product-features">
             {sources.map((source) => (
               <li key={source} className="source-link">
-                <a href={source.link} target="_blank" className="source-link">
-                  {source.name}
+                <a href={source.url} target="_blank" className="source-link">
+                  {source.title}
                 </a>
               </li>
             ))}
@@ -142,8 +120,59 @@ function Modal({ children }) {
 }
 
 function App() {
-  return years.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts().then((products) => setProducts(products));
+  }, []);
+
+  return products.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />);
+}
+
+async function fetchProducts() {
+  const spaceId = "1zn4b0ow3sim";
+  const accessToken = "xkzA96ThdMaC5DW91RubOhJhrMi8ZHPrxCCWZ7DbZek";
+  const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=product`;
+  const data = await fetch(apiUrl).then((res) => res.json());
+
+  const products = [];
+  data.items.forEach((item) => {
+    const date = new Date(item.fields.date);
+    const year = date.getUTCFullYear();
+    const monthIndex = date.getUTCMonth();
+    const monthName = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date).toLocaleLowerCase();
+
+    let productsForYear = products.find((yearObject) => yearObject.yearName === year);
+    if (!productsForYear) {
+      productsForYear = { yearName: year, months: [] };
+      products.push(productsForYear);
+    }
+
+    let productsForMonth = productsForYear.months.find((monthObject) => monthObject.name === monthName);
+    if (!productsForMonth) {
+      productsForMonth = { name: monthName, index: monthIndex, products: [] };
+      productsForYear.months.push(productsForMonth);
+    }
+
+    productsForMonth.products.push({
+      name: item.fields.productName,
+      status: item.fields.status,
+      description: item.fields.description,
+      features: item.fields.features,
+      sources: item.fields.sources?.map(
+        (source) => data.includes.Entry.find((entry) => entry.sys.id === source.sys.id).fields
+      ),
+      images: item.fields.images?.map(
+        (image) => data.includes.Asset.find((asset) => asset.sys.id === image.sys.id).fields
+      ),
+    });
+  });
+
+  products.sort((a, b) => a.yearName - b.yearName);
+  products.forEach((year) => year.months.sort((a, b) => a.index - b.index));
+
+  console.log({ products, data });
+  return products;
 }
 
 render(<App />, document.querySelector(".wrapper"));
-
