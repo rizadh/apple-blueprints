@@ -80,7 +80,7 @@ function ProductContainer({ product: { name, status, description, features, sour
       )}
       {features && (
         <div className="product-header">
-          What's new
+          What's new:
           <ul className="product-features">
             {features.map((feature) => (
               <li key={feature}>{feature}</li>
@@ -89,8 +89,8 @@ function ProductContainer({ product: { name, status, description, features, sour
         </div>
       )}
       {sources && (
-        <div className="product-header">
-          Sources
+        <div className="product-header sources-header">
+          Sources:
           <ul className="product-features">
             {sources.map((source) => (
               <li key={source} className="source-link">

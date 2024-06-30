@@ -273,6 +273,10 @@ ul {
   font-size: 1.8em;
 }
 
+.sources-header {
+  font-size: 1.4em;
+}
+
 .product-features {
   margin-bottom: var(--content-section-gap);
 }
