@@ -100,6 +100,7 @@
       let lastTop = 0;
       let lastScrollPosition = 0;
       const navbar = document.querySelector("#navbar");
+      const navbarTravel = navbar.clientHeight + 24;
 
       window.addEventListener(
         "scroll",
@@ -116,12 +117,12 @@
 
           const scrollPosition = window.pageYOffset;
           const delta = scrollPosition - lastScrollPosition;
-          const newTop = scrollPosition <= 0 ? 0 : Math.max(0, Math.min(203, lastTop + delta));
+          const newTop = scrollPosition <= 0 ? 0 : Math.max(0, Math.min(navbarTravel, lastTop + delta));
 
           navbar.style.transform = `translateY(-${newTop}px)`;
 
           lastTop = newTop;
-          lastScrollPosition = Math.min(maxScrollPosition, scrollPosition);
+          lastScrollPosition = scrollPosition;
         },
         false
       );
