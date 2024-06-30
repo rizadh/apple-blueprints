@@ -235,7 +235,7 @@ a {
 }
 
 .product-name {
-  font-size: 3em;
+  font-size: 48px;
   line-height: 1;
   order: 1;
 }
@@ -268,11 +268,11 @@ ul {
 .product-header {
   margin: 0;
   margin-top: 10px;
-  font-size: 1.8em;
+  font-size: 24px;
 }
 
 .sources-header {
-  font-size: 1.4em;
+  font-size: 19px;
 }
 
 .product-features {
@@ -281,7 +281,7 @@ ul {
 
 .product-features li {
   list-style-type: inherit;
-  font-size: 1.2rem;
+  font-size: 19px;
   font-weight: 400;
   margin: 10px 0;
   color: var(--text-secondary);
@@ -290,7 +290,7 @@ ul {
 .source-link {
   color: var(--link);
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 18px;
   text-decoration: underline;
 }
 
