@@ -2,7 +2,7 @@ body {
   --site-background: rgb(250, 250, 250);
   --navbar-background: rgba(255, 204, 0, 0.8);
   --text-primary: black;
-  --text-secondary: gray;
+  --text-secondary: rgb(97, 97, 97);
   --text-tertiary: rgb(191, 191, 191);
   --month-card-background: rgb(255, 255, 255);
   --border-colour: rgb(200, 200, 200);
