@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { render, createPortal } from "react-dom";
-// import years from "./resources/data/products";
 
 const statusIcons = {
   released: "fas fa-check-circle",
@@ -130,8 +129,8 @@ function App() {
 }
 
 async function fetchProducts() {
-  const spaceId = "1zn4b0ow3sim";
-  const accessToken = "xkzA96ThdMaC5DW91RubOhJhrMi8ZHPrxCCWZ7DbZek";
+  const spaceId = process.env.CONTENTFUL_SPACE_ID;
+  const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
   const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=product`;
   const data = await fetch(apiUrl).then((res) => res.json());
 
@@ -171,7 +170,6 @@ async function fetchProducts() {
   products.sort((a, b) => a.yearName - b.yearName);
   products.forEach((year) => year.months.sort((a, b) => a.index - b.index));
 
-  console.log({ products, data });
   return products;
 }
 
