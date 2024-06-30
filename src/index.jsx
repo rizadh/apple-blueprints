@@ -64,10 +64,12 @@ function YearCard({ months, year }) {
 function ProductContainer({ product: { name, status, description, features, sources, images }, onDismiss }) {
   return (
     <div className="product-container">
-      <div className={"product-status " + status + "-product"}>
-        <i className={statusIcons[status]} /> {statusLabels[status]}
+      <div className="titlebar">
+        <div className={"product-status " + status + "-product"}>
+          <i className={statusIcons[status]} /> {statusLabels[status]}
+        </div>
+        <div className="product-name">{name}</div>
       </div>
-      <div className="product-name">{name}</div>
       <div className="product-description">{description}</div>
       {images && (
         <div className="product-image-container">

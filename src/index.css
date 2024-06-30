@@ -185,6 +185,7 @@ a {
   margin-bottom: 6px;
   font-size: 1.2em;
   border-radius: 6px;
+  order: 2;
 }
 .released-product {
   color: var(--released-product);
@@ -225,10 +226,23 @@ a {
   background-color: rgba(128, 126, 128, 0.14);
 }
 
+.titlebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .product-name {
   font-size: 3em;
   line-height: 1;
-  margin-bottom: 12px;
+  order: 1;
+  margin-bottom: 6px;
+}
+@media (max-width: 600px) {
+  .product-name {
+    font-size: 2.5em;
+  }
 }
 
 .product-description {
@@ -241,7 +255,8 @@ a {
 }
 
 .product-image {
-  width: 100%;
+  max-width: 512px;
+  max-height: 512px;
   margin-bottom: var(--content-section-gap);
   border-radius: 6px;
 }
