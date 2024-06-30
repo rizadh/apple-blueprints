@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import React, { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { render, createPortal } from "react-dom";
 
 const statusIcons = {
@@ -54,7 +54,7 @@ function YearCard({ months, year }) {
       <div className="year">{year}</div>
       <div className="container">
         {months.map(({ name, products }) => (
-          <MonthCard key={name} month={name} products={products} />
+          <MonthCard key={name ?? "unknown"} month={name} products={products} />
         ))}
       </div>
     </>
@@ -120,11 +120,13 @@ function Modal({ children }) {
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [unknownProducts, setUnknownProducts] = useState([]);
   const [lastUpdated, setLastUpdated] = useState(null);
 
   useEffect(() => {
     fetchData().then((data) => {
       setProducts(data.products);
+      setUnknownProducts(data.unknownProducts);
       setLastUpdated(data.lastUpdated);
     });
   }, []);
@@ -137,11 +139,15 @@ function App() {
     minute: "numeric",
   }).format(lastUpdated);
 
+  const unknownMonths = useMemo(() => [{ products: unknownProducts }], [unknownProducts]);
+
   return (
     <>
       {products.map(({ yearName, months }) => (
         <YearCard key={yearName} year={yearName} months={months} />
       ))}
+
+      <YearCard key="unknown" year="unknown" months={unknownMonths} />
 
       <div id="footer">
         <div id="footer-button-container">
@@ -170,9 +176,11 @@ function App() {
             <i className="far fa-grin"></i>&nbsp;&nbsp;Donate
           </a>
         </div>
-        <div title="Last updated" id="last-updated">
-          Last updated: {lastUpdatedDateString}
-        </div>
+        {lastUpdated && (
+          <div title="Last updated" id="last-updated">
+            Last updated: {lastUpdatedDateString}
+          </div>
+        )}
       </div>
     </>
   );
@@ -185,7 +193,26 @@ async function fetchData() {
   const data = await fetch(apiUrl).then((res) => res.json());
 
   const products = [];
+  const unknownProducts = [];
   data.items.forEach((item) => {
+    const product = {
+      name: item.fields.productName,
+      status: item.fields.status,
+      description: item.fields.description,
+      features: item.fields.features,
+      sources: item.fields.sources?.map(
+        (source) => data.includes.Entry.find((entry) => entry.sys.id === source.sys.id).fields
+      ),
+      images: item.fields.images?.map(
+        (image) => data.includes.Asset.find((asset) => asset.sys.id === image.sys.id).fields
+      ),
+    };
+
+    if (!item.fields.date) {
+      unknownProducts.push(product);
+      return;
+    }
+
     const date = new Date(item.fields.date);
     const year = date.getUTCFullYear();
     const monthIndex = date.getUTCMonth();
@@ -203,18 +230,7 @@ async function fetchData() {
       productsForYear.months.push(productsForMonth);
     }
 
-    productsForMonth.products.push({
-      name: item.fields.productName,
-      status: item.fields.status,
-      description: item.fields.description,
-      features: item.fields.features,
-      sources: item.fields.sources?.map(
-        (source) => data.includes.Entry.find((entry) => entry.sys.id === source.sys.id).fields
-      ),
-      images: item.fields.images?.map(
-        (image) => data.includes.Asset.find((asset) => asset.sys.id === image.sys.id).fields
-      ),
-    });
+    productsForMonth.products.push(product);
   });
 
   products.sort((a, b) => a.yearName - b.yearName);
@@ -225,8 +241,8 @@ async function fetchData() {
     .sort((a, b) => a.getTime() - b.getTime())
     .pop();
 
-  console.log({ data, lastUpdated });
-  return { products, lastUpdated };
+  console.log({ data, products, unknownProducts, lastUpdated });
+  return { products, unknownProducts, lastUpdated };
 }
 
 render(<App />, document.querySelector(".wrapper"));
