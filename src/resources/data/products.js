@@ -1015,8 +1015,7 @@ export default [
           {
             name: "iOS 16",
             status: "announced",
-            description:
-              "iOS 16 brings lock screen customization, , new Messages improvements, and more.",
+            description: "iOS 16 brings lock screen customization, , new Messages improvements, and more.",
             features: ["Lock screen customization (font, font color, )"],
             sources: [
               {

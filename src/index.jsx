@@ -210,12 +210,15 @@ async function fetchData() {
       ),
     };
 
-    if (!item.fields.date) {
+    const latestDate = item.fields.date ?? item.fields.announcedDate ?? item.fields.rumouredDate;
+
+    if (!latestDate) {
       unknownProducts.push(product);
       return;
     }
 
-    const date = new Date(item.fields.date);
+    // const date = new Date(item.fields.date);
+    const date = new Date(latestDate);
     const year = date.getUTCFullYear();
     const monthIndex = date.getUTCMonth();
     const monthName = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);

@@ -231,6 +231,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
 .product-name {
@@ -256,7 +257,7 @@ a {
 
 .product-image {
   max-width: 512px;
-  max-height: 512px;
+  max-height: 256px;
   margin-bottom: var(--content-section-gap);
   border-radius: 6px;
 }
