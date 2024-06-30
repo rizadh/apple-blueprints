@@ -161,12 +161,7 @@ function App() {
           >
             <i className="fas fa-wrench"></i>&nbsp;&nbsp;Suggest an edit
           </a>
-          <a
-            href="https://www.twitter.com/appleblueprints"
-            target="_blank"
-            className="footer-button"
-            id="twitter-button"
-          >
+          <a href="https://www.x.com/appleblueprints" target="_blank" className="footer-button" id="twitter-button">
             <i className="fab fa-x-twitter"></i>&nbsp;&nbsp;Follow
           </a>
           <a
