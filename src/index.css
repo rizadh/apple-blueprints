@@ -162,7 +162,6 @@ a {
   padding: 30px 30px 18px 30px;
   background-color: var(--product-container-background);
   font-weight: 600;
-  letter-spacing: -0.5px;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
   overflow: scroll;
   max-height: 80%;
@@ -251,7 +250,6 @@ a {
   margin-bottom: var(--content-section-gap);
   font-weight: 400;
   font-size: 1.2em;
-  letter-spacing: 0;
   color: var(--text-secondary);
 }
 
