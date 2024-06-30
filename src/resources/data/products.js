@@ -39,7 +39,7 @@ export default [
           {
             name: "MacBook Air",
             status: "released",
-            description: "Apple refreshed the MacBook Air with a few spec bumps and new keyboard. ",
+            description: "Apple refreshed the MacBook Air with a few spec bumps and new keyboard.",
             features: [
               "Twice the storage",
               "Lower price",

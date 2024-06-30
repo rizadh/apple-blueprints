@@ -2,9 +2,9 @@ import React, { useState, useCallback, useRef, useEffect, useMemo } from "react"
 import { render, createPortal } from "react-dom";
 
 const statusIcons = {
-  released: "fas fa-check-circle",
-  announced: "far fa-check-circle",
-  rumoured: "far fa-question-circle",
+  released: "fa-solid fa-circle-check",
+  announced: "fa-regular fa-circle-check",
+  rumoured: "fa-regular fa-circle-question",
 };
 
 const statusLabels = {
@@ -167,7 +167,7 @@ function App() {
             className="footer-button"
             id="twitter-button"
           >
-            <i className="fab fa-twitter"></i>&nbsp;&nbsp;Twitter
+            <i className="fab fa-x-twitter"></i>&nbsp;&nbsp;X
           </a>
           <a
             href="https://www.buymeacoffee.com/appleblueprints"
@@ -210,15 +210,12 @@ async function fetchData() {
       ),
     };
 
-    const latestDate = item.fields.date ?? item.fields.announcedDate ?? item.fields.rumouredDate;
-
-    if (!latestDate) {
+    if (!item.fields.date) {
       unknownProducts.push(product);
       return;
     }
 
-    // const date = new Date(item.fields.date);
-    const date = new Date(latestDate);
+    const date = new Date(item.fields.date);
     const year = date.getUTCFullYear();
     const monthIndex = date.getUTCMonth();
     const monthName = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
