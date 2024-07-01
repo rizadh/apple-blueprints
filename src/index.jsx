@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo, createContext } from "react";
-import { render } from "react-dom";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { YearCard } from "./YearCard";
 import { ProductPage } from "./ProductPage";
