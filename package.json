@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "serve": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "serve": "vite serve",
+    "build": "vite build"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "vite": "^5.3.2"
   },
   "dependencies": {
     "react": "^18.3.1",
