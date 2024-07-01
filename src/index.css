@@ -33,6 +33,7 @@ body {
   body {
     --site-background: rgb(10, 10, 10);
     --text-primary: white;
+    --text-secondary: rgb(158, 158, 158);
     --text-tertiary: rgb(64, 64, 64);
     --month-card-background: rgb(20, 20, 20);
     --border-colour: rgb(64, 64, 64);

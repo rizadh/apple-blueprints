@@ -238,6 +238,8 @@ async function fetchData() {
     .sort((a, b) => a.getTime() - b.getTime())
     .pop();
 
+  console.log({ data });
+
   return { products, unknownProducts, lastUpdated };
 }
 
