@@ -238,6 +238,7 @@ a {
 
 .product-name {
   font-size: 48px;
+  margin-bottom: 6px;
   line-height: 1;
   order: 1;
 }
