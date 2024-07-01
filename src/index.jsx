@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { YearCard } from "./YearCard";
 import { ProductPage } from "./ProductPage";
+import { createRoot } from "react-dom/client";
 
 export const statusIcons = {
   released: "fa-solid fa-circle-check",
@@ -161,4 +162,5 @@ async function fetchData() {
   return { products, unknownProducts, lastUpdated };
 }
 
-render(<RouterProvider router={router} />, document.querySelector(".wrapper"));
+const root = createRoot(document.querySelector(".wrapper"));
+root.render(<RouterProvider router={router} />);
