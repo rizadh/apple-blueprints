@@ -131,37 +131,39 @@
       let lastTop = 0;
       let lastScrollPosition = 0;
       const navbar = document.querySelector("#navbar");
-      const navbarTravel = navbar.clientHeight + 26;
-      const opacityOffset = 50; // Adjust this value to set the offset before opacity starts decreasing
+      const navbarHeight = navbar.clientHeight + 26;
+      // const opacityOffset = 50; // Adjust this value to set the offset before opacity starts decreasing
 
-      window.addEventListener(
-        "scroll",
-        function () {
-          const maxScrollPosition =
-            Math.max(
-              document.body.scrollHeight,
-              document.body.offsetHeight,
-              document.documentElement.clientHeight,
-              document.documentElement.scrollHeight,
-              document.documentElement.offsetHeight
-            ) - window.innerHeight;
+      function updateNavbar() {
+        const scrollPosition = window.pageYOffset;
+        const delta = scrollPosition - lastScrollPosition;
+        const newTop = scrollPosition <= 0 ? 0 : Math.max(0, Math.min(navbarHeight, lastTop + delta));
 
-          const scrollPosition = window.pageYOffset;
-          const delta = scrollPosition - lastScrollPosition;
-          const newTop = scrollPosition <= 0 ? 0 : Math.max(0, Math.min(navbarTravel, lastTop + delta));
+        navbar.style.transform = `translateY(-${newTop}px)`;
 
-          navbar.style.transform = `translateY(-${newTop}px)`;
+        // Calculate opacity based on scroll position with an offset
+        const opacityScrollPosition = Math.max(0, scrollPosition - opacityOffset);
+        const opacity = 1 - opacityScrollPosition / navbarHeight;
+        navbar.style.opacity = opacity.toFixed(2);
 
-          // Calculate opacity based on scroll position with an offset
-          const opacityScrollPosition = Math.max(0, scrollPosition - opacityOffset);
-          const opacity = 1 - opacityScrollPosition / navbarTravel;
-          navbar.style.opacity = opacity.toFixed(2);
+        lastTop = newTop;
+        lastScrollPosition = scrollPosition;
+      }
 
-          lastTop = newTop;
-          lastScrollPosition = scrollPosition;
-        },
-        false
-      );
+      function throttle(callback, limit) {
+        let wait = false;
+        return function () {
+          if (!wait) {
+            callback.apply(null, arguments);
+            wait = true;
+            requestAnimationFrame(function () {
+              wait = false;
+            });
+          }
+        };
+      }
+
+      window.addEventListener("scroll", throttle(updateNavbar, 16), false);
     </script>
   </body>
 </html>
