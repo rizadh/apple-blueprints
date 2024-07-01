@@ -98,72 +98,36 @@
     <script src="./index.jsx"></script>
 
     <script>
-      // let lastTop = 0;
-      // let lastScrollPosition = 0;
-      // const navbar = document.querySelector("#navbar");
-      // const navbarTravel = navbar.clientHeight + 24;
-
-      // window.addEventListener(
-      //   "scroll",
-      //   function () {
-      //     // Credit: Neil Philip Whitehead https://stackoverflow.com/a/17698713
-      //     const maxScrollPosition =
-      //       Math.max(
-      //         document.body.scrollHeight,
-      //         document.body.offsetHeight,
-      //         document.documentElement.clientHeight,
-      //         document.documentElement.scrollHeight,
-      //         document.documentElement.offsetHeight
-      //       ) - window.innerHeight;
-
-      //     const scrollPosition = window.pageYOffset;
-      //     const delta = scrollPosition - lastScrollPosition;
-      //     const newTop = scrollPosition <= 0 ? 0 : Math.max(0, Math.min(navbarTravel, lastTop + delta));
-
-      //     navbar.style.transform = `translateY(-${newTop}px)`;
-
-      //     lastTop = newTop;
-      //     lastScrollPosition = scrollPosition;
-      //   },
-      //   false
-      // );
-
       let lastTop = 0;
       let lastScrollPosition = 0;
       const navbar = document.querySelector("#navbar");
-      const navbarHeight = navbar.clientHeight + 26;
-      const opacityOffset = 50; // Adjust this value to set the offset before opacity starts decreasing
+      const navbarTravel = navbar.clientHeight + 42;
 
-      function updateNavbar() {
-        const scrollPosition = window.pageYOffset;
-        const delta = scrollPosition - lastScrollPosition;
-        const newTop = scrollPosition <= 0 ? 0 : Math.max(0, Math.min(navbarHeight, lastTop + delta));
+      window.addEventListener(
+        "scroll",
+        function () {
+          // Credit: Neil Philip Whitehead https://stackoverflow.com/a/17698713
 
-        navbar.style.transform = `translateY(-${newTop}px)`;
+          const maxScrollPosition =
+            Math.max(
+              document.body.scrollHeight,
+              document.body.offsetHeight,
+              document.documentElement.clientHeight,
+              document.documentElement.scrollHeight,
+              document.documentElement.offsetHeight
+            ) - window.innerHeight;
 
-        // Calculate opacity based on scroll position with an offset
-        const opacityScrollPosition = Math.max(0, scrollPosition - opacityOffset);
-        const opacity = 1 - opacityScrollPosition / navbarHeight;
-        navbar.style.opacity = opacity.toFixed(2);
+          const scrollPosition = window.pageYOffset;
+          const delta = scrollPosition - lastScrollPosition;
+          const newTop = scrollPosition <= 0 ? 0 : Math.max(0, Math.min(navbarTravel, lastTop + delta));
 
-        lastTop = newTop;
-        lastScrollPosition = scrollPosition;
-      }
+          navbar.style.transform = `translateY(-${newTop}px)`;
 
-      function throttle(callback, limit) {
-        let wait = false;
-        return function () {
-          if (!wait) {
-            callback.apply(null, arguments);
-            wait = true;
-            requestAnimationFrame(function () {
-              wait = false;
-            });
-          }
-        };
-      }
-
-      window.addEventListener("scroll", throttle(updateNavbar, 16), false);
+          lastTop = newTop;
+          lastScrollPosition = scrollPosition;
+        },
+        false
+      );
     </script>
   </body>
 </html>
