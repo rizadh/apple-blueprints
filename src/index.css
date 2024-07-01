@@ -76,7 +76,7 @@ body {
   }
 }
 
-.year {
+.year-label {
   margin-top: 24px;
   margin-left: 60px;
   font-size: 60px;
@@ -85,7 +85,7 @@ body {
   align-items: flex-end;
 }
 @media (max-width: 600px) {
-  .year {
+  .year-label {
     margin-left: 42px;
   }
 }
@@ -103,7 +103,7 @@ body {
   }
 }
 
-.item {
+.monthCard {
   min-width: 200px;
   padding: 12px 18px;
   margin: 12px;
@@ -117,10 +117,34 @@ body {
   flex-grow: 1;
   flex-basis: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
-.month {
+.month-label {
   text-transform: lowercase;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.product-item {
+  flex-grow: 0;
+  font-size: 22px;
+  display: flex;
+  gap: 6px;
+  border-radius: 6px;
+  padding: 4px 0;
+  transition: var(--transition-time);
+  align-items: center;
+}
+.product-item:hover {
+  padding: 4px 8px;
+}
+
+.product-item-icon {
+  align-self: flex-start;
+  margin-top: 2px;
 }
 
 .counter {
@@ -141,14 +165,12 @@ body {
 
 li {
   list-style: none;
-  line-height: 90%;
   margin: 0;
 }
 
 a {
   text-decoration: none;
   color: grey;
-  font-size: 22px;
   font-weight: 500;
   letter-spacing: -0.5px;
   cursor: pointer;
@@ -184,19 +206,15 @@ a {
 .product-status {
   padding: 4px 8px;
   display: inline-block;
-  margin-bottom: 6px;
   font-size: 1.2em;
   border-radius: 6px;
   order: 2;
 }
 .released-product {
   color: var(--released-product);
-  transition: var(--transition-time);
 }
 .released-product:hover {
-  padding: 4px 8px;
   background-color: rgba(8, 127, 6, 0.1);
-  border-radius: 6px;
 }
 .product-status.released-product {
   background-color: rgba(8, 127, 6, 0.14);
@@ -204,12 +222,9 @@ a {
 
 .announced-product {
   color: var(--announced-product);
-  transition: var(--transition-time);
 }
 .announced-product:hover {
-  padding: 4px 8px;
   background-color: rgba(230, 125, 6, 0.1);
-  border-radius: 6px;
 }
 .product-status.announced-product {
   background-color: rgba(230, 125, 6, 0.14);
@@ -217,12 +232,9 @@ a {
 
 .rumoured-product {
   color: var(--rumoured-product);
-  transition: var(--transition-time);
 }
 .rumoured-product:hover {
-  padding: 4px 8px;
   background-color: rgba(128, 126, 128, 0.1);
-  border-radius: 6px;
 }
 .product-status.rumoured-product {
   background-color: rgba(128, 126, 128, 0.14);
@@ -236,11 +248,11 @@ a {
   flex-wrap: wrap-reverse;
   margin-bottom: var(--content-section-gap);
   letter-spacing: -0.5px;
+  gap: 6px 30px;
 }
 
 .product-name {
-  font-size: 48px;
-  margin-bottom: 6px;
+  font-size: 36px;
   line-height: 1;
   order: 1;
 }
@@ -260,8 +272,6 @@ a {
 
 .product-image {
   width: 100%;
-  /* max-width: 100%; */
-  /* max-height: 256px; */
   margin-bottom: var(--content-section-gap);
   border-radius: 6px;
 }
@@ -280,11 +290,13 @@ ul {
   font-size: 19px;
 }
 
-.product-features {
+.product-features,
+.product-sources {
   margin-bottom: var(--content-section-gap);
 }
 
-.product-features li {
+.product-features li,
+.product-sources li {
   list-style-type: inherit;
   font-size: 19px;
   font-weight: 400;

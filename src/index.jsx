@@ -21,11 +21,9 @@ function ProductItem({ product }) {
 
   return (
     <>
-      <li>
-        <a className={status + "-product"} onClick={showModal}>
-          <i className={statusIcons[status]} /> {name}
-        </a>
-      </li>
+      <a className={status + "-product product-item"} onClick={showModal}>
+        <i className={`${statusIcons[status]} product-item-icon`} /> {name}
+      </a>
       {showDetails && (
         <Modal>
           <div className="overlay" onClick={closeModal} />
@@ -38,9 +36,9 @@ function ProductItem({ product }) {
 
 function MonthCard({ month, products }) {
   return (
-    <ul className="item">
-      <span className="month">{month}</span>
-      {/* <span className="counter">{products.length}</span>  */}
+    <ul className="monthCard">
+      <span className="month-label">{month}</span>
+      {/* <span className="counter">{products.length}</span> */}
       {products.map((product) => (
         <ProductItem key={product.name} product={product} />
       ))}
@@ -51,7 +49,7 @@ function MonthCard({ month, products }) {
 function YearCard({ months, year }) {
   return (
     <>
-      <div className="year">{year}</div>
+      <div className="year-label">{year}</div>
       <div className="container">
         {months.map(({ name, products }) => (
           <MonthCard key={name ?? "unknown"} month={name} products={products} />
@@ -91,7 +89,7 @@ function ProductContainer({ product: { name, status, description, features, sour
       {sources && (
         <div className="product-header sources-header">
           Sources:
-          <ul className="product-features">
+          <ul className="product-sources">
             {sources.map((source) => (
               <li key={source} className="source-link">
                 <a href={source.url} target="_blank" className="source-link">
@@ -238,7 +236,9 @@ async function fetchData() {
     .sort((a, b) => a.getTime() - b.getTime())
     .pop();
 
-  console.log({ data });
+  const slugs = data.items.map((item) => item.fields.slug);
+
+  console.log({ data, slugs });
 
   return { products, unknownProducts, lastUpdated };
 }
