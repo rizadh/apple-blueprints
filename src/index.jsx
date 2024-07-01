@@ -155,9 +155,9 @@ async function fetchData() {
     .sort((a, b) => a.getTime() - b.getTime())
     .pop();
 
-  const slugs = data.items.map((item) => item.fields.slug);
+  // const slugs = data.items.map((item) => item.fields.slug);
 
-  console.log({ data, slugs });
+  // console.log({ data, slugs });
 
   return { products, unknownProducts, lastUpdated };
 }
