@@ -3,6 +3,9 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { YearCard } from "./YearCard";
 import { ProductPage } from "./ProductPage";
 import { createRoot } from "react-dom/client";
+import { ContentfulLivePreview } from "@contentful/live-preview";
+
+ContentfulLivePreview.init({ locale: navigator.language });
 
 export const statusIcons = {
   released: "fa-solid fa-circle-check",
@@ -29,39 +32,28 @@ export const router = createBrowserRouter([
   },
 ]);
 
-export const ProductsContext = createContext();
+export const ProductsDataContext = createContext();
 
 function App() {
-  const [products, setProducts] = useState([]);
-  const [unknownProducts, setUnknownProducts] = useState([]);
-  const [lastUpdated, setLastUpdated] = useState(null);
+  const [productsData, setProductsData] = useState(null);
+  const { productsByYear, unknownProducts, lastUpdated } = useMemo(
+    () => (productsData ? transformProductsData(productsData) : {}),
+    [productsData]
+  );
 
   useEffect(() => {
-    fetchData().then((data) => {
-      setProducts(data.products);
-      setUnknownProducts(data.unknownProducts);
-      setLastUpdated(data.lastUpdated);
-    });
+    fetchProductsData().then((data) => setProductsData(data));
   }, []);
-
-  const lastUpdatedDateString = new Intl.DateTimeFormat(navigator.language, {
-    day: "numeric",
-    year: "numeric",
-    month: "long",
-    hour: "numeric",
-    minute: "numeric",
-  }).format(lastUpdated);
 
   const unknownMonths = useMemo(() => [{ products: unknownProducts }], [unknownProducts]);
 
   return (
     <div className="app">
-      <ProductsContext.Provider value={products}>
+      <ProductsDataContext.Provider value={productsData}>
         <div className="year-list">
-          {products.map(({ yearName, months }) => (
-            <YearCard key={yearName} year={yearName} months={months} />
-          ))}
-          {unknownProducts.length > 0 && <YearCard key="unknown" year="unknown" months={unknownMonths} />}
+          {productsByYear &&
+            productsByYear.map(({ yearName, months }) => <YearCard key={yearName} year={yearName} months={months} />)}
+          {unknownProducts?.length > 0 && <YearCard key="unknown" year="unknown" months={unknownMonths} />}
         </div>
 
         <div id="footer">
@@ -86,43 +78,46 @@ function App() {
               <i className="far fa-grin"></i>&nbsp;&nbsp;Donate
             </a>
           </div>
-          {lastUpdated && (
-            <div title="Last updated" id="last-updated">
-              Last updated: {lastUpdatedDateString}
-            </div>
-          )}
+          {lastUpdated && <LastUpdated lastUpdated={lastUpdated} />}
         </div>
         <Outlet />
-      </ProductsContext.Provider>
+      </ProductsDataContext.Provider>
     </div>
   );
 }
 
-async function fetchData() {
+function LastUpdated({ lastUpdated }) {
+  const lastUpdatedDateString = new Intl.DateTimeFormat(navigator.language, {
+    day: "numeric",
+    year: "numeric",
+    month: "long",
+    hour: "numeric",
+    minute: "numeric",
+  }).format(lastUpdated);
+
+  return (
+    <div title="Last updated" id="last-updated">
+      Last updated: {lastUpdatedDateString}
+    </div>
+  );
+}
+
+async function fetchProductsData() {
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
   const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
   const apiUrl = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=product`;
   const data = await fetch(apiUrl).then((res) => res.json());
 
-  const products = [];
-  const unknownProducts = [];
-  data.items.forEach((item) => {
-    const product = {
-      name: item.fields.productName,
-      status: item.fields.status,
-      slug: item.fields.slug,
-      description: item.fields.description,
-      features: item.fields.features,
-      sources: item.fields.sources?.map(
-        (source) => data.includes.Entry.find((entry) => entry.sys.id === source.sys.id).fields
-      ),
-      images: item.fields.images?.map(
-        (image) => data.includes.Asset.find((asset) => asset.sys.id === image.sys.id).fields
-      ),
-    };
+  return data;
+}
 
+function transformProductsData(data) {
+  const productsByYear = [];
+  const unknownProducts = [];
+
+  data.items.forEach((item) => {
     if (!item.fields.date) {
-      unknownProducts.push(product);
+      unknownProducts.push(item);
       return;
     }
 
@@ -131,10 +126,10 @@ async function fetchData() {
     const monthIndex = date.getUTCMonth();
     const monthName = new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
 
-    let productsForYear = products.find((yearObject) => yearObject.yearName === year);
+    let productsForYear = productsByYear.find((yearObject) => yearObject.yearName === year);
     if (!productsForYear) {
       productsForYear = { yearName: year, months: [] };
-      products.push(productsForYear);
+      productsByYear.push(productsForYear);
     }
 
     let productsForMonth = productsForYear.months.find((monthObject) => monthObject.name === monthName);
@@ -143,11 +138,11 @@ async function fetchData() {
       productsForYear.months.push(productsForMonth);
     }
 
-    productsForMonth.products.push(product);
+    productsForMonth.products.push(item);
   });
 
-  products.sort((a, b) => a.yearName - b.yearName);
-  products.forEach((year) => year.months.sort((a, b) => a.index - b.index));
+  productsByYear.sort((a, b) => a.yearName - b.yearName);
+  productsByYear.forEach((year) => year.months.sort((a, b) => a.index - b.index));
 
   const lastUpdated = data.items
     .map((item) => new Date(item.sys.updatedAt))
@@ -158,7 +153,7 @@ async function fetchData() {
 
   // console.log({ data, slugs });
 
-  return { products, unknownProducts, lastUpdated };
+  return { productsByYear, unknownProducts, lastUpdated };
 }
 
 const root = createRoot(document.querySelector(".wrapper"));

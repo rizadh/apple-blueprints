@@ -10,7 +10,7 @@ export function MonthCard({ month, products }) {
       <span className="month-label">{month}</span>
       {/* <span className="counter">{products.length}</span> */}
       {products.map((product) => (
-        <ProductItem key={product.name} product={product} />
+        <ProductItem key={product.sys.id} product={product} />
       ))}
     </ul>
   );
