@@ -1,5 +1,6 @@
-import React, { useState, useCallback, useRef, useEffect, useMemo } from "react";
+import React, { useState, useCallback, useRef, useEffect, useMemo, createContext, useContext } from "react";
 import { render, createPortal } from "react-dom";
+import { Outlet, RouterProvider, createBrowserRouter, useParams, Link } from "react-router-dom";
 
 const statusIcons = {
   released: "fa-solid fa-circle-check",
@@ -13,24 +14,26 @@ const statusLabels = {
   rumoured: "Rumoured",
 };
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/product/:product",
+        element: <ProductPage />,
+      },
+    ],
+  },
+]);
+
 function ProductItem({ product }) {
-  const { name, status } = product;
-  const [showDetails, setShowDetails] = useState(false);
-  const showModal = useCallback(() => setShowDetails(true));
-  const closeModal = useCallback(() => setShowDetails(false));
+  const { name, status, slug } = product;
 
   return (
-    <>
-      <a className={status + "-product product-item"} onClick={showModal}>
-        <i className={`${statusIcons[status]} product-item-icon`} /> {name}
-      </a>
-      {showDetails && (
-        <Modal>
-          <div className="overlay" onClick={closeModal} />
-          <ProductContainer product={product} onDismiss={closeModal} />
-        </Modal>
-      )}
-    </>
+    <Link to={"/product/" + slug} className={status + "-product product-item"}>
+      <i className={`${statusIcons[status]} product-item-icon`} /> {name}
+    </Link>
   );
 }
 
@@ -59,6 +62,21 @@ function YearCard({ months, year }) {
         ))}
       </div>
     </>
+  );
+}
+
+function ProductPage() {
+  const products = useContext(ProductsContext);
+  const { product: slug } = useParams();
+  const allProducts = products.flatMap((year) => year.months.flatMap((month) => month.products));
+  const product = allProducts.find((product) => product.slug === slug);
+
+  const closeModal = useCallback(() => {
+    router.navigate("/");
+  });
+
+  return (
+    <Modal onDismiss={closeModal}>{product ? <ProductContainer product={product} /> : <div>Loading...</div>}</Modal>
   );
 }
 
@@ -108,7 +126,7 @@ function ProductContainer({ product: { name, status, description, features, sour
   );
 }
 
-function Modal({ children }) {
+function Modal({ onDismiss, children }) {
   const element = useRef(document.createElement("div"));
 
   useEffect(() => {
@@ -118,8 +136,16 @@ function Modal({ children }) {
     return () => element.current.remove();
   });
 
-  return createPortal(children, element.current);
+  return createPortal(
+    <>
+      <div className="overlay" onClick={onDismiss} />
+      {children}
+    </>,
+    element.current
+  );
 }
+
+const ProductsContext = createContext();
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -145,7 +171,7 @@ function App() {
   const unknownMonths = useMemo(() => [{ products: unknownProducts }], [unknownProducts]);
 
   return (
-    <>
+    <ProductsContext.Provider value={products}>
       {products.map(({ yearName, months }) => (
         <YearCard key={yearName} year={yearName} months={months} />
       ))}
@@ -180,7 +206,8 @@ function App() {
           </div>
         )}
       </div>
-    </>
+      <Outlet />
+    </ProductsContext.Provider>
   );
 }
 
@@ -196,6 +223,7 @@ async function fetchData() {
     const product = {
       name: item.fields.productName,
       status: item.fields.status,
+      slug: item.fields.slug,
       description: item.fields.description,
       features: item.fields.features,
       sources: item.fields.sources?.map(
@@ -246,4 +274,4 @@ async function fetchData() {
   return { products, unknownProducts, lastUpdated };
 }
 
-render(<App />, document.querySelector(".wrapper"));
+render(<RouterProvider router={router} />, document.querySelector(".wrapper"));
