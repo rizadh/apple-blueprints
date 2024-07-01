@@ -35,6 +35,9 @@ function ProductItem({ product }) {
 }
 
 function MonthCard({ month, products }) {
+  if (month === "unknown" && products.length === 0) {
+    return null;
+  }
   return (
     <ul className="monthCard">
       <span className="month-label">{month}</span>
@@ -147,7 +150,7 @@ function App() {
         <YearCard key={yearName} year={yearName} months={months} />
       ))}
 
-      <YearCard key="unknown" year="unknown" months={unknownMonths} />
+      {unknownProducts.length > 0 && <YearCard key="unknown" year="unknown" months={unknownMonths} />}
 
       <div id="footer">
         <div id="footer-button-container">
