@@ -16,6 +16,8 @@ export function ProductPage() {
   });
 
   return (
-    <Modal onDismiss={closeModal}>{product ? <ProductContainer product={product} /> : <div>Loading...</div>}</Modal>
+    <Modal onDismiss={closeModal}>
+      {product ? <ProductContainer product={product} onDismiss={closeModal} /> : <div>Loading...</div>}
+    </Modal>
   );
 }

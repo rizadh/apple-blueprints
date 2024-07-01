@@ -32,6 +32,7 @@ body {
   background-color: var(--site-background);
   color: var(--text-primary);
 }
+
 @media (prefers-color-scheme: dark) {
   body {
     --site-background: rgb(10, 10, 10);
@@ -52,6 +53,11 @@ body {
   }
 }
 
+h2,
+h3 {
+  all: initial;
+}
+
 #navbar {
   max-width: var(--site-width);
   position: fixed;
@@ -67,6 +73,7 @@ body {
   backdrop-filter: saturate(200%) blur(var(--blur-value));
   border-radius: 12px;
 }
+
 @media (max-width: 600px) {
   #navbar {
     font-size: 0.8em;
@@ -79,6 +86,7 @@ body {
 #spacer {
   height: 118px;
 }
+
 @media (max-width: 600px) {
   #spacer {
     height: 90px;
@@ -97,7 +105,9 @@ body {
   font-weight: bold;
   display: flex;
   align-items: flex-end;
+  letter-spacing: var(--header-letter-spacing);
 }
+
 @media (max-width: 600px) {
   .year-label {
     margin-left: 42px;
@@ -112,6 +122,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
 @media (max-width: 600px) {
   .container {
     margin: 0 24px;
@@ -122,12 +133,10 @@ body {
   min-width: 200px;
   padding: 12px 18px;
   margin: 12px;
-  border: 1px solid;
-  border-color: var(--border-colour);
+  border: 1px solid var(--border-colour);
   border-radius: var(--border-radius);
   background-color: var(--month-card-background);
   font-size: 36px;
-  font-weight: bold;
   flex-grow: 1;
   flex-basis: 0;
   position: relative;
@@ -137,11 +146,13 @@ body {
 }
 
 .month-label {
+  font-size: 36px;
   text-transform: lowercase;
   margin-bottom: 6px;
   font-weight: 600;
   letter-spacing: var(--header-letter-spacing);
 }
+
 @media (max-width: 600px) {
   .month-label {
     font-size: 32px;
@@ -157,10 +168,11 @@ body {
   padding: 4px 0;
   transition: var(--transition-time);
   align-items: center;
-  letter-spacing: var(--product-list-letter-spacing);
-  font-weight: 500;
+  /* letter-spacing: var(--product-list-letter-spacing); */
+  /* font-weight: normal; */
   text-decoration: none;
 }
+
 .product-item:hover {
   padding: 4px 8px;
   cursor: pointer;
@@ -201,12 +213,12 @@ li {
   transform: translate(-50%, -50%);
   padding: 30px 30px 18px 30px;
   background-color: var(--product-container-background);
-  font-weight: 600;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
   overflow: scroll;
   max-height: 80%;
   border-radius: var(--border-radius);
 }
+
 @media (max-width: 600px) {
   .product-container {
     width: inherit;
@@ -219,6 +231,7 @@ li {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
   }
 }
+
 .product-status {
   padding: 4px 8px;
   display: inline-block;
@@ -227,12 +240,15 @@ li {
   order: 2;
   font-weight: 500;
 }
+
 .released-product {
   color: var(--released-product);
 }
+
 .released-product:hover {
   background-color: rgba(8, 127, 6, 0.1);
 }
+
 .product-status.released-product {
   background-color: rgba(8, 127, 6, 0.14);
 }
@@ -240,9 +256,11 @@ li {
 .announced-product {
   color: var(--announced-product);
 }
+
 .announced-product:hover {
   background-color: rgba(230, 125, 6, 0.1);
 }
+
 .product-status.announced-product {
   background-color: rgba(230, 125, 6, 0.14);
 }
@@ -250,19 +268,20 @@ li {
 .rumoured-product {
   color: var(--rumoured-product);
 }
+
 .rumoured-product:hover {
   background-color: rgba(128, 126, 128, 0.1);
 }
+
 .product-status.rumoured-product {
   background-color: rgba(128, 126, 128, 0.14);
 }
 
 .titlebar {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap-reverse;
   margin-bottom: var(--content-section-gap);
   letter-spacing: var(--product-list-letter-spacing);
   gap: 6px 30px;
@@ -270,12 +289,43 @@ li {
 
 .product-name {
   font-size: 36px;
+  font-weight: 600;
   line-height: 1;
   order: 1;
 }
+
 @media (max-width: 600px) {
   .product-name {
     font-size: 2.5em;
+  }
+}
+
+.top-section {
+  /* display: flex; */
+}
+
+.close-button {
+  height: 40px;
+  width: 40px;
+  font-size: 1.6em;
+  text-align: center;
+  background-color: var(--button-background);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 9999px;
+  border: none;
+  transition: var(--transition-time);
+  order: 3;
+}
+
+.close-button:hover {
+  background-color: var(--button-background-hover);
+}
+
+@media (max-width: 600px) {
+  .close-button {
+    height: 32px;
+    width: 32px;
   }
 }
 
@@ -283,7 +333,7 @@ li {
   margin-top: 4px;
   margin-bottom: var(--content-section-gap);
   font-weight: 400;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.5;
   color: var(--text-secondary);
 }
@@ -298,14 +348,16 @@ ul {
   margin-block-start: 0;
   margin-block-end: 0.6em;
 }
+
 .product-header {
   margin: 0;
   margin-top: 10px;
   font-size: 24px;
+  font-weight: 600;
 }
 
 .sources-header {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .product-features,
@@ -316,7 +368,7 @@ ul {
 .product-features li,
 .product-sources li {
   list-style-type: inherit;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 400;
   margin: 10px 0;
   color: var(--text-secondary);
@@ -325,42 +377,12 @@ ul {
 .source-link {
   color: var(--link);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: underline;
 }
 
 .source-link:hover {
   text-decoration: none;
-}
-
-.close-button {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  top: 30px;
-  right: 30px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6em;
-  text-align: center;
-  text-transform: none;
-  background-color: var(--button-background);
-  color: var(--text-secondary);
-  cursor: pointer;
-  border-radius: 100px;
-  border: none;
-  transition: var(--transition-time);
-}
-.close-button:hover {
-  background-color: var(--button-background-hover);
-}
-@media (max-width: 600px) {
-  .close-button {
-    height: 32px;
-    width: 32px;
-  }
 }
 
 .overlay {
@@ -395,13 +417,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Prevent modal container from blocking click events */
   pointer-events: none;
   z-index: 2;
 }
 
 #modal-container > * {
-  /* Restore click events */
   pointer-events: initial;
 }
 
@@ -427,8 +447,7 @@ ul {
 .footer-button {
   margin: 6px;
   background-color: var(--footer-background);
-  border: 1px solid;
-  border-color: var(--border-colour);
+  border: 1px solid var(--border-colour);
   font-size: 1em;
   color: var(--text-secondary);
   padding: 6px 12px;
@@ -436,6 +455,7 @@ ul {
   transition: var(--transition-time);
   text-decoration: none;
 }
+
 .footer-button:hover {
   background-color: var(--button-background-hover);
   border-color: var(--button-border-hover);

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { statusLabels } from "./statusLabels";
 import { statusIcons } from "./statusIcons";
 import { ProductsDataContext } from "./ProductsDataContext";
@@ -18,43 +18,63 @@ export function ProductContainer({ product, onDismiss }) {
     updatedEntries.find((entry) => entry.sys.id === source.sys.id)
   );
 
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        console.log("Escape key pressed");
+        onDismiss();
+      }
+    };
+
+    document.addEventListener("keydown", handleEsc);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
   return (
     <div className="product-container">
-      <div className="titlebar">
-        <div
-          className={"product-status " + updatedProduct.fields.status + "-product"}
-          {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "status" })}
-        >
-          <i className={statusIcons[updatedProduct.fields.status]} /> {statusLabels[updatedProduct.fields.status]}
+      <div className="top-section">
+        <div className="titlebar">
+          <div
+            className="product-name"
+            {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "productName" })}
+          >
+            {updatedProduct.fields.productName}
+          </div>
+          <div
+            className={"product-status " + updatedProduct.fields.status + "-product"}
+            {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "status" })}
+          >
+            <i className={statusIcons[updatedProduct.fields.status]} /> {statusLabels[updatedProduct.fields.status]}
+          </div>
+          {/* <button className="fa-solid fa-xmark close-button" onClick={onDismiss} /> */}
         </div>
         <div
-          className="product-name"
-          {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "productName" })}
+          className="product-description"
+          {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "description" })}
         >
-          {updatedProduct.fields.productName}
+          {updatedProduct.fields.description}
         </div>
+        {images && (
+          <div
+            className="product-image-container"
+            {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "images" })}
+          >
+            {images.map((image) => (
+              <img
+                key={image.fields.file.url}
+                className="product-image"
+                src={image.fields.file.url}
+                alt={image.fields.description}
+              />
+            ))}
+          </div>
+        )}
       </div>
-      <div
-        className="product-description"
-        {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "description" })}
-      >
-        {updatedProduct.fields.description}
-      </div>
-      {images && (
-        <div
-          className="product-image-container"
-          {...ContentfulLivePreview.getProps({ entryId: product.sys.id, fieldId: "images" })}
-        >
-          {images.map((image) => (
-            <img
-              key={image.fields.file.url}
-              className="product-image"
-              src={image.fields.file.url}
-              alt={image.fields.description}
-            />
-          ))}
-        </div>
-      )}
+
       {updatedProduct.fields.features && (
         <div
           className="product-header"
@@ -85,7 +105,6 @@ export function ProductContainer({ product, onDismiss }) {
           </ul>
         </div>
       )}
-      {/* <button className="fas fa-times close-button" onClick={onDismiss} /> */}
     </div>
   );
 }
