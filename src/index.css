@@ -96,6 +96,7 @@ body {
 @media (max-width: 600px) {
   .year-label {
     margin-left: 42px;
+    font-size: 48px;
   }
 }
 
@@ -140,6 +141,11 @@ body {
   text-transform: lowercase;
   margin-bottom: 6px;
   font-weight: 600;
+}
+@media (max-width: 600px) {
+  .month-label {
+    font-size: 32px;
+  }
 }
 
 .product-item {
