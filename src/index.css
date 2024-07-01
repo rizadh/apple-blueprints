@@ -15,8 +15,8 @@ body {
   --product-container-background: rgb(255, 255, 255);
   --button-background: rgba(0, 0, 0, 0.05);
   --button-background-hover: rgba(255, 204, 0, 0.1);
-  --button-border-hover: rgba(255, 204, 0, 0.5);
-  --footer-text-hover: rgba(255, 204, 0, 1);
+  --button-border-hover: rgb(133, 119, 0);
+  --footer-text-hover: var(--button-border-hover);
   --footer-background: rgb(245, 245, 245);
   --blur-value: 12px;
   --border-radius: 18px;
@@ -24,13 +24,13 @@ body {
   --mobile-viewport: 600px;
   --content-section-gap: 24px;
   --site-width: 1500px;
+  --header-letter-spacing: -1px;
+  --product-list-letter-spacing: -0.5px;
   margin: 0;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Arial",
     "sans-serif";
   background-color: var(--site-background);
   color: var(--text-primary);
-  max-width: var(--site-width);
-  margin: 0 auto;
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -47,13 +47,14 @@ body {
     --product-container-background: rgb(14, 14, 14);
     --button-background: rgba(255, 255, 255, 0.05);
     --button-background-hover: rgba(255, 204, 0, 0.05);
+    --button-border-hover: rgba(255, 204, 0, 1);
     --footer-background: rgb(15, 15, 15);
   }
 }
 
 #navbar {
-  position: fixed;
   max-width: var(--site-width);
+  position: fixed;
   margin: 0 auto;
   z-index: 1;
   top: 24px;
@@ -65,7 +66,6 @@ body {
   -webkit-backdrop-filter: saturate(200%) blur(var(--blur-value));
   backdrop-filter: saturate(200%) blur(var(--blur-value));
   border-radius: 12px;
-  max-width: var(--site-width);
 }
 @media (max-width: 600px) {
   #navbar {
@@ -83,6 +83,11 @@ body {
   #spacer {
     height: 90px;
   }
+}
+
+.year-list {
+  max-width: var(--site-width);
+  margin: 0 auto;
 }
 
 .year-label {
@@ -130,17 +135,12 @@ body {
   flex-direction: column;
   align-items: start;
 }
-@media (max-width: 600px) {
-  .monthCard {
-    margin: 12px 0;
-  }
-}
 
 .month-label {
   text-transform: lowercase;
   margin-bottom: 6px;
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: var(--header-letter-spacing);
 }
 @media (max-width: 600px) {
   .month-label {
@@ -157,7 +157,7 @@ body {
   padding: 4px 0;
   transition: var(--transition-time);
   align-items: center;
-  letter-spacing: -0.5px;
+  letter-spacing: var(--product-list-letter-spacing);
   font-weight: 500;
   text-decoration: none;
 }
@@ -225,6 +225,7 @@ li {
   font-size: 1.2em;
   border-radius: 6px;
   order: 2;
+  font-weight: 500;
 }
 .released-product {
   color: var(--released-product);
@@ -263,7 +264,7 @@ li {
   align-items: center;
   flex-wrap: wrap-reverse;
   margin-bottom: var(--content-section-gap);
-  letter-spacing: -0.5px;
+  letter-spacing: var(--product-list-letter-spacing);
   gap: 6px 30px;
 }
 
@@ -282,7 +283,8 @@ li {
   margin-top: 4px;
   margin-bottom: var(--content-section-gap);
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 19px;
+  line-height: 1.5;
   color: var(--text-secondary);
 }
 
@@ -432,6 +434,7 @@ ul {
   padding: 6px 12px;
   border-radius: 6px;
   transition: var(--transition-time);
+  text-decoration: none;
 }
 .footer-button:hover {
   background-color: var(--button-background-hover);
