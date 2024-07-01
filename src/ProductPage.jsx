@@ -1,6 +1,7 @@
 import React, { useCallback, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { ProductsDataContext, router } from ".";
+import { router } from "./router";
+import { ProductsDataContext } from "./ProductsDataContext";
 import { Modal } from "./Modal";
 import { ProductContainer } from "./ProductContainer";
 

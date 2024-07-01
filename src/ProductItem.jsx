@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { statusIcons } from ".";
+import { statusIcons } from "./statusIcons";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import { ContentfulLivePreview } from "@contentful/live-preview";
 

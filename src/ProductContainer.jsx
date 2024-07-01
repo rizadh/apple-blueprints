@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
-import { ProductsDataContext, statusIcons, statusLabels } from ".";
+import { statusLabels } from "./statusLabels";
+import { statusIcons } from "./statusIcons";
+import { ProductsDataContext } from "./ProductsDataContext";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import { ContentfulLivePreview } from "@contentful/live-preview";
 
