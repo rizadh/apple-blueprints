@@ -1,14 +1,14 @@
 import React, { useCallback, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { ProductsContext, router } from ".";
+import { ProductsDataContext, router } from ".";
 import { Modal } from "./Modal";
 import { ProductContainer } from "./ProductContainer";
 
 export function ProductPage() {
-  const products = useContext(ProductsContext);
+  const productsData = useContext(ProductsDataContext);
   const { product: slug } = useParams();
-  const allProducts = products.flatMap((year) => year.months.flatMap((month) => month.products));
-  const product = allProducts.find((product) => product.slug === slug);
+
+  const product = productsData?.items.find((product) => product.fields.slug === slug);
 
   const closeModal = useCallback(() => {
     router.navigate("/");
