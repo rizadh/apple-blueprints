@@ -6,7 +6,6 @@
   --text-tertiary: rgb(191, 191, 191);
   --month-card-background: rgb(255, 255, 255);
   --border: rgb(200, 200, 200);
-
   --counter-background: rgba(0, 0, 0, 0.05);
   --released-product: rgb(8, 127, 6);
   --announced-product: rgb(230, 125, 6);
@@ -48,7 +47,7 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  :root {
     --site-background: rgb(10, 10, 10);
     --text-primary: white;
     --text-secondary: rgb(158, 158, 158);
