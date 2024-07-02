@@ -110,7 +110,7 @@ h3 {
 
 @media (max-width: 600px) {
   .year-label {
-    margin-left: 42px;
+    margin-left: 30px;
     font-size: 48px;
   }
 }
