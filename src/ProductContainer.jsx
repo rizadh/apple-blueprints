@@ -1,12 +1,24 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef, useMemo } from "react";
 import { statusLabels } from "./statusLabels";
 import { statusIcons } from "./statusIcons";
 import { ProductsDataContext } from "./ProductsDataContext";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import { ContentfulLivePreview } from "@contentful/live-preview";
+import { router } from "./router";
 
 export function ProductContainer({ product, onDismiss }) {
   const productsData = useContext(ProductsDataContext);
+  const sortedProductSlugs = useMemo(
+    () =>
+      productsData.items
+        .toSorted((a, b) => new Date(a.fields.date).getTime() - new Date(b.fields.date).getTime())
+        .map((item) => item.fields.slug),
+    [productsData]
+  );
+  const currentProductIndex = sortedProductSlugs.indexOf(product.fields.slug);
+  const nextProductSlug = sortedProductSlugs[currentProductIndex + 1];
+  const previousProductSlug = sortedProductSlugs[currentProductIndex - 1];
+
   const updatedProduct = useContentfulLiveUpdates(product);
   const updatedAssets = useContentfulLiveUpdates(productsData.includes.Asset);
   const updatedEntries = useContentfulLiveUpdates(productsData.includes.Entry);
@@ -19,23 +31,36 @@ export function ProductContainer({ product, onDismiss }) {
   );
 
   useEffect(() => {
-    const handleEsc = (event) => {
-      if (event.key === "Escape") {
-        console.log("Escape key pressed");
-        onDismiss();
+    const handler = (event) => {
+      switch (event.key) {
+        case "Escape":
+          onDismiss();
+          break;
+        case "ArrowLeft":
+          if (previousProductSlug) router.navigate(`/product/${previousProductSlug}`);
+          break;
+        case "ArrowRight":
+          if (nextProductSlug) router.navigate(`/product/${nextProductSlug}`);
+          break;
       }
     };
 
-    document.addEventListener("keydown", handleEsc);
+    document.addEventListener("keydown", handler);
 
     // Cleanup the event listener on component unmount
     return () => {
-      document.removeEventListener("keydown", handleEsc);
+      document.removeEventListener("keydown", handler);
     };
-  }, []);
+  }, [previousProductSlug, nextProductSlug]);
+
+  // TODO: Remove if this does not work
+  const productContainerRef = useRef();
+  useEffect(() => {
+    productContainerRef.current?.focus();
+  }, [productContainerRef.current]);
 
   return (
-    <div className="product-container">
+    <div className="product-container" ref={productContainerRef}>
       <div className="top-section">
         <div className="titlebar">
           <div
