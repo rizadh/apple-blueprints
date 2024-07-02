@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useMemo } from "react";
+import React, { useContext, useEffect, useRef, useMemo, useState } from "react";
 import { statusLabels } from "./statusLabels";
 import { statusIcons } from "./statusIcons";
 import { ProductsDataContext } from "./ProductsDataContext";
@@ -7,6 +7,7 @@ import { ContentfulLivePreview } from "@contentful/live-preview";
 import { router } from "./router";
 
 export function ProductContainer({ product, onDismiss }) {
+  const [isHovered, setIsHovered] = useState(false); // State for hover effect
   const productsData = useContext(ProductsDataContext);
   const sortedProductSlugs = useMemo(
     () =>
@@ -53,7 +54,6 @@ export function ProductContainer({ product, onDismiss }) {
     };
   }, [previousProductSlug, nextProductSlug]);
 
-  // TODO: Remove if this does not work
   const productContainerRef = useRef();
   useEffect(() => {
     productContainerRef.current?.focus();
@@ -122,9 +122,15 @@ export function ProductContainer({ product, onDismiss }) {
           >
             {sources.map((source) => (
               <li key={source} className="source-link">
-                <a href={source.fields.url} target="_blank" className="source-link">
-                  <span className="source-link-text">{source.fields.title}</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square source-link-icon"></i>
+                <a
+                  href={source.fields.url}
+                  target="_blank"
+                  className="source-link"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <span className={`source-link-text ${isHovered ? "hovered-text" : ""}`}>{source.fields.title}</span>
+                  <i className="fa-solid fa-arrow-up-right-from-square source-link-icon"></i>
                 </a>
               </li>
             ))}

@@ -5,7 +5,7 @@
   --text-secondary: rgb(97, 97, 97);
   --text-tertiary: rgb(191, 191, 191);
   --month-card-background: rgb(255, 255, 255);
-  --border-colour: rgb(200, 200, 200);
+  --border: rgb(200, 200, 200);
   --counter-background: rgba(0, 0, 0, 0.05);
   --released-product: rgb(8, 127, 6);
   --announced-product: rgb(230, 125, 6);
@@ -18,6 +18,7 @@
   --button-border-hover: rgb(133, 119, 0);
   --footer-text-hover: var(--button-border-hover);
   --footer-background: rgb(245, 245, 247);
+  --underline: grey;
   --blur-value: 12px;
   --border-radius: 18px;
   --transition-time: 100ms;
@@ -52,7 +53,7 @@ body {
     --text-secondary: rgb(158, 158, 158);
     --text-tertiary: rgb(64, 64, 64);
     --month-card-background: rgb(29, 29, 31);
-    --border-colour: rgb(64, 64, 64);
+    --border: rgb(64, 64, 64);
     --counter-background: rgba(255, 255, 255, 0.05);
     --released-product: rgb(76, 175, 79);
     --announced-product: rgb(224, 120, 0);
@@ -140,7 +141,7 @@ body {
   min-width: 200px;
   padding: 12px 18px;
   margin: 12px;
-  border: 1px solid var(--border-colour);
+  border: 1px solid var(--border);
   border-radius: var(--border-radius);
   background-color: var(--month-card-background);
   font-size: 36px;
@@ -187,7 +188,7 @@ body {
 .product-item-text {
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: var(--border-colour);
+  text-decoration-color: var(--underline);
   text-underline-offset: 4px;
 }
 .hovered-text {
@@ -403,7 +404,7 @@ ul {
 .source-link-text {
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: var(--border-colour);
+  text-decoration-color: var(--underline);
   text-underline-offset: 4px;
   margin-right: 6px;
 }
@@ -413,10 +414,6 @@ ul {
 
 .source-link-icon {
   font-size: 14px;
-}
-
-.blank-space {
-  text-decoration: none;
 }
 
 .overlay {
@@ -481,7 +478,7 @@ ul {
 .footer-button {
   margin: 6px;
   background-color: var(--footer-background);
-  border: 1px solid var(--border-colour);
+  border: 1px solid var(--border);
   font-size: 1em;
   color: var(--text-secondary);
   padding: 6px 12px;
