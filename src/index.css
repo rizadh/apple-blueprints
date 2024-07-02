@@ -84,8 +84,8 @@ body {
 @media (max-width: 600px) {
   #navbar {
     font-size: 0.8em;
-    left: 12px;
-    right: 12px;
+    left: 18px;
+    right: 18px;
   }
 }
 
@@ -117,7 +117,7 @@ body {
 
 @media (max-width: 600px) {
   .year-label {
-    margin-left: 30px;
+    margin-left: 36px;
     font-size: 48px;
   }
 }
@@ -132,7 +132,7 @@ body {
 
 @media (max-width: 600px) {
   .container {
-    margin: 0;
+    margin: 0 6px;
   }
 }
 
