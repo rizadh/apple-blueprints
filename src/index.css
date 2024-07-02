@@ -6,6 +6,7 @@
   --text-tertiary: rgb(191, 191, 191);
   --month-card-background: rgb(255, 255, 255);
   --border: rgb(200, 200, 200);
+
   --counter-background: rgba(0, 0, 0, 0.05);
   --released-product: rgb(8, 127, 6);
   --announced-product: rgb(230, 125, 6);
@@ -18,7 +19,7 @@
   --button-border-hover: rgb(133, 119, 0);
   --footer-text-hover: var(--button-border-hover);
   --footer-background: rgb(245, 245, 247);
-  --underline: grey;
+  --underline: rgb(169, 169, 169);
   --blur-value: 12px;
   --border-radius: 18px;
   --transition-time: 100ms;
@@ -63,6 +64,7 @@ body {
     --button-background-hover: rgba(255, 204, 0, 0.05);
     --button-border-hover: rgba(255, 204, 0, 1);
     --footer-background: rgb(20, 20, 20);
+    --underline: rgb(86, 86, 86);
   }
 }
 
