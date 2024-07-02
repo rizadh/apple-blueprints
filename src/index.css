@@ -126,7 +126,7 @@ h3 {
 
 @media (max-width: 600px) {
   .container {
-    margin: 0 24px;
+    margin: 0 12px;
   }
 }
 
@@ -402,7 +402,7 @@ ul {
   opacity: 0;
   cursor: pointer;
   animation-name: fadeIn;
-  animation-duration: 500ms;
+  animation-duration: 200ms;
   animation-fill-mode: forwards;
 }
 
