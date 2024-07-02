@@ -17,7 +17,7 @@ body {
   --button-background-hover: rgba(255, 204, 0, 0.1);
   --button-border-hover: rgb(133, 119, 0);
   --footer-text-hover: var(--button-border-hover);
-  --footer-background: rgb(245, 245, 245);
+  --footer-background: rgb(245, 245, 247);
   --blur-value: 12px;
   --border-radius: 18px;
   --transition-time: 100ms;
@@ -39,7 +39,7 @@ body {
     --text-primary: white;
     --text-secondary: rgb(158, 158, 158);
     --text-tertiary: rgb(64, 64, 64);
-    --month-card-background: rgb(20, 20, 20);
+    --month-card-background: rgb(29, 29, 31);
     --border-colour: rgb(64, 64, 64);
     --counter-background: rgba(255, 255, 255, 0.05);
     --released-product: rgb(76, 175, 79);
@@ -49,7 +49,7 @@ body {
     --button-background: rgba(255, 255, 255, 0.05);
     --button-background-hover: rgba(255, 204, 0, 0.05);
     --button-border-hover: rgba(255, 204, 0, 1);
-    --footer-background: rgb(15, 15, 15);
+    --footer-background: rgb(20, 20, 20);
   }
 }
 
@@ -103,6 +103,7 @@ h3 {
   margin-left: 60px;
   font-size: 60px;
   font-weight: bold;
+  color: var(--text-primary);
   display: flex;
   align-items: flex-end;
   letter-spacing: var(--header-letter-spacing);
@@ -148,6 +149,7 @@ h3 {
 .month-label {
   font-size: 36px;
   text-transform: lowercase;
+  color: var(--text-primary);
   margin-bottom: 6px;
   font-weight: 600;
   letter-spacing: var(--header-letter-spacing);
@@ -166,15 +168,17 @@ h3 {
   gap: 6px;
   border-radius: 6px;
   padding: 4px 0;
-  transition: var(--transition-time);
+  transition: 0.2s;
   align-items: center;
-  /* letter-spacing: var(--product-list-letter-spacing); */
-  /* font-weight: normal; */
   text-decoration: none;
+  padding: 4px 8px;
+  translate: -8px 0;
 }
 
 .product-item:hover {
-  padding: 4px 8px;
+  translate: 0 0;
+  /* margin: */
+  /* padding: 4px 8px; */
   cursor: pointer;
 }
 
