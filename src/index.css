@@ -166,19 +166,25 @@ h3 {
   display: flex;
   gap: 6px;
   border-radius: 6px;
-  padding: 4px 0;
   transition: 0.2s;
   align-items: center;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 6px 8px;
   translate: -8px 0;
 }
-
 .product-item:hover {
   translate: 0 0;
-  /* margin: */
-  /* padding: 4px 8px; */
   cursor: pointer;
+}
+
+.product-item-text {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--border-colour);
+  text-underline-offset: 4px;
+}
+.hovered-text {
+  text-decoration: none !important;
 }
 
 .product-item-icon {
