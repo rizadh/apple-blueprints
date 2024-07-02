@@ -394,10 +394,28 @@ ul {
   color: var(--link);
   font-weight: 400;
   font-size: 16px;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .source-link:hover {
+  text-decoration: none;
+}
+.source-link-text {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--border-colour);
+  text-underline-offset: 4px;
+  margin-right: 6px;
+}
+.source-link-text:hover {
+  text-decoration: none;
+}
+
+.source-link-icon {
+  font-size: 14px;
+}
+
+.blank-space {
   text-decoration: none;
 }
 

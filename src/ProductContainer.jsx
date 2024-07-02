@@ -123,7 +123,8 @@ export function ProductContainer({ product, onDismiss }) {
             {sources.map((source) => (
               <li key={source} className="source-link">
                 <a href={source.fields.url} target="_blank" className="source-link">
-                  {source.fields.title}
+                  <span className="source-link-text">{source.fields.title}</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square source-link-icon"></i>
                 </a>
               </li>
             ))}
